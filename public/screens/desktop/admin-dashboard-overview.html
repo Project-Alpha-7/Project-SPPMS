@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-high":"#e5e8ec","on-tertiary-fixed-variant":"#534600","secondary-fixed":"#ffd9de","inverse-on-surface":"#eef1f5","on-secondary":"#ffffff","on-surface":"#181c1f","on-tertiary":"#ffffff","tertiary-fixed":"#ffe262","on-error":"#ffffff","primary-fixed":"#bde9ff","surface-container-highest":"#e0e3e7","on-background":"#181c1f","background":"#f7f9fe","surface-container-lowest":"#ffffff","tertiary-container":"#c7aa00","on-secondary-fixed-variant":"#8f0638","surface":"#f7f9fe","inverse-primary":"#6bd3fd","secondary":"#b0274e","outline-variant":"#bdc8ce","on-primary-fixed":"#001f2a","on-primary":"#ffffff","on-error-container":"#93000a","tertiary-fixed-dim":"#e7c500","on-primary-container":"#fbfdff","on-primary-fixed-variant":"#004d64","surface-tint":"#006684","inverse-surface":"#2d3134","surface-dim":"#d7dade","secondary-fixed-dim":"#ffb2bd","on-tertiary-container":"#4b3f00","primary-container":"#007ea1","error":"#ba1a1a","surface-container-low":"#f1f4f8","error-container":"#ffdad6","tertiary":"#6f5d00","on-secondary-container":"#670025","on-surface-variant":"#3e484e","primary":"#006480","primary-fixed-dim":"#6bd3fd","secondary-container":"#fe6386","surface-bright":"#f7f9fe","on-secondary-fixed":"#400014","on-tertiary-fixed":"#221b00","outline":"#6e797e","surface-container":"#ebeef2","surface-variant":"#e0e3e7"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-lg":"1.5rem","margin-lg":"2.5rem",gutter:"1rem","space-xs":"0.25rem","margin-md":"1.5rem",margin:"1rem","space-sm":"0.5rem","space-xl":"2.25rem","gutter-lg":"1.5rem","space-md":"1rem"},fontFamily:{"body-md":["Times New Roman"],"label-lg":["Times New Roman"],"headline-lg":["Times New Roman"],"label-md":["Times New Roman"],"headline-sm":["Times New Roman"],"body-lg":["Times New Roman"],"body-sm":["Times New Roman"],"display-lg":["Times New Roman"],"title-md":["Times New Roman"],"headline-xl-mobile":["Times New Roman"],"label-tech":["Times New Roman"],"headline-xl":["Times New Roman"]},fontSize:{"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"label-lg":["13px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"700"}],"headline-lg":["24px",{lineHeight:"32px",fontWeight:"700"}],"label-md":["11px",{lineHeight:"14px",letterSpacing:"0.06em",fontWeight:"700"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"display-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"700"}],"title-md":["18px",{lineHeight:"24px",fontWeight:"600"}],"headline-xl-mobile":["26px",{lineHeight:"32px",letterSpacing:"0em",fontWeight:"700"}],"label-tech":["10px",{lineHeight:"12px",letterSpacing:"0.08em",fontWeight:"400"}],"headline-xl":["32px",{lineHeight:"40px",letterSpacing:"-0.01em",fontWeight:"700"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low border-r border-outline-variant/60 z-50 flex flex-col"><div class="w-full h-1 grid grid-cols-4"><div class="bg-[#219BC3] h-full"></div><div class="bg-[#D9476B] h-full"></div><div class="bg-[#F5D21B] h-full"></div><div class="bg-[#1B2427] h-full"></div></div><div class="h-16 px-space-md border-b border-outline-variant/60 flex items-center justify-between bg-surface-container-lowest"><div class="flex items-center gap-space-xs"><img alt="PrintFlow OS Logo" class="h-7 w-auto object-contain" src="/images/printflow-logo.svg"/><span class="font-headline-sm text-headline-sm uppercase tracking-wide text-on-surface">PrintFlow</span></div><span class="font-label-tech text-label-tech border border-outline-variant px-1 text-on-surface-variant">v4.2</span></div><div class="px-space-md py-space-sm border-b border-outline-variant/40 bg-surface-container"><div class="flex items-center justify-between text-on-surface-variant"><span class="font-label-tech text-label-tech uppercase tracking-widest">ADMIN CONSOLE</span><span class="font-label-tech text-label-tech text-primary">PRESSNET ACTIVE</span></div></div><nav class="flex-1 overflow-y-auto px-space-xs py-space-sm space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-bold border-l-4 border-secondary"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-xs transition-colors bg-primary-container text-on-primary-container font-bold border-l-4 border-secondary" data-path="overview" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span><span class="font-label-lg text-label-lg uppercase">Overview</span></a><a class="flex items-center justify-between px-space-md py-space-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="order-queue-approval" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span class="font-label-lg text-label-lg uppercase">Order Queue &amp; Approval</span></div><span class="font-label-tech text-label-tech bg-secondary text-on-secondary px-1">14</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="production-stages" href="#"><span class="material-symbols-outlined text-[18px]">precision_manufacturing</span><span class="font-label-lg text-label-lg uppercase">Production Stages</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="digital-job-cards" href="#"><span class="material-symbols-outlined text-[18px]">qr_code_2</span><span class="font-label-lg text-label-lg uppercase">Digital Job Cards</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="product-paper-catalog" href="#"><span class="material-symbols-outlined text-[18px]">layers</span><span class="font-label-lg text-label-lg uppercase">Product &amp; Paper Catalog</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="pricing-cost-estimator" href="#"><span class="material-symbols-outlined text-[18px]">calculate</span><span class="font-label-lg text-label-lg uppercase">Pricing &amp; Estimator</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reports-telemetry" href="#"><span class="material-symbols-outlined text-[18px]">monitoring</span><span class="font-label-lg text-label-lg uppercase">Reports &amp; Telemetry</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="system-settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span class="font-label-lg text-label-lg uppercase">System Settings</span></a></nav><div class="p-space-sm border-t border-outline-variant/60 bg-surface-container-lowest"><div class="border border-outline-variant/60 p-space-xs flex items-center justify-between text-outline"><span class="font-label-tech text-label-tech uppercase">OFFSET C4 · 300LPI</span><span class="font-label-tech text-label-tech">⌖ REG OK</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/95 backdrop-blur-md border-b border-outline-variant/60 z-40 flex items-center justify-between px-gutter-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs border border-outline-variant/70 bg-surface-container-lowest px-space-sm py-space-xs"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-tech text-label-tech uppercase text-on-surface font-semibold">Pressline 04: Online · Calibration 99.4%</span></div><span class="font-label-tech text-label-tech text-on-surface-variant hidden xl:inline">[ SPEED: 14,200 IMP/H · INK DENSITY DELTA-E &lt; 1.2 ]</span></div><div class="flex items-center gap-space-md"><div class="flex items-center border border-outline-variant/70 p-0.5 bg-surface-container-low"><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface uppercase" data-path="store-catalog" href="#">Customer Portal</a><a class="px-space-sm py-space-xs font-label-md text-label-md bg-surface-container-lowest text-primary uppercase shadow-sm border border-outline-variant/50" data-path="overview" href="#">Admin Centre</a></div><button class="w-8 h-8 flex items-center justify-center border border-outline-variant hover:bg-surface-container-high transition-colors" onclick="document.documentElement.classList.toggle('dark')" type="button"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">light_mode</span></button><div class="flex items-center gap-space-xs border border-outline-variant/60 pl-space-xs pr-space-sm py-0.5 bg-surface-container-lowest"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden sm:flex flex-col text-left"><span class="font-label-md text-label-md uppercase text-on-surface">Master Pressman</span><span class="font-label-tech text-label-tech text-on-surface-variant">SHIFT LEAD #01</span></div><span class="material-symbols-outlined text-[16px] text-outline ml-space-xs">expand_more</span></div></div></header><main class="relative pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- PREPRESS CALIBRATION BANNER / LIVE TELEMETRY BAR -->
+<div class="w-full bg-surface-container-lowest px-gutter-lg py-space-sm flex flex-wrap items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-md">
+<!-- CMYK 4-Block Registration Indicator -->
+<div class="flex items-center gap-1">
+<span class="w-2.5 h-2.5 bg-[#219BC3] rounded-none"></span>
+<span class="w-2.5 h-2.5 bg-[#D9476B] rounded-none"></span>
+<span class="w-2.5 h-2.5 bg-[#F5D21B] rounded-none"></span>
+<span class="w-2.5 h-2.5 bg-[#1B2427] rounded-none"></span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-tech text-label-tech uppercase text-on-surface-variant">JOB DENSITY PROFILER:</span>
+<span class="font-label-tech text-label-tech text-primary font-bold">FOGRA 51 STANDARD · ΔE 0.8 PASS</span>
+</div>
+<span class="hidden md:inline font-label-tech text-label-tech text-outline">|</span>
+<div class="hidden lg:flex items-center gap-space-xs text-on-surface-variant font-label-tech text-label-tech">
+<span>IMPOSITION BED: C4 8-UP</span>
+<span class="text-outline">·</span>
+<span>PLATE CTCP LASER 2400 DPI: CALIBRATED</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-0.5">
+<span class="material-symbols-outlined text-[14px] text-tertiary">speed</span>
+<span class="font-label-tech text-label-tech text-on-surface font-semibold">GLOBAL OUTPUT: 38,450 SPH</span>
+</div>
+<!-- Fast Prepress Action Bar -->
+<button class="bg-primary text-on-primary px-space-sm py-0.5 font-label-md text-label-md uppercase tracking-wider flex items-center gap-1 shadow-sm hover:opacity-90 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[15px]">print</span>
+<span>Queue Batch Dispatch</span>
+</button>
+</div>
+</div>
+<div class="p-gutter-lg space-y-space-lg">
+<!-- SECTION 1: TOP 7 KEY METRICS BAR (HEAVYWEIGHT INDUSTRIAL KPIS) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-space-sm">
+<!-- Metric 1: Total Active Orders -->
+<div class="bg-surface-container-lowest p-space-sm relative shadow-sm flex flex-col justify-between">
+<div class="h-1 bg-[#219BC3] absolute top-0 left-0 right-0"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md uppercase text-on-surface-variant">Active Orders</span>
+<span class="font-label-tech text-label-tech text-[#219BC3]">#M-01</span>
+</div>
+<div class="my-space-xs">
+<div class="font-headline-xl text-headline-xl text-on-surface">1,482</div>
+<div class="font-label-tech text-label-tech text-primary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">trending_up</span>
+<span>+12.4% VS LW</span>
+</div>
+</div>
+<div class="font-label-tech text-label-tech text-outline truncate">Run pool: 48 Presslines</div>
+</div>
+<!-- Metric 2: New Unassigned Orders -->
+<div class="bg-surface-container-lowest p-space-sm relative shadow-sm flex flex-col justify-between">
+<div class="h-1 bg-[#D9476B] absolute top-0 left-0 right-0"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md uppercase text-on-surface-variant">Flight Check Req.</span>
+<span class="font-label-tech text-label-tech text-secondary">⌖ PENDING</span>
+</div>
+<div class="my-space-xs">
+<div class="font-headline-xl text-headline-xl text-secondary">34</div>
+<div class="font-label-tech text-label-tech text-on-surface-variant">Requires PitStop preflight</div>
+</div>
+<div class="font-label-tech text-label-tech text-outline">Trapping &amp; bleed checks</div>
+</div>
+<!-- Metric 3: Active Production -->
+<div class="bg-surface-container-lowest p-space-sm relative shadow-sm flex flex-col justify-between">
+<div class="h-1 bg-primary absolute top-0 left-0 right-0"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md uppercase text-on-surface-variant">In Production</span>
+<span class="font-label-tech text-label-tech text-primary">6 PRESSES</span>
+</div>
+<div class="my-space-xs">
+<div class="font-headline-xl text-headline-xl text-on-surface">86</div>
+<div class="font-label-tech text-label-tech text-on-surface-variant">Heidelberg &amp; HP Indigo</div>
+</div>
+<div class="font-label-tech text-label-tech text-primary font-semibold">91.4% Plate utilization</div>
+</div>
+<!-- Metric 4: Quality Inspection Stage -->
+<div class="bg-surface-container-lowest p-space-sm relative shadow-sm flex flex-col justify-between">
+<div class="h-1 bg-[#1B2427] absolute top-0 left-0 right-0"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md uppercase text-on-surface-variant">Spectro QC Hold</span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">INSP-LAB</span>
+</div>
+<div class="my-space-xs">
+<div class="font-headline-xl text-headline-xl text-on-surface">18</div>
+<div class="font-label-tech text-label-tech text-on-surface-variant">Drying &amp; Specimen test</div>
+</div>
+<div class="font-label-tech text-label-tech text-outline">Target ΔE tolerance ±1.0</div>
+</div>
+<!-- Metric 5: Ready for Logistics & Dispatch -->
+<div class="bg-surface-container-lowest p-space-sm relative shadow-sm flex flex-col justify-between">
+<div class="h-1 bg-surface-container-high absolute top-0 left-0 right-0"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md uppercase text-on-surface-variant">Packaged Lots</span>
+<span class="font-label-tech text-label-tech text-primary">PALLET DOCK</span>
+</div>
+<div class="my-space-xs">
+<div class="font-headline-xl text-headline-xl text-on-surface">42</div>
+<div class="font-label-tech text-label-tech text-primary font-semibold">Ready for courier load</div>
+</div>
+<div class="font-label-tech text-label-tech text-outline">Cut &amp; shrink-wrapped</div>
+</div>
+<!-- Metric 6: Month-to-Date Revenue -->
+<div class="bg-surface-container-lowest p-space-sm relative shadow-sm flex flex-col justify-between">
+<div class="h-1 bg-[#219BC3] absolute top-0 left-0 right-0"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md uppercase text-on-surface-variant">MTD Revenue</span>
+<span class="font-label-tech text-label-tech text-primary">99.2% SLA</span>
+</div>
+<div class="my-space-xs">
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight">$284,950</div>
+<div class="font-label-tech text-label-tech text-primary">+18.2% vs target pace</div>
+</div>
+<div class="font-label-tech text-label-tech text-outline">3,420 Net imp. billable</div>
+</div>
+<!-- Metric 7: Pending Prepress Approvals -->
+<div class="bg-surface-container-lowest p-space-sm relative shadow-sm flex flex-col justify-between">
+<div class="h-1 bg-[#F5D21B] absolute top-0 left-0 right-0"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md uppercase text-on-surface-variant">Pending Proofs</span>
+<span class="font-label-tech text-label-tech bg-[#F5D21B]/30 px-1 text-on-surface font-bold">WARNING</span>
+</div>
+<div class="my-space-xs">
+<div class="font-headline-lg text-headline-lg text-tertiary tracking-tight">$18,420</div>
+<div class="font-label-tech text-label-tech text-on-surface-variant">Awaiting client signoff</div>
+</div>
+<div class="font-label-tech text-label-tech text-outline">9 Hardproofs dispatched</div>
+</div>
+</div>
+<!-- SECTION 2: PRODUCTION TELEMETRY & SUBSTRATE ANALYTICS GRID -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Chart 1: Daily Press Throughput by Sheet Volume (8 Cols) -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-space-md shadow-sm relative flex flex-col justify-between">
+<!-- Technical Prepress Corner Marks -->
+<span class="absolute top-2 left-2 font-label-tech text-label-tech text-outline">⌜ 100LPI</span>
+<span class="absolute top-2 right-2 font-label-tech text-label-tech text-outline">OFFSET/DIG ⌝</span>
+<span class="absolute bottom-2 left-2 font-label-tech text-label-tech text-outline">⌞ IMPOSITION</span>
+<span class="absolute bottom-2 right-2 font-label-tech text-label-tech text-outline">G7 CERT ⌟</span>
+<div class="flex flex-wrap items-center justify-between pb-space-sm bg-surface-container-low px-space-sm py-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">equalizer</span>
+<div>
+<h2 class="font-title-md text-title-md uppercase text-on-surface leading-tight">Daily Press Throughput by Sheet Volume</h2>
+<p class="font-label-tech text-label-tech text-on-surface-variant">HOURLY IMPRESSION CYCLE · REAL-TIME SPECTRAL DENSITY TRACKING</p>
+</div>
+</div>
+<!-- CMYK Color Series Legend -->
+<div class="flex items-center gap-space-sm pt-space-xs sm:pt-0">
+<div class="flex items-center gap-1 font-label-tech text-label-tech">
+<span class="w-3 h-3 bg-[#219BC3]"></span>
+<span>Offset 4C</span>
+</div>
+<div class="flex items-center gap-1 font-label-tech text-label-tech">
+<span class="w-3 h-3 bg-[#D9476B]"></span>
+<span>Indigo 7C</span>
+</div>
+<div class="flex items-center gap-1 font-label-tech text-label-tech">
+<span class="w-3 h-3 bg-[#F5D21B]"></span>
+<span>Spot UV</span>
+</div>
+<div class="flex items-center gap-1 font-label-tech text-label-tech">
+<span class="w-3 h-3 bg-[#1B2427]"></span>
+<span>Bindery Cut</span>
+</div>
+</div>
+</div>
+<!-- Inline SVG Multi-Color Production Throughput Chart -->
+<div class="w-full my-space-md overflow-x-auto">
+<svg class="w-full min-w-[560px] h-60 text-on-surface" fill="none" viewbox="0 0 760 220" xmlns="http://www.w3.org/2000/svg">
+<!-- Grid Lines -->
+<line stroke="currentColor" stroke-dasharray="2 2" stroke-opacity="0.08" x1="40" x2="740" y1="20" y2="20"></line>
+<line stroke="currentColor" stroke-dasharray="2 2" stroke-opacity="0.08" x1="40" x2="740" y1="65" y2="65"></line>
+<line stroke="currentColor" stroke-dasharray="2 2" stroke-opacity="0.08" x1="40" x2="740" y1="110" y2="110"></line>
+<line stroke="currentColor" stroke-dasharray="2 2" stroke-opacity="0.08" x1="40" x2="740" y1="155" y2="155"></line>
+<line stroke="currentColor" stroke-opacity="0.2" x1="40" x2="740" y1="195" y2="195"></line>
+<!-- Y Axis Labels -->
+<text class="font-label-tech text-[10px]" fill="currentColor" fill-opacity="0.6" x="5" y="24">40K SPH</text>
+<text class="font-label-tech text-[10px]" fill="currentColor" fill-opacity="0.6" x="5" y="69">30K SPH</text>
+<text class="font-label-tech text-[10px]" fill="currentColor" fill-opacity="0.6" x="5" y="114">20K SPH</text>
+<text class="font-label-tech text-[10px]" fill="currentColor" fill-opacity="0.6" x="5" y="159">10K SPH</text>
+<text class="font-label-tech text-[10px]" fill="currentColor" fill-opacity="0.6" x="18" y="198">0</text>
+<!-- Stacked Bar Sets (06:00 to 22:00 Shift Blocks) -->
+<!-- 06:00 -->
+<g class="transition-all hover:opacity-80 cursor-pointer">
+<rect fill="#1B2427" height="45" width="36" x="70" y="150"></rect>
+<rect fill="#F5D21B" height="20" width="36" x="70" y="130"></rect>
+<rect fill="#D9476B" height="40" width="36" x="70" y="90"></rect>
+<rect fill="#219BC3" height="45" width="36" x="70" y="45"></rect>
+<text class="font-label-tech text-[10px]" fill="currentColor" fill-opacity="0.7" x="74" y="210">06:00</text>
+</g>
+<!-- 08:00 -->
+<g class="transition-all hover:opacity-80 cursor-pointer">
+<rect fill="#1B2427" height="55" width="36" x="155" y="140"></rect>
+<rect fill="#F5D21B" height="25" width="36" x="155" y="115"></rect>
+<rect fill="#D9476B" height="45" width="36" x="155" y="70"></rect>
+<rect fill="#219BC3" height="42" width="36" x="155" y="28"></rect>
+<text class="font-label-tech text-[10px]" fill="currentColor" fill-opacity="0.7" x="159" y="210">08:00</text>
+</g>
+<!-- 10:00 (Peak Shift) -->
+<g class="transition-all hover:opacity-80 cursor-pointer">
+<rect fill="#1B2427" height="60" width="36" x="240" y="135"></rect>
+<rect fill="#F5D21B" height="30" width="36" x="240" y="105"></rect>
+<rect fill="#D9476B" height="50" width="36" x="240" y="55"></rect>
+<rect fill="#219BC3" height="40" width="36" x="240" y="15"></rect>
+<text class="font-label-tech text-[10px]" fill="currentColor" fill-opacity="0.7" x="244" y="210">10:00</text>
+</g>
+<!-- 12:00 -->
+<g class="transition-all hover:opacity-80 cursor-pointer">
+<rect fill="#1B2427" height="35" width="36" x="325" y="160"></rect>
+<rect fill="#F5D21B" height="15" width="36" x="325" y="145"></rect>
+<rect fill="#D9476B" height="40" width="36" x="325" y="105"></rect>
+<rect fill="#219BC3" height="45" width="36" x="325" y="60"></rect>
+<text class="font-label-tech text-[10px]" fill="currentColor" fill-opacity="0.7" x="329" y="210">12:00</text>
+</g>
+<!-- 14:00 -->
+<g class="transition-all hover:opacity-80 cursor-pointer">
+<rect fill="#1B2427" height="65" width="36" x="410" y="130"></rect>
+<rect fill="#F5D21B" height="30" width="36" x="410" y="100"></rect>
+<rect fill="#D9476B" height="50" width="36" x="410" y="50"></rect>
+<rect fill="#219BC3" height="30" width="36" x="410" y="20"></rect>
+<text class="font-label-tech text-[10px]" fill="currentColor" fill-opacity="0.7" x="414" y="210">14:00</text>
+</g>
+<!-- 16:00 -->
+<g class="transition-all hover:opacity-80 cursor-pointer">
+<rect fill="#1B2427" height="50" width="36" x="495" y="145"></rect>
+<rect fill="#F5D21B" height="25" width="36" x="495" y="120"></rect>
+<rect fill="#D9476B" height="45" width="36" x="495" y="75"></rect>
+<rect fill="#219BC3" height="43" width="36" x="495" y="32"></rect>
+<text class="font-label-tech text-[10px]" fill="currentColor" fill-opacity="0.7" x="499" y="210">16:00</text>
+</g>
+<!-- 18:00 -->
+<g class="transition-all hover:opacity-80 cursor-pointer">
+<rect fill="#1B2427" height="45" width="36" x="580" y="150"></rect>
+<rect fill="#F5D21B" height="20" width="36" x="580" y="130"></rect>
+<rect fill="#D9476B" height="45" width="36" x="580" y="85"></rect>
+<rect fill="#219BC3" height="43" width="36" x="580" y="42"></rect>
+<text class="font-label-tech text-[10px]" fill="currentColor" fill-opacity="0.7" x="584" y="210">18:00</text>
+</g>
+<!-- 20:00 -->
+<g class="transition-all hover:opacity-80 cursor-pointer">
+<rect fill="#1B2427" height="40" width="36" x="665" y="155"></rect>
+<rect fill="#F5D21B" height="15" width="36" x="665" y="140"></rect>
+<rect fill="#D9476B" height="40" width="36" x="665" y="100"></rect>
+<rect fill="#219BC3" height="45" width="36" x="665" y="55"></rect>
+<text class="font-label-tech text-[10px]" fill="currentColor" fill-opacity="0.7" x="669" y="210">20:00</text>
+</g>
+<!-- Optical Registration Crosshair Overlay -->
+<circle cx="720" cy="30" r="8" stroke="#219BC3" stroke-width="1"></circle>
+<line stroke="#219BC3" stroke-width="1" x1="720" x2="720" y1="18" y2="42"></line>
+<line stroke="#219BC3" stroke-width="1" x1="708" x2="732" y1="30" y2="30"></line>
+</svg>
+</div>
+<!-- Live Press Status Feed Footer -->
+<div class="bg-surface-container p-space-xs flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 bg-primary animate-pulse"></span>
+<span class="font-label-tech text-label-tech font-bold text-on-surface">HEIDELBERG CX-104 (UNIT 1):</span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">Running Job #PF-8921 (Brochures 300 GSM)</span>
+</div>
+<div class="flex items-center gap-space-sm font-label-tech text-label-tech">
+<span class="bg-surface-container-lowest px-1 py-0.5 font-bold text-primary">SPEED: 14,200 SPH</span>
+<span class="bg-surface-container-lowest px-1 py-0.5 font-bold text-on-surface">INK DENSITY ΔE 0.8</span>
+<span class="bg-[#219BC3] text-on-primary px-1 py-0.5">FEEDER OK</span>
+</div>
+</div>
+</div>
+<!-- Chart 2: Paper Substrate Consumption (4 Cols) -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-space-md shadow-sm relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">layers</span>
+<h3 class="font-title-md text-title-md uppercase text-on-surface">Substrate Stock</h3>
+</div>
+<span class="font-label-tech text-label-tech text-outline">[ STOCK INVENTORY ]</span>
+</div>
+<p class="font-label-tech text-label-tech text-on-surface-variant">CURRENT WAREHOUSE TONNAGE ALLOCATION</p>
+<!-- Donut Graphic Representation -->
+<div class="my-space-md flex items-center justify-center">
+<div class="relative w-44 h-44 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 100 100">
+<!-- Art Card 350 GSM: 42% -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#219BC3" stroke-dasharray="110.8 152.6" stroke-dashoffset="0" stroke-width="14"></circle>
+<!-- Matte Bond 120 GSM: 28% -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#D9476B" stroke-dasharray="73.8 189.6" stroke-dashoffset="-110.8" stroke-width="14"></circle>
+<!-- Recycled Kraft 250 GSM: 18% -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#F5D21B" stroke-dasharray="47.5 215.9" stroke-dashoffset="-184.6" stroke-width="14"></circle>
+<!-- Metallic Foil: 12% -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#1B2427" stroke-dasharray="31.6 231.8" stroke-dashoffset="-232.1" stroke-width="14"></circle>
+</svg>
+<!-- Center Metric -->
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-headline-lg text-headline-lg leading-tight text-on-surface">148.6</span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">METRIC TONS</span>
+</div>
+</div>
+</div>
+<!-- Substrate Breakdown Progress Sliders -->
+<div class="space-y-space-xs font-body-sm text-body-sm">
+<div>
+<div class="flex justify-between text-on-surface">
+<span class="font-label-tech text-label-tech uppercase flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 bg-[#219BC3]"></span> Art Card 350 GSM Velvet
+                </span>
+<span class="font-label-tech text-label-tech font-bold">42% (62.4 T)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container mt-0.5">
+<div class="h-full bg-[#219BC3] w-[42%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-on-surface">
+<span class="font-label-tech text-label-tech uppercase flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 bg-[#D9476B]"></span> Matte Bond 120 GSM Offset
+                </span>
+<span class="font-label-tech text-label-tech font-bold">28% (41.6 T)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container mt-0.5">
+<div class="h-full bg-[#D9476B] w-[28%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-on-surface">
+<span class="font-label-tech text-label-tech uppercase flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 bg-[#F5D21B]"></span> Recycled Kraft 250 GSM
+                </span>
+<span class="font-label-tech text-label-tech font-bold">18% (26.7 T)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container mt-0.5">
+<div class="h-full bg-[#F5D21B] w-[18%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-on-surface">
+<span class="font-label-tech text-label-tech uppercase flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 bg-[#1B2427]"></span> Metallic Silver Foil 300 GSM
+                </span>
+<span class="font-label-tech text-label-tech font-bold">12% (17.9 T)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container mt-0.5">
+<div class="h-full bg-[#1B2427] w-[12%]"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-sm mt-space-sm flex justify-between items-center text-on-surface-variant font-label-tech text-label-tech">
+<span>HUMIDITY: 48% RH (STABLE)</span>
+<span class="text-primary cursor-pointer hover:underline uppercase font-bold">Reorder Mill Lots →</span>
+</div>
+</div>
+</div>
+<!-- SECTION 3: COMPREHENSIVE ORDERS & FLIGHT CHECK QUEUE DATA TABLE -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm">
+<!-- Table Header & Controls Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm pb-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">assignment_turned_in</span>
+<h2 class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-wide">Prepress Flight Check &amp; Order Queue</h2>
+</div>
+<p class="font-label-tech text-label-tech text-on-surface-variant">IMPOSITION DISPATCH · SPECTRAL VERIFICATION · JDF RIP PIPELINE</p>
+</div>
+<!-- Action / Filter Button Cluster -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<!-- Search Input -->
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[16px]">search</span>
+<input class="pl-8 pr-space-sm py-1 bg-surface-container-low text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest" placeholder="Search PO, Job ID, Client..." type="text"/>
+</div>
+<!-- Quick Filters -->
+<div class="hidden xl:flex items-center bg-surface-container-low p-0.5">
+<button class="px-space-xs py-0.5 bg-surface-container-lowest text-primary font-label-tech text-label-tech uppercase shadow-xs" type="button">All (1,482)</button>
+<button class="px-space-xs py-0.5 text-on-surface-variant hover:text-on-surface font-label-tech text-label-tech uppercase" type="button">Preflight (34)</button>
+<button class="px-space-xs py-0.5 text-on-surface-variant hover:text-on-surface font-label-tech text-label-tech uppercase" type="button">On Press (86)</button>
+<button class="px-space-xs py-0.5 text-on-surface-variant hover:text-on-surface font-label-tech text-label-tech uppercase" type="button">Finishing (24)</button>
+<button class="px-space-xs py-0.5 text-secondary hover:text-on-surface font-label-tech text-label-tech uppercase font-bold" type="button">Rush (9)</button>
+</div>
+<!-- Export JDF/PDF Button -->
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface px-space-sm py-1 font-label-md text-label-md uppercase tracking-wider flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[15px]">file_download</span>
+<span>Export JDF / XML</span>
+</button>
+</div>
+</div>
+<!-- Data Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-body-sm text-body-sm border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-md text-label-md uppercase">
+<th class="py-2.5 px-3 w-8 text-center">
+<input class="accent-primary rounded-none cursor-pointer" type="checkbox"/>
+</th>
+<th class="py-2.5 px-3">Order ID &amp; Stamp</th>
+<th class="py-2.5 px-3">Customer / Entity</th>
+<th class="py-2.5 px-3">Product Specs &amp; Substrate</th>
+<th class="py-2.5 px-3 text-right">Quantity</th>
+<th class="py-2.5 px-3">Date</th>
+<th class="py-2.5 px-3 text-right">Gross Value</th>
+<th class="py-2.5 px-3">Settlement</th>
+<th class="py-2.5 px-3">Production Status</th>
+<th class="py-2.5 px-3 text-center">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-3 text-center">
+<input class="accent-primary rounded-none cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-space-xs">
+<div class="w-2 h-6 bg-[#219BC3]"></div>
+<div>
+<span class="font-title-md text-title-md font-bold text-on-surface">#PF-9042</span>
+<span class="block font-label-tech text-label-tech text-outline tracking-wider">JDF: AUTO-RIP</span>
+</div>
+</div>
+</td>
+<td class="py-2.5 px-3">
+<span class="font-body-md text-body-md font-bold text-on-surface block">Aethelgard Corp</span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">Attn: Marcus Vance · Enterprise</span>
+</td>
+<td class="py-2.5 px-3 max-w-xs">
+<span class="font-body-md text-body-md text-on-surface block font-medium">Tri-Fold Brochure (A4 to DL)</span>
+<span class="font-label-tech text-label-tech text-outline">300 GSM Velvet Art · Soft-Touch Lam + Spot UV</span>
+</td>
+<td class="py-2.5 px-3 text-right font-headline-sm text-headline-sm font-normal text-on-surface">
+                10,000 <span class="font-label-tech text-label-tech text-outline block">pcs</span>
+</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech text-on-surface-variant whitespace-nowrap">
+                Today, 09:24
+              </td>
+<td class="py-2.5 px-3 text-right font-body-lg text-body-lg font-bold text-on-surface">
+                $3,840.00
+              </td>
+<td class="py-2.5 px-3">
+<span class="bg-primary/10 text-primary px-1.5 py-0.5 font-label-tech text-label-tech uppercase font-bold inline-block">
+                  Paid · Stripe Wire
+                </span>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-md text-label-md uppercase text-primary">In Pre-Press Flight</span>
+</div>
+<span class="font-label-tech text-label-tech text-outline">Check: Bleeds 3mm OK</span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 hover:bg-surface-container text-primary transition-colors" title="Inspect Preflight" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant transition-colors" title="Generate Job Card" type="button">
+<span class="material-symbols-outlined text-[18px]">qr_code</span>
+</button>
+<button class="p-1 hover:bg-surface-container text-secondary transition-colors" title="Hold Job" type="button">
+<span class="material-symbols-outlined text-[18px]">pause_circle</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-surface-container-lowest">
+<td class="py-2.5 px-3 text-center">
+<input class="accent-primary rounded-none cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-space-xs">
+<div class="w-2 h-6 bg-[#D9476B]"></div>
+<div>
+<span class="font-title-md text-title-md font-bold text-on-surface">#PF-9041</span>
+<span class="block font-label-tech text-label-tech text-outline tracking-wider">JDF: MANUAL</span>
+</div>
+</div>
+</td>
+<td class="py-2.5 px-3">
+<span class="font-body-md text-body-md font-bold text-on-surface block">Lumina Publishing Ltd</span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">Attn: Sarah Jenkins · VIP Account</span>
+</td>
+<td class="py-2.5 px-3 max-w-xs">
+<span class="font-body-md text-body-md text-on-surface block font-medium">Perfect Bound Catalog (96pp)</span>
+<span class="font-label-tech text-label-tech text-outline">Cover 350 GSM + Inner 130 GSM Silk · PUR Glue</span>
+</td>
+<td class="py-2.5 px-3 text-right font-headline-sm text-headline-sm font-normal text-on-surface">
+                4,500 <span class="font-label-tech text-label-tech text-outline block">pcs</span>
+</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech text-on-surface-variant whitespace-nowrap">
+                Today, 08:45
+              </td>
+<td class="py-2.5 px-3 text-right font-body-lg text-body-lg font-bold text-on-surface">
+                $12,650.00
+              </td>
+<td class="py-2.5 px-3">
+<span class="bg-[#F5D21B]/30 text-on-surface px-1.5 py-0.5 font-label-tech text-label-tech uppercase font-bold inline-block">
+                  Deposit 50%
+                </span>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#219BC3]"></span>
+<span class="font-label-md text-label-md uppercase text-on-surface">Offset Printing</span>
+</div>
+<span class="font-label-tech text-label-tech text-outline">Press: Heidelberg CX-104</span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 hover:bg-surface-container text-primary transition-colors" title="Inspect Preflight" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant transition-colors" title="Generate Job Card" type="button">
+<span class="material-symbols-outlined text-[18px]">qr_code</span>
+</button>
+<button class="p-1 hover:bg-surface-container text-secondary transition-colors" title="Hold Job" type="button">
+<span class="material-symbols-outlined text-[18px]">pause_circle</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 (Rush Order) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-secondary/5">
+<td class="py-2.5 px-3 text-center">
+<input class="accent-secondary rounded-none cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-space-xs">
+<div class="w-2 h-6 bg-secondary"></div>
+<div>
+<span class="font-title-md text-title-md font-bold text-secondary">#PF-9040</span>
+<span class="block font-label-tech text-label-tech text-secondary font-bold">RUSH PRIORITY</span>
+</div>
+</div>
+</td>
+<td class="py-2.5 px-3">
+<span class="font-body-md text-body-md font-bold text-on-surface block">Apex Tech Expo 2025</span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">Attn: Event Operations Desk</span>
+</td>
+<td class="py-2.5 px-3 max-w-xs">
+<span class="font-body-md text-body-md text-on-surface block font-medium">Delegate Passes + Metallic Lanyards</span>
+<span class="font-label-tech text-label-tech text-outline">Teslin Waterproof 400μ · Double Sided CMYK</span>
+</td>
+<td class="py-2.5 px-3 text-right font-headline-sm text-headline-sm font-normal text-on-surface">
+                15,000 <span class="font-label-tech text-label-tech text-outline block">pcs</span>
+</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech text-on-surface-variant whitespace-nowrap">
+                Today, 07:15
+              </td>
+<td class="py-2.5 px-3 text-right font-body-lg text-body-lg font-bold text-on-surface">
+                $5,920.00
+              </td>
+<td class="py-2.5 px-3">
+<span class="bg-primary/10 text-primary px-1.5 py-0.5 font-label-tech text-label-tech uppercase font-bold inline-block">
+                  Paid Full
+                </span>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#1B2427]"></span>
+<span class="font-label-md text-label-md uppercase text-on-surface">Die-Cut Bindery</span>
+</div>
+<span class="font-label-tech text-label-tech text-secondary font-bold">Slot Punch &amp; Eyeletting</span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 hover:bg-surface-container text-primary transition-colors" title="Inspect Preflight" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant transition-colors" title="Generate Job Card" type="button">
+<span class="material-symbols-outlined text-[18px]">qr_code</span>
+</button>
+<button class="p-1 hover:bg-surface-container text-secondary transition-colors" title="Hold Job" type="button">
+<span class="material-symbols-outlined text-[18px]">pause_circle</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-3 text-center">
+<input class="accent-primary rounded-none cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-space-xs">
+<div class="w-2 h-6 bg-[#F5D21B]"></div>
+<div>
+<span class="font-title-md text-title-md font-bold text-on-surface">#PF-9039</span>
+<span class="block font-label-tech text-label-tech text-outline tracking-wider">JDF: AUTO-RIP</span>
+</div>
+</div>
+</td>
+<td class="py-2.5 px-3">
+<span class="font-body-md text-body-md font-bold text-on-surface block">Krona Botanicals</span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">Attn: Henrik Lindqvist</span>
+</td>
+<td class="py-2.5 px-3 max-w-xs">
+<span class="font-body-md text-body-md text-on-surface block font-medium">Cosmetic Carton Packaging</span>
+<span class="font-label-tech text-label-tech text-outline">Kraft Board 350 GSM · Gold Foil Stamping + Emboss</span>
+</td>
+<td class="py-2.5 px-3 text-right font-headline-sm text-headline-sm font-normal text-on-surface">
+                8,000 <span class="font-label-tech text-label-tech text-outline block">pcs</span>
+</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech text-on-surface-variant whitespace-nowrap">
+                Yesterday, 17:30
+              </td>
+<td class="py-2.5 px-3 text-right font-body-lg text-body-lg font-bold text-on-surface">
+                $4,410.00
+              </td>
+<td class="py-2.5 px-3">
+<span class="bg-surface-container-high text-on-surface px-1.5 py-0.5 font-label-tech text-label-tech uppercase font-bold inline-block">
+                  Pending PO
+                </span>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-md text-label-md uppercase text-tertiary">Curing &amp; Lamination</span>
+</div>
+<span class="font-label-tech text-label-tech text-outline">Thermal Foil Unit B</span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 hover:bg-surface-container text-primary transition-colors" title="Inspect Preflight" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant transition-colors" title="Generate Job Card" type="button">
+<span class="material-symbols-outlined text-[18px]">qr_code</span>
+</button>
+<button class="p-1 hover:bg-surface-container text-secondary transition-colors" title="Hold Job" type="button">
+<span class="material-symbols-outlined text-[18px]">pause_circle</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-3 text-center">
+<input class="accent-primary rounded-none cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-space-xs">
+<div class="w-2 h-6 bg-[#1B2427]"></div>
+<div>
+<span class="font-title-md text-title-md font-bold text-on-surface">#PF-9038</span>
+<span class="block font-label-tech text-label-tech text-outline tracking-wider">JDF: DIRECT CTCP</span>
+</div>
+</div>
+</td>
+<td class="py-2.5 px-3">
+<span class="font-body-md text-body-md font-bold text-on-surface block">St. Jude Foundation</span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">Attn: Diane Morales · Non-Profit</span>
+</td>
+<td class="py-2.5 px-3 max-w-xs">
+<span class="font-body-md text-body-md text-on-surface block font-medium">Annual Donor Report Booklet (32pp)</span>
+<span class="font-label-tech text-label-tech text-outline">FSC Recycled 150 GSM Uncoated · Saddle Stitch</span>
+</td>
+<td class="py-2.5 px-3 text-right font-headline-sm text-headline-sm font-normal text-on-surface">
+                2,000 <span class="font-label-tech text-label-tech text-outline block">pcs</span>
+</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech text-on-surface-variant whitespace-nowrap">
+                Yesterday, 14:10
+              </td>
+<td class="py-2.5 px-3 text-right font-body-lg text-body-lg font-bold text-on-surface">
+                $1,850.00
+              </td>
+<td class="py-2.5 px-3">
+<span class="bg-primary/10 text-primary px-1.5 py-0.5 font-label-tech text-label-tech uppercase font-bold inline-block">
+                  Paid Wire
+                </span>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-md text-label-md uppercase text-primary font-bold">QC Passed</span>
+</div>
+<span class="font-label-tech text-label-tech text-outline">Boxed &amp; Palletized</span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 hover:bg-surface-container text-primary transition-colors" title="Inspect Preflight" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant transition-colors" title="Generate Job Card" type="button">
+<span class="material-symbols-outlined text-[18px]">qr_code</span>
+</button>
+<button class="p-1 hover:bg-surface-container text-secondary transition-colors" title="Hold Job" type="button">
+<span class="material-symbols-outlined text-[18px]">pause_circle</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Queue Telemetry Footer -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-space-md border-t border-surface-container font-label-tech text-label-tech text-on-surface-variant">
+<div class="flex items-center gap-space-sm">
+<span>SHOWING ROWS 1–5 OF 1,482 ORDERS</span>
+<span>·</span>
+<span>PRESSNET SYNC: LATENCY 12ms</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-space-sm py-1 bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-tech text-label-tech" type="button">PREV</button>
+<button class="px-space-sm py-1 bg-primary text-on-primary font-bold font-label-tech text-label-tech" type="button">1</button>
+<button class="px-space-sm py-1 bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-tech text-label-tech" type="button">2</button>
+<button class="px-space-sm py-1 bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-tech text-label-tech" type="button">3</button>
+<span class="px-1 text-outline">...</span>
+<button class="px-space-sm py-1 bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-tech text-label-tech" type="button">296</button>
+<button class="px-space-sm py-1 bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-tech text-label-tech" type="button">NEXT</button>
+</div>
+</div>
+</div>
+<!-- SECTION 4: REAL-TIME PRESS LINE TELEMETRY STATUS DOCK -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pb-space-lg">
+<!-- Heidelberg CX 104 -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-title-md text-title-md uppercase text-on-surface font-bold">Heidelberg CX-104</span>
+<span class="font-label-tech text-label-tech bg-primary/10 text-primary px-1 font-bold">ONLINE · RUNNING</span>
+</div>
+<div class="font-label-tech text-label-tech text-on-surface-variant space-y-0.5">
+<p>JOB #PF-8921 · 300 GSM VELVET BROCHURE</p>
+<p>IMPRESSION SPEED: 14,200 SPH (TARGET: 15,000)</p>
+<p>SPECTRO ΔE: C:0.6 M:0.8 Y:0.5 K:0.9 (STABLE)</p>
+</div>
+</div>
+<div class="w-full bg-surface-container h-1.5 mt-space-sm">
+<div class="bg-[#219BC3] h-full w-[84%]"></div>
+</div>
+</div>
+<!-- HP Indigo 12000 -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-title-md text-title-md uppercase text-on-surface font-bold">HP Indigo 12000 HD</span>
+<span class="font-label-tech text-label-tech bg-[#D9476B]/10 text-secondary px-1 font-bold">ONLINE · 7-COLOR</span>
+</div>
+<div class="font-label-tech text-label-tech text-on-surface-variant space-y-0.5">
+<p>JOB #PF-9040 · TECH EXPO PASSES</p>
+<p>ELECTROINK DENSITY: OPTIMAL · BID 4/7</p>
+<p>SUBSTRATE: TESLIN 400μ SYNTHETIC</p>
+</div>
+</div>
+<div class="w-full bg-surface-container h-1.5 mt-space-sm">
+<div class="bg-[#D9476B] h-full w-[62%]"></div>
+</div>
+</div>
+<!-- Polar Mohr High-Speed Guillotine & UV Coater -->
+<div class="bg-surface-container-lowest p-space-sm shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-title-md text-title-md uppercase text-on-surface font-bold">Polar N 137 Plus Cut</span>
+<span class="font-label-tech text-label-tech bg-[#F5D21B]/30 text-on-surface px-1 font-bold">CALIBRATING</span>
+</div>
+<div class="font-label-tech text-label-tech text-on-surface-variant space-y-0.5">
+<p>BATCH #BT-4412 · DIE SEQUENCE TRIM</p>
+<p>OPTICAL CUT LINE ACCURACY: ±0.05 MM</p>
+<p>AIR TABLE PRESSURE: 6.2 BAR NOMINAL</p>
+</div>
+</div>
+<div class="w-full bg-surface-container h-1.5 mt-space-sm">
+<div class="bg-[#F5D21B] h-full w-[45%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Clean client-side interaction: row selection sync and keyboard quick shortcut
+  document.addEventListener('DOMContentLoaded', () => {
+    const masterCheckbox = document.querySelector('thead input[type="checkbox"]');
+    const rowCheckboxes = document.querySelectorAll('tbody input[type="checkbox"]');
+    
+    if (masterCheckbox) {
+      masterCheckbox.addEventListener('change', (e) => {
+        rowCheckboxes.forEach(cb => {
+          cb.checked = e.target.checked;
+        });
+      });
+    }
+  });
+</script></main></div></body></html>

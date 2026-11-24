@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-high":"#e5e8ec","on-tertiary-fixed-variant":"#534600","secondary-fixed":"#ffd9de","inverse-on-surface":"#eef1f5","on-secondary":"#ffffff","on-surface":"#181c1f","on-tertiary":"#ffffff","tertiary-fixed":"#ffe262","on-error":"#ffffff","primary-fixed":"#bde9ff","surface-container-highest":"#e0e3e7","on-background":"#181c1f","background":"#f7f9fe","surface-container-lowest":"#ffffff","tertiary-container":"#c7aa00","on-secondary-fixed-variant":"#8f0638","surface":"#f7f9fe","inverse-primary":"#6bd3fd","secondary":"#b0274e","outline-variant":"#bdc8ce","on-primary-fixed":"#001f2a","on-primary":"#ffffff","on-error-container":"#93000a","tertiary-fixed-dim":"#e7c500","on-primary-container":"#fbfdff","on-primary-fixed-variant":"#004d64","surface-tint":"#006684","inverse-surface":"#2d3134","surface-dim":"#d7dade","secondary-fixed-dim":"#ffb2bd","on-tertiary-container":"#4b3f00","primary-container":"#007ea1","error":"#ba1a1a","surface-container-low":"#f1f4f8","error-container":"#ffdad6","tertiary":"#6f5d00","on-secondary-container":"#670025","on-surface-variant":"#3e484e","primary":"#006480","primary-fixed-dim":"#6bd3fd","secondary-container":"#fe6386","surface-bright":"#f7f9fe","on-secondary-fixed":"#400014","on-tertiary-fixed":"#221b00","outline":"#6e797e","surface-container":"#ebeef2","surface-variant":"#e0e3e7"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-lg":"1.5rem","margin-lg":"2.5rem",gutter:"1rem","space-xs":"0.25rem","margin-md":"1.5rem",margin:"1rem","space-sm":"0.5rem","space-xl":"2.25rem","gutter-lg":"1.5rem","space-md":"1rem"},fontFamily:{"body-md":["Times New Roman"],"label-lg":["Times New Roman"],"headline-lg":["Times New Roman"],"label-md":["Times New Roman"],"headline-sm":["Times New Roman"],"body-lg":["Times New Roman"],"body-sm":["Times New Roman"],"display-lg":["Times New Roman"],"title-md":["Times New Roman"],"headline-xl-mobile":["Times New Roman"],"label-tech":["Times New Roman"],"headline-xl":["Times New Roman"]},fontSize:{"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"label-lg":["13px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"700"}],"headline-lg":["24px",{lineHeight:"32px",fontWeight:"700"}],"label-md":["11px",{lineHeight:"14px",letterSpacing:"0.06em",fontWeight:"700"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"display-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"700"}],"title-md":["18px",{lineHeight:"24px",fontWeight:"600"}],"headline-xl-mobile":["26px",{lineHeight:"32px",letterSpacing:"0em",fontWeight:"700"}],"label-tech":["10px",{lineHeight:"12px",letterSpacing:"0.08em",fontWeight:"400"}],"headline-xl":["32px",{lineHeight:"40px",letterSpacing:"-0.01em",fontWeight:"700"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low border-r border-outline-variant/60 z-50 flex flex-col"><div class="w-full h-1 grid grid-cols-4"><div class="bg-[#219BC3] h-full"></div><div class="bg-[#D9476B] h-full"></div><div class="bg-[#F5D21B] h-full"></div><div class="bg-[#1B2427] h-full"></div></div><div class="h-16 px-space-md border-b border-outline-variant/60 flex items-center justify-between bg-surface-container-lowest"><div class="flex items-center gap-space-xs"><img alt="PrintFlow OS Logo" class="h-7 w-auto object-contain" src="/images/printflow-logo.svg"/><span class="font-headline-sm text-headline-sm uppercase tracking-wide text-on-surface">PrintFlow</span></div><span class="font-label-tech text-label-tech border border-outline-variant px-1 text-on-surface-variant">v4.2</span></div><div class="px-space-md py-space-sm border-b border-outline-variant/40 bg-surface-container"><div class="flex items-center justify-between text-on-surface-variant"><span class="font-label-tech text-label-tech uppercase tracking-widest">ADMIN CONSOLE</span><span class="font-label-tech text-label-tech text-primary">PRESSNET ACTIVE</span></div></div><nav class="flex-1 overflow-y-auto px-space-xs py-space-sm space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-bold border-l-4 border-secondary"><a class="flex items-center gap-space-sm px-space-md py-space-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span><span class="font-label-lg text-label-lg uppercase">Overview</span></a><a class="flex items-center justify-between px-space-md py-space-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="order-queue-approval" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span class="font-label-lg text-label-lg uppercase">Order Queue &amp; Approval</span></div><span class="font-label-tech text-label-tech bg-secondary text-on-secondary px-1">14</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-xs transition-colors bg-primary-container text-on-primary-container font-bold border-l-4 border-secondary" data-path="production-stages" href="#"><span class="material-symbols-outlined text-[18px]">precision_manufacturing</span><span class="font-label-lg text-label-lg uppercase">Production Stages</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="digital-job-cards" href="#"><span class="material-symbols-outlined text-[18px]">qr_code_2</span><span class="font-label-lg text-label-lg uppercase">Digital Job Cards</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="product-paper-catalog" href="#"><span class="material-symbols-outlined text-[18px]">layers</span><span class="font-label-lg text-label-lg uppercase">Product &amp; Paper Catalog</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="pricing-cost-estimator" href="#"><span class="material-symbols-outlined text-[18px]">calculate</span><span class="font-label-lg text-label-lg uppercase">Pricing &amp; Estimator</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reports-telemetry" href="#"><span class="material-symbols-outlined text-[18px]">monitoring</span><span class="font-label-lg text-label-lg uppercase">Reports &amp; Telemetry</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="system-settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span class="font-label-lg text-label-lg uppercase">System Settings</span></a></nav><div class="p-space-sm border-t border-outline-variant/60 bg-surface-container-lowest"><div class="border border-outline-variant/60 p-space-xs flex items-center justify-between text-outline"><span class="font-label-tech text-label-tech uppercase">OFFSET C4 · 300LPI</span><span class="font-label-tech text-label-tech">⌖ REG OK</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/95 backdrop-blur-md border-b border-outline-variant/60 z-40 flex items-center justify-between px-gutter-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs border border-outline-variant/70 bg-surface-container-lowest px-space-sm py-space-xs"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-tech text-label-tech uppercase text-on-surface font-semibold">Pressline 04: Online · Calibration 99.4%</span></div><span class="font-label-tech text-label-tech text-on-surface-variant hidden xl:inline">[ SPEED: 14,200 IMP/H · INK DENSITY DELTA-E &lt; 1.2 ]</span></div><div class="flex items-center gap-space-md"><div class="flex items-center border border-outline-variant/70 p-0.5 bg-surface-container-low"><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface uppercase" data-path="store-catalog" href="#">Customer Portal</a><a class="px-space-sm py-space-xs font-label-md text-label-md bg-surface-container-lowest text-primary uppercase shadow-sm border border-outline-variant/50" data-path="overview" href="#">Admin Centre</a></div><button class="w-8 h-8 flex items-center justify-center border border-outline-variant hover:bg-surface-container-high transition-colors" onclick="document.documentElement.classList.toggle('dark')" type="button"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">light_mode</span></button><div class="flex items-center gap-space-xs border border-outline-variant/60 pl-space-xs pr-space-sm py-0.5 bg-surface-container-lowest"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden sm:flex flex-col text-left"><span class="font-label-md text-label-md uppercase text-on-surface">Master Pressman</span><span class="font-label-tech text-label-tech text-on-surface-variant">SHIFT LEAD #01</span></div><span class="material-symbols-outlined text-[16px] text-outline ml-space-xs">expand_more</span></div></div></header><main class="relative pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Global Telemetry Banner / Calibration Strip -->
+<div class="w-full bg-surface-container-lowest px-gutter-lg py-space-sm shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 bg-[#219BC3] inline-block"></span>
+<span class="w-3 h-3 bg-[#D9476B] inline-block"></span>
+<span class="w-3 h-3 bg-[#F5D21B] inline-block"></span>
+<span class="w-3 h-3 bg-[#1B2427] inline-block"></span>
+</div>
+<div class="h-4 w-px bg-surface-container-high hidden sm:block"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface">Production Orchestration &amp; Job Dispatch</span>
+<span class="font-label-tech text-label-tech bg-primary-fixed text-on-primary-fixed px-1.5 py-0.5 font-bold">SYSTEM ACTIVE</span>
+</div>
+<span class="font-label-tech text-label-tech text-on-surface-variant">WORKFLOW ENGINE: HARLEQUIN RIP v13.2 · CTP QUEUE ENGAGED · DELTA-E TOLERANCE ±0.8</span>
+</div>
+</div>
+<!-- Live Imposition Metrics -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="px-space-sm py-1 bg-surface-container-low flex flex-col items-start">
+<span class="font-label-tech text-label-tech text-on-surface-variant">ACTIVE SHEET RUNS</span>
+<span class="font-label-lg text-label-lg text-primary font-bold">33 JOBS IN LINE</span>
+</div>
+<div class="px-space-sm py-1 bg-surface-container-low flex flex-col items-start">
+<span class="font-label-tech text-label-tech text-on-surface-variant">SPEEDMASTER XL 106</span>
+<span class="font-label-lg text-label-lg text-secondary font-bold">14,850 SPH (PEAK)</span>
+</div>
+<div class="px-space-sm py-1 bg-surface-container-low flex flex-col items-start">
+<span class="font-label-tech text-label-tech text-on-surface-variant">IMPOSITION EFFICIENCY</span>
+<span class="font-label-lg text-label-lg text-tertiary font-bold">96.4% YIELD</span>
+</div>
+<button class="bg-primary text-on-primary px-space-md py-space-xs font-label-lg text-label-lg uppercase shadow-sm hover:bg-primary-container hover:text-on-primary-container transition-all flex items-center gap-space-xs" onclick="alert('Synchronizing RIP queue with CTP plate generator...')" type="button">
+<span class="material-symbols-outlined text-[16px]">sync_alt</span>
+        Sync Imposition
+      </button>
+</div>
+</div>
+<div class="p-gutter-lg space-y-margin-lg">
+<!-- SECTION 1: MASTER DIGITAL JOB CARD (#PF-8921-X) -->
+<section class="relative bg-surface-container-lowest shadow-md overflow-hidden">
+<!-- 4-Color CMYK Prepress Top Edge Strip -->
+<div class="w-full h-1.5 grid grid-cols-4">
+<div class="bg-[#219BC3] h-full"></div>
+<div class="bg-[#D9476B] h-full"></div>
+<div class="bg-[#F5D21B] h-full"></div>
+<div class="bg-[#1B2427] h-full"></div>
+</div>
+<!-- Header docket bar -->
+<div class="p-space-md bg-surface-container-low flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-tech text-label-tech bg-[#1B2427] text-white px-2 py-0.5 tracking-widest font-bold">PRESS TICKET</span>
+<div>
+<h1 class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-tight">
+              Digital Job Card / Ticket #PF-8921-X
+            </h1>
+<p class="font-label-tech text-label-tech text-on-surface-variant">
+              SECURE PRESSROOM REQUISITION · DOCKET CODE: IMP-8921-CORP-AR · ROUTING: UNIT-03
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md bg-secondary text-on-secondary px-2.5 py-1 uppercase tracking-widest font-bold shadow-sm">
+            HIGH PRIORITY COMMERCIAL RUN
+          </span>
+<span class="font-label-tech text-label-tech bg-surface-container-high px-2 py-1 text-on-surface">
+            TARGET RELEASE: TODAY 18:30 GMT
+          </span>
+</div>
+</div>
+<!-- Main Docket Content Grid -->
+<div class="p-space-lg grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg">
+<!-- Left: Prepress Flight & Pressfloor QR Scan (3 Cols) -->
+<div class="lg:col-span-3 flex flex-col gap-space-md bg-surface-container-low p-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-bold">Floor Scan Code</span>
+<span class="font-label-tech text-label-tech text-outline">TAG #004-9811</span>
+</div>
+<!-- Physical QR Box with Optical Corner Ticks -->
+<div class="relative bg-surface-container-lowest p-space-md flex flex-col items-center justify-center shadow-sm">
+<!-- Cut/Registration Marks around QR -->
+<div class="w-full flex justify-between items-center text-outline-variant font-label-tech text-[10px]">
+<span>⌈ 3mm BLEED</span>
+<span>⊤</span>
+<span>⌉ 3mm BLEED</span>
+</div>
+<!-- Stylized Crisp QR SVG -->
+<div class="my-space-sm p-space-sm bg-white">
+<svg class="w-36 h-36" fill="currentColor" viewbox="0 0 100 100">
+<!-- QR matrix simulation -->
+<rect fill="#181c1f" height="26" width="26" x="5" y="5"></rect>
+<rect fill="#ffffff" height="18" width="18" x="9" y="9"></rect>
+<rect fill="#181c1f" height="10" width="10" x="13" y="13"></rect>
+<rect fill="#181c1f" height="26" width="26" x="69" y="5"></rect>
+<rect fill="#ffffff" height="18" width="18" x="73" y="9"></rect>
+<rect fill="#181c1f" height="10" width="10" x="77" y="13"></rect>
+<rect fill="#181c1f" height="26" width="26" x="5" y="69"></rect>
+<rect fill="#ffffff" height="18" width="18" x="9" y="73"></rect>
+<rect fill="#181c1f" height="10" width="10" x="13" y="77"></rect>
+<!-- Random data pattern blocks -->
+<rect fill="#181c1f" height="6" width="6" x="36" y="8"></rect>
+<rect fill="#181c1f" height="6" width="8" x="46" y="8"></rect>
+<rect fill="#181c1f" height="6" width="6" x="58" y="12"></rect>
+<rect fill="#181c1f" height="8" width="8" x="36" y="20"></rect>
+<rect fill="#181c1f" height="4" width="10" x="50" y="22"></rect>
+<rect fill="#181c1f" height="8" width="6" x="8" y="38"></rect>
+<rect fill="#181c1f" height="6" width="8" x="18" y="42"></rect>
+<rect fill="#181c1f" height="6" width="6" x="32" y="36"></rect>
+<rect fill="#181c1f" height="6" width="14" x="42" y="34"></rect>
+<rect fill="#181c1f" height="10" width="8" x="62" y="36"></rect>
+<rect fill="#181c1f" height="6" width="16" x="76" y="38"></rect>
+<rect fill="#181c1f" height="6" width="12" x="34" y="48"></rect>
+<rect fill="#181c1f" height="12" width="8" x="52" y="48"></rect>
+<rect fill="#181c1f" height="6" width="12" x="66" y="52"></rect>
+<rect fill="#181c1f" height="8" width="10" x="82" y="50"></rect>
+<rect fill="#181c1f" height="14" width="6" x="36" y="66"></rect>
+<rect fill="#181c1f" height="6" width="12" x="48" y="68"></rect>
+<rect fill="#181c1f" height="10" width="8" x="66" y="64"></rect>
+<rect fill="#181c1f" height="6" width="12" x="80" y="66"></rect>
+<rect fill="#181c1f" height="12" width="8" x="46" y="80"></rect>
+<rect fill="#181c1f" height="10" width="14" x="60" y="82"></rect>
+<rect fill="#181c1f" height="14" width="12" x="80" y="78"></rect>
+</svg>
+</div>
+<div class="w-full flex justify-between items-center text-outline-variant font-label-tech text-[10px]">
+<span>⌊ CUT LINE</span>
+<span>⊥</span>
+<span>⌋ CUT LINE</span>
+</div>
+</div>
+<!-- Plate & Imposition Thumb Preview -->
+<div class="space-y-space-xs text-on-surface">
+<span class="font-label-tech text-label-tech uppercase text-outline">PLATE PROOF VISUALIZER</span>
+<div class="relative bg-surface-container-high h-28 overflow-hidden flex items-center justify-center">
+<img class="object-cover w-full h-full opacity-90" data-alt="High precision architectural cyan-tinted prepress 16-page imposition signature layout with registration crosshairs, color scale test strips and trim marks, industrial printing press quality inspection style, editorial lighting" src="/images/stitch-asset-02.jpg"/>
+<div class="absolute inset-0 bg-primary/10 flex items-end justify-between p-space-xs text-white bg-gradient-to-t from-black/80 to-transparent">
+<span class="font-label-tech text-label-tech">SIG #01 FRONT (8-UP)</span>
+<span class="font-label-tech text-label-tech bg-secondary px-1 text-white">READY</span>
+</div>
+</div>
+<!-- CMYK Separation Layer Toggles -->
+<div class="grid grid-cols-4 gap-1 text-center font-label-tech text-label-tech pt-1">
+<button class="bg-[#219BC3] text-white py-1 hover:brightness-110 font-bold">C 100%</button>
+<button class="bg-[#D9476B] text-white py-1 hover:brightness-110 font-bold">M 100%</button>
+<button class="bg-[#F5D21B] text-black py-1 hover:brightness-110 font-bold">Y 100%</button>
+<button class="bg-[#1B2427] text-white py-1 hover:brightness-110 font-bold">K 100%</button>
+</div>
+</div>
+</div>
+<!-- Center: Detailed Engineering Technical Specification Matrix (6 Cols) -->
+<div class="lg:col-span-6 space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<h2 class="font-title-md text-title-md uppercase text-on-surface">Prepress Technical Docket &amp; Bindery Formula</h2>
+<span class="font-label-tech text-label-tech text-outline tracking-wider">[ IMPOSITION: 16-UP SIGNATURE · 300 LPI ]</span>
+</div>
+<!-- Specs Table Bento Style -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<div class="p-space-sm bg-surface-container-low">
+<span class="font-label-tech text-label-tech uppercase text-outline">01. PRODUCT SPECIFICATION</span>
+<p class="font-headline-sm text-headline-sm text-on-surface pt-0.5">Corporate Annual Report</p>
+<div class="mt-1 space-y-0.5 font-body-sm text-body-sm text-on-surface-variant">
+<p>Trim Size: <strong class="text-on-surface font-bold">210 × 297 mm (A4)</strong></p>
+<p>Bleed: <strong class="text-on-surface font-bold">3.0 mm</strong> · Spine Bulk: <strong class="text-on-surface font-bold">4.82 mm</strong></p>
+<p>Page Count: <strong class="text-on-surface font-bold">80 Inside + 4pp Cover</strong></p>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-low">
+<span class="font-label-tech text-label-tech uppercase text-outline">02. PRESS ASSIGNMENT &amp; RUN</span>
+<p class="font-headline-sm text-headline-sm text-primary pt-0.5">Heidelberg Speedmaster XL 106</p>
+<div class="mt-1 space-y-0.5 font-body-sm text-body-sm text-on-surface-variant">
+<p>Target Quantity: <strong class="text-on-surface font-bold">5,000 Copies</strong></p>
+<p>Overs Allowance: <strong class="text-on-surface font-bold">+2.0% (5,100 Gross Sheets)</strong></p>
+<p>CTP Plates: <strong class="text-on-surface font-bold">Suprasetter 1030 × 790 mm</strong></p>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-low">
+<span class="font-label-tech text-label-tech uppercase text-outline">03. COVER STOCK &amp; FINISHING</span>
+<p class="font-title-md text-title-md text-on-surface pt-0.5">350 GSM Silk Artboard</p>
+<div class="mt-1 space-y-0.5 font-body-sm text-body-sm text-on-surface-variant">
+<p>Color: <strong class="text-on-surface font-bold">4/4 CMYK Direct</strong></p>
+<p>Surface: <strong class="text-on-surface font-bold">Matte Soft-Touch Lam (Outer)</strong></p>
+<p>Embellishment: <strong class="text-secondary font-bold">Raised Gold Foil (Curzon #402)</strong></p>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-low">
+<span class="font-label-tech text-label-tech uppercase text-outline">04. TEXT STOCK &amp; BINDERY SPEC</span>
+<p class="font-title-md text-title-md text-on-surface pt-0.5">150 GSM Sappi Galerie Art</p>
+<div class="mt-1 space-y-0.5 font-body-sm text-body-sm text-on-surface-variant">
+<p>Binding: <strong class="text-on-surface font-bold">PUR Perfect Bound (Hot Melt)</strong></p>
+<p>Trimming: <strong class="text-on-surface font-bold">3-Knife Rotary High-Speed Trim</strong></p>
+<p>Carton Pack: <strong class="text-on-surface font-bold">25 Units/Carton Double-Wall</strong></p>
+</div>
+</div>
+</div>
+<!-- Color Channel Density Reading Bar (Densitometer QC) -->
+<div class="p-space-sm bg-surface-container">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-tech text-label-tech uppercase text-on-surface font-bold">DENSITOMETER SOLID INK TARGETS (ISO 12647-2)</span>
+<span class="font-label-tech text-label-tech text-primary font-bold">POLARIZED STATUS E OK</span>
+</div>
+<div class="grid grid-cols-4 gap-space-sm text-center">
+<div class="bg-surface-container-lowest p-space-xs">
+<span class="font-label-tech text-label-tech text-[#219BC3] font-bold">CYAN (C)</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">1.45 <span class="text-body-sm font-normal text-outline">D</span></p>
+<span class="font-label-tech text-label-tech text-on-surface-variant">ΔE 0.42</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs">
+<span class="font-label-tech text-label-tech text-[#D9476B] font-bold">MAGENTA (M)</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">1.50 <span class="text-body-sm font-normal text-outline">D</span></p>
+<span class="font-label-tech text-label-tech text-on-surface-variant">ΔE 0.61</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs">
+<span class="font-label-tech text-label-tech text-tertiary-container font-bold">YELLOW (Y)</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">1.05 <span class="text-body-sm font-normal text-outline">D</span></p>
+<span class="font-label-tech text-label-tech text-on-surface-variant">ΔE 0.38</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs">
+<span class="font-label-tech text-label-tech text-[#1B2427] font-bold">BLACK (K)</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">1.80 <span class="text-body-sm font-normal text-outline">D</span></p>
+<span class="font-label-tech text-label-tech text-on-surface-variant">ΔE 0.55</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Sign-off, Quality Checklist & Plate Dispatch Authorization (3 Cols) -->
+<div class="lg:col-span-3 flex flex-col justify-between bg-surface-container-low p-space-md">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-bold">Pressroom Verification</span>
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+</div>
+<!-- Checkbox Interactive List -->
+<div class="space-y-2 pt-1 font-body-sm text-body-sm text-on-surface">
+<label class="flex items-center gap-space-xs cursor-pointer">
+<input checked="" class="w-4 h-4 accent-primary" type="checkbox"/>
+<span>Preflight PDF/X-4a Verified</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer">
+<input checked="" class="w-4 h-4 accent-primary" type="checkbox"/>
+<span>Trapping &amp; Overprint 0.08pt Set</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer">
+<input checked="" class="w-4 h-4 accent-primary" type="checkbox"/>
+<span>Suprasetter CTP Plates Baked</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer">
+<input checked="" class="w-4 h-4 accent-primary" type="checkbox"/>
+<span>Ink Fountain Calibration Complete</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer">
+<input class="w-4 h-4 accent-primary" type="checkbox"/>
+<span>First 50 Make-Ready Sheets Inspected</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer">
+<input class="w-4 h-4 accent-primary" type="checkbox"/>
+<span>Foil Stamping Die Lockup Confirmed</span>
+</label>
+</div>
+</div>
+<!-- Digital Stamp Approval Box -->
+<div class="mt-space-md p-space-sm bg-surface-container-lowest text-center relative shadow-sm">
+<div class="w-full flex justify-between text-outline-variant font-label-tech">
+<span>⌥ 99.8% ACC</span>
+<span>STAMP #891</span>
+</div>
+<div class="py-space-xs">
+<span class="font-label-tech text-label-tech uppercase tracking-widest text-secondary font-bold">APPROVED FOR PRESS RUN</span>
+<p class="font-headline-sm text-headline-sm uppercase text-primary">H. VANDERBILT</p>
+<p class="font-label-tech text-label-tech text-on-surface-variant">SENIOR CTP &amp; OFFSET PRESS MASTER</p>
+<p class="font-label-tech text-label-tech text-outline">STAMPED: 2024-10-24 14:18:02</p>
+</div>
+<button class="w-full mt-space-xs bg-secondary text-on-secondary py-1 font-label-md text-label-md uppercase tracking-wider hover:opacity-90 transition-opacity">
+              Re-Authorise Docket
+            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: 8-STAGE INDUSTRIAL PRODUCTION WORKFLOW BOARD -->
+<section class="space-y-space-md">
+<!-- Section Title & Stage Filter Bar -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm pb-space-xs">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 bg-primary"></span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">
+              8-Stage Industrial Production Pipeline
+            </h2>
+</div>
+<p class="font-label-tech text-label-tech text-on-surface-variant">
+            ACTIVE PRESSROOM FLOOR MONITOR · 33 BATCHES SCHEDULED ACROSS CTP, OFFSET, FINISHING &amp; LOGISTICS
+          </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center bg-surface-container-low px-space-xs py-1">
+<span class="material-symbols-outlined text-[16px] text-outline mr-1">filter_list</span>
+<span class="font-label-tech text-label-tech uppercase text-on-surface-variant mr-2">Filter:</span>
+<button class="font-label-tech text-label-tech px-2 py-0.5 bg-surface-container-lowest text-primary font-bold shadow-sm">All Stages (33)</button>
+<button class="font-label-tech text-label-tech px-2 py-0.5 text-on-surface-variant hover:text-on-surface">Urgent Only (4)</button>
+<button class="font-label-tech text-label-tech px-2 py-0.5 text-on-surface-variant hover:text-on-surface">Issues (2)</button>
+</div>
+</div>
+</div>
+<!-- Horizontal Drag/Scrollable Pipeline Grid (8 Stages) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-8 gap-space-sm overflow-x-auto pb-space-sm">
+<!-- STAGE 1: PRE-PRESS & RIP -->
+<div class="flex flex-col bg-surface-container-low p-space-xs space-y-space-xs">
+<div class="p-space-xs bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="font-label-tech text-label-tech font-bold text-primary">01</span>
+<span class="font-label-md text-label-md uppercase text-on-surface">Pre-Press &amp; RIP</span>
+</div>
+<span class="font-label-tech text-label-tech bg-primary text-on-primary px-1.5 py-0.2">4</span>
+</div>
+<span class="font-label-tech text-label-tech text-outline px-1">CTP · FLIGHTCHECK · BLEED</span>
+<!-- Cards Container -->
+<div class="space-y-space-xs flex-1">
+<!-- Job Card 1 -->
+<div class="bg-surface-container-lowest p-space-xs shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between font-label-tech text-label-tech">
+<span class="text-primary font-bold">#PF-8930</span>
+<span class="bg-error-container text-on-error-container px-1 font-bold">Issue: Bleed +0.5mm</span>
+</div>
+<p class="font-title-md text-title-md text-on-surface leading-tight mt-1">Artisan Coffee Menu</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Fedrigoni Tintoretto 300 GSM</p>
+<div class="mt-2 pt-1 flex items-center justify-between font-label-tech text-label-tech text-outline">
+<span>OP: J. Weber</span>
+<span>08:42</span>
+</div>
+</div>
+<!-- Job Card 2 -->
+<div class="bg-surface-container-lowest p-space-xs shadow-sm">
+<div class="flex items-center justify-between font-label-tech text-label-tech">
+<span class="text-primary font-bold">#PF-8933</span>
+<span class="bg-surface-container text-on-surface-variant px-1">Trapping OK</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface font-semibold leading-tight mt-1">Nordic Style Lookbook</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Munken Polar 170 GSM</p>
+<div class="mt-2 pt-1 flex items-center justify-between font-label-tech text-label-tech text-outline">
+<span>OP: A. Thorne</span>
+<span>10:15</span>
+</div>
+</div>
+</div>
+</div>
+<!-- STAGE 2: PRINTING / PRESSWORK -->
+<div class="flex flex-col bg-surface-container-low p-space-xs space-y-space-xs">
+<div class="p-space-xs bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="font-label-tech text-label-tech font-bold text-primary">02</span>
+<span class="font-label-md text-label-md uppercase text-on-surface">Printing Press</span>
+</div>
+<span class="font-label-tech text-label-tech bg-primary text-on-primary px-1.5 py-0.2">6</span>
+</div>
+<span class="font-label-tech text-label-tech text-outline px-1">HEIDELBERG · INDIGO 12000</span>
+<div class="space-y-space-xs flex-1">
+<!-- Job Card Selected Active -->
+<div class="bg-surface-container-lowest p-space-xs shadow-sm">
+<div class="flex items-center justify-between font-label-tech text-label-tech">
+<span class="text-secondary font-bold">#PF-8921-X</span>
+<span class="bg-primary text-on-primary px-1">RUNNING 64%</span>
+</div>
+<p class="font-title-md text-title-md text-on-surface leading-tight mt-1">Corporate Annual Report</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sappi Magno Silk 350 GSM</p>
+<div class="w-full bg-surface-container-high h-1.5 mt-2 overflow-hidden">
+<div class="bg-primary h-full w-[64%]"></div>
+</div>
+<div class="mt-2 pt-1 flex items-center justify-between font-label-tech text-label-tech text-outline">
+<span>UNIT #03 · H. Van</span>
+<span>3,200/5,000</span>
+</div>
+</div>
+<!-- Job Card 4 -->
+<div class="bg-surface-container-lowest p-space-xs shadow-sm">
+<div class="flex items-center justify-between font-label-tech text-label-tech">
+<span class="text-primary font-bold">#PF-8919</span>
+<span class="bg-surface-container-high text-on-surface px-1">Makeready</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface font-semibold leading-tight mt-1">Luxury Perfume Cartons</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Invercote G 400 GSM</p>
+<div class="mt-2 pt-1 flex items-center justify-between font-label-tech text-label-tech text-outline">
+<span>INDIGO 12K</span>
+<span>12:00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- STAGE 3: QUALITY & SPECTRO QC -->
+<div class="flex flex-col bg-surface-container-low p-space-xs space-y-space-xs">
+<div class="p-space-xs bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="font-label-tech text-label-tech font-bold text-primary">03</span>
+<span class="font-label-md text-label-md uppercase text-on-surface">Spectro QC</span>
+</div>
+<span class="font-label-tech text-label-tech bg-primary text-on-primary px-1.5 py-0.2">3</span>
+</div>
+<span class="font-label-tech text-label-tech text-outline px-1">DENSITY · ΔE · REG CHECK</span>
+<div class="space-y-space-xs flex-1">
+<!-- Job Card -->
+<div class="bg-surface-container-lowest p-space-xs shadow-sm">
+<div class="flex items-center justify-between font-label-tech text-label-tech">
+<span class="text-primary font-bold">#PF-8914</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-1 font-bold">Testing ΔE</span>
+</div>
+<p class="font-title-md text-title-md text-on-surface leading-tight mt-1">Cosmetic Brand Brochure</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Symbol Tatami 250 GSM</p>
+<div class="mt-2 pt-1 flex items-center justify-between font-label-tech text-label-tech text-outline">
+<span>QC: M. Dupuis</span>
+<span>ΔE: 0.72 OK</span>
+</div>
+</div>
+</div>
+</div>
+<!-- STAGE 4: FINISHING & COATING -->
+<div class="flex flex-col bg-surface-container-low p-space-xs space-y-space-xs">
+<div class="p-space-xs bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="font-label-tech text-label-tech font-bold text-primary">04</span>
+<span class="font-label-md text-label-md uppercase text-on-surface">Finishing</span>
+</div>
+<span class="font-label-tech text-label-tech bg-primary text-on-primary px-1.5 py-0.2">5</span>
+</div>
+<span class="font-label-tech text-label-tech text-outline px-1">LAM · SPOT UV · FOIL</span>
+<div class="space-y-space-xs flex-1">
+<!-- Job Card -->
+<div class="bg-surface-container-lowest p-space-xs shadow-sm">
+<div class="flex items-center justify-between font-label-tech text-label-tech">
+<span class="text-primary font-bold">#PF-8908</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant px-1 font-bold">Gold Foil Hot</span>
+</div>
+<p class="font-title-md text-title-md text-on-surface leading-tight mt-1">Whiskey Gift Sleeves</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Arjowiggins Curious 320 GSM</p>
+<div class="mt-2 pt-1 flex items-center justify-between font-label-tech text-label-tech text-outline">
+<span>OP: D. Kroll</span>
+<span>Die #14-B</span>
+</div>
+</div>
+<!-- Job Card -->
+<div class="bg-surface-container-lowest p-space-xs shadow-sm">
+<div class="flex items-center justify-between font-label-tech text-label-tech">
+<span class="text-primary font-bold">#PF-8911</span>
+<span class="bg-surface-container-high text-on-surface px-1">Matte Lam</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface font-semibold leading-tight mt-1">Real Estate Folios</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Creator Silk 350 GSM</p>
+<div class="mt-2 pt-1 flex items-center justify-between font-label-tech text-label-tech text-outline">
+<span>LINE 2 · S. Reed</span>
+<span>13:40</span>
+</div>
+</div>
+</div>
+</div>
+<!-- STAGE 5: FOLDING & BINDERY -->
+<div class="flex flex-col bg-surface-container-low p-space-xs space-y-space-xs">
+<div class="p-space-xs bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="font-label-tech text-label-tech font-bold text-primary">05</span>
+<span class="font-label-md text-label-md uppercase text-on-surface">Folding / Bind</span>
+</div>
+<span class="font-label-tech text-label-tech bg-primary text-on-primary px-1.5 py-0.2">4</span>
+</div>
+<span class="font-label-tech text-label-tech text-outline px-1">PUR · SADDLE · 3-KNIFE</span>
+<div class="space-y-space-xs flex-1">
+<!-- Job Card -->
+<div class="bg-surface-container-lowest p-space-xs shadow-sm">
+<div class="flex items-center justify-between font-label-tech text-label-tech">
+<span class="text-primary font-bold">#PF-8902</span>
+<span class="bg-primary-fixed text-on-primary-fixed px-1 font-bold">PUR Bind Line</span>
+</div>
+<p class="font-title-md text-title-md text-on-surface leading-tight mt-1">Architecture Monograph</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">1,200 Hardcover Books</p>
+<div class="mt-2 pt-1 flex items-center justify-between font-label-tech text-label-tech text-outline">
+<span>BINDER #01</span>
+<span>Spine 12mm</span>
+</div>
+</div>
+</div>
+</div>
+<!-- STAGE 6: READY FOR DELIVERY -->
+<div class="flex flex-col bg-surface-container-low p-space-xs space-y-space-xs">
+<div class="p-space-xs bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="font-label-tech text-label-tech font-bold text-primary">06</span>
+<span class="font-label-md text-label-md uppercase text-on-surface">Pallet Staging</span>
+</div>
+<span class="font-label-tech text-label-tech bg-primary text-on-primary px-1.5 py-0.2">7</span>
+</div>
+<span class="font-label-tech text-label-tech text-outline px-1">PACKED · SHRINK · TAGGED</span>
+<div class="space-y-space-xs flex-1">
+<!-- Job Card -->
+<div class="bg-surface-container-lowest p-space-xs shadow-sm">
+<div class="flex items-center justify-between font-label-tech text-label-tech">
+<span class="text-primary font-bold">#PF-8894</span>
+<span class="bg-surface-container-highest text-on-surface px-1">3 Pallets</span>
+</div>
+<p class="font-title-md text-title-md text-on-surface leading-tight mt-1">Pharma Product Inserts</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">50,000 Pcs · Bible Paper</p>
+<div class="mt-2 pt-1 flex items-center justify-between font-label-tech text-label-tech text-outline">
+<span>BAY 04 · R. Diaz</span>
+<span>WEIGHT 410kg</span>
+</div>
+</div>
+</div>
+</div>
+<!-- STAGE 7: DISPATCHED / COURIER -->
+<div class="flex flex-col bg-surface-container-low p-space-xs space-y-space-xs">
+<div class="p-space-xs bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="font-label-tech text-label-tech font-bold text-primary">07</span>
+<span class="font-label-md text-label-md uppercase text-on-surface">Dispatched</span>
+</div>
+<span class="font-label-tech text-label-tech bg-primary text-on-primary px-1.5 py-0.2">5</span>
+</div>
+<span class="font-label-tech text-label-tech text-outline px-1">FEDEX FREIGHT · VAN 02</span>
+<div class="space-y-space-xs flex-1">
+<!-- Job Card -->
+<div class="bg-surface-container-lowest p-space-xs shadow-sm">
+<div class="flex items-center justify-between font-label-tech text-label-tech">
+<span class="text-primary font-bold">#PF-8889</span>
+<span class="bg-primary-container text-on-primary-container px-1">Transit</span>
+</div>
+<p class="font-title-md text-title-md text-on-surface leading-tight mt-1">Fashion Week Invites</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tracking: FDX-990412</p>
+<div class="mt-2 pt-1 flex items-center justify-between font-label-tech text-label-tech text-outline">
+<span>EXPEDITED</span>
+<span>ETA 16:30</span>
+</div>
+</div>
+</div>
+</div>
+<!-- STAGE 8: DELIVERED & ARCHIVED -->
+<div class="flex flex-col bg-surface-container-low p-space-xs space-y-space-xs">
+<div class="p-space-xs bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="font-label-tech text-label-tech font-bold text-primary">08</span>
+<span class="font-label-md text-label-md uppercase text-on-surface">Archived</span>
+</div>
+<span class="font-label-tech text-label-tech bg-outline-variant text-on-surface px-1.5 py-0.2">18</span>
+</div>
+<span class="font-label-tech text-label-tech text-outline px-1">SIGNED PROOFS · BILLED</span>
+<div class="space-y-space-xs flex-1">
+<!-- Job Card -->
+<div class="bg-surface-container-lowest p-space-xs opacity-75 shadow-sm">
+<div class="flex items-center justify-between font-label-tech text-label-tech">
+<span class="text-on-surface-variant font-bold">#PF-8870</span>
+<span class="bg-surface-container-high text-on-surface px-1">POD Signed</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface font-semibold leading-tight mt-1">Tech Summit Badges</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Archived in Vault C</p>
+<div class="mt-2 pt-1 flex items-center justify-between font-label-tech text-label-tech text-outline">
+<span>Rec: K. Larsson</span>
+<span>11:12 GMT</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: LIVE PRESSROOM TELEMETRY & RUNNING HARDWARE STATUS -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg pb-space-lg">
+<!-- Real-time Ink Consumption & Fountain Balance (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 bg-primary"></span>
+<h3 class="font-title-md text-title-md uppercase text-on-surface">In-Line Fountain &amp; Spectrophotometer Telemetry</h3>
+</div>
+<span class="font-label-tech text-label-tech text-outline">SAMPLING RATE: 24 SAMPLES/SEC</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-4 gap-space-sm pt-space-xs">
+<!-- Ink Canister Cyan -->
+<div class="p-space-xs bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-tech text-label-tech text-[#219BC3] font-bold">CYAN INK LEVEL</span>
+<span class="font-label-tech text-label-tech font-bold text-on-surface">78%</span>
+</div>
+<div class="w-full bg-surface-container-high h-20 my-space-xs relative flex items-end">
+<div class="w-full bg-[#219BC3] transition-all" style="height: 78%;"></div>
+<span class="absolute inset-0 flex items-center justify-center font-label-tech text-label-tech text-white drop-shadow">3.9 KG REMAINING</span>
+</div>
+<span class="font-label-tech text-label-tech text-outline text-center">FLOW: 42g / 1,000 SHTS</span>
+</div>
+<!-- Ink Canister Magenta -->
+<div class="p-space-xs bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-tech text-label-tech text-[#D9476B] font-bold">MAGENTA LEVEL</span>
+<span class="font-label-tech text-label-tech font-bold text-on-surface">91%</span>
+</div>
+<div class="w-full bg-surface-container-high h-20 my-space-xs relative flex items-end">
+<div class="w-full bg-[#D9476B] transition-all" style="height: 91%;"></div>
+<span class="absolute inset-0 flex items-center justify-center font-label-tech text-label-tech text-white drop-shadow">4.6 KG REMAINING</span>
+</div>
+<span class="font-label-tech text-label-tech text-outline text-center">FLOW: 51g / 1,000 SHTS</span>
+</div>
+<!-- Ink Canister Yellow -->
+<div class="p-space-xs bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-tech text-label-tech text-tertiary-container font-bold">YELLOW LEVEL</span>
+<span class="font-label-tech text-label-tech font-bold text-on-surface">62%</span>
+</div>
+<div class="w-full bg-surface-container-high h-20 my-space-xs relative flex items-end">
+<div class="w-full bg-[#F5D21B] transition-all" style="height: 62%;"></div>
+<span class="absolute inset-0 flex items-center justify-center font-label-tech text-label-tech text-black font-bold">3.1 KG REMAINING</span>
+</div>
+<span class="font-label-tech text-label-tech text-outline text-center">FLOW: 34g / 1,000 SHTS</span>
+</div>
+<!-- Ink Canister Black -->
+<div class="p-space-xs bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-tech text-label-tech text-[#1B2427] font-bold">KEY BLACK LEVEL</span>
+<span class="font-label-tech text-label-tech font-bold text-on-surface">44%</span>
+</div>
+<div class="w-full bg-surface-container-high h-20 my-space-xs relative flex items-end">
+<div class="w-full bg-[#1B2427] transition-all" style="height: 44%;"></div>
+<span class="absolute inset-0 flex items-center justify-center font-label-tech text-label-tech text-white drop-shadow">2.2 KG (REFILL REQ)</span>
+</div>
+<span class="font-label-tech text-label-tech text-secondary text-center font-bold">FLOW: 68g / 1,000 SHTS</span>
+</div>
+</div>
+</div>
+<!-- Real-time Production Log & Operator Dispatch Notes (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs">
+<h3 class="font-title-md text-title-md uppercase text-on-surface">Shift Lead Dispatch Log</h3>
+<span class="font-label-tech text-label-tech text-primary font-bold">SHIFT #01 · 06:00 - 14:30</span>
+</div>
+<!-- Micro Technical Audit Trail -->
+<div class="space-y-space-xs pt-space-xs font-body-sm text-body-sm">
+<div class="flex items-start gap-space-xs p-space-xs bg-surface-container-low">
+<span class="font-label-tech text-label-tech text-outline mt-0.5">14:12:09</span>
+<div>
+<strong class="text-on-surface">Unit 03 Speedmaster:</strong>
+<span class="text-on-surface-variant">Signature 01 front pass concluded. Blanket wash auto-cycle started.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs p-space-xs bg-surface-container-low">
+<span class="font-label-tech text-label-tech text-outline mt-0.5">13:55:40</span>
+<div>
+<strong class="text-on-surface">Suprasetter CTP:</strong>
+<span class="text-on-surface-variant">Generated 8 plates for Requisition #PF-8933. Calibration confirmed.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs p-space-xs bg-surface-container-low">
+<span class="font-label-tech text-label-tech text-secondary mt-0.5 font-bold">13:30:15</span>
+<div>
+<strong class="text-secondary font-bold">Warning Flag #PF-8930:</strong>
+<span class="text-on-surface-variant">Prepress engineer flagged missing 0.5mm outer trim bleed on artboard #4.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between">
+<span class="font-label-tech text-label-tech text-outline">PRINTFLOW OS RUNTIME 482 HOURS WITHOUT FAULT</span>
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface px-space-sm py-1 font-label-tech text-label-tech uppercase transition-colors">
+            Export Shift Docket PDF
+          </button>
+</div>
+</div>
+</section>
+</div>
+</div></main></div></body></html>

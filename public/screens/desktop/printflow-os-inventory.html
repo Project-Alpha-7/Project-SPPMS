@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "secondary-container": "#fe6386",
+        "secondary": "#b0274e",
+        "surface": "#f7f9fe",
+        "inverse-primary": "#6bd3fd",
+        "on-error-container": "#93000a",
+        "surface-container": "#ebeef2",
+        "error": "#ba1a1a",
+        "tertiary-fixed": "#ffe262",
+        "on-surface": "#181c1f",
+        "surface-container-high": "#e5e8ec",
+        "on-primary-fixed": "#001f2a",
+        "secondary-fixed-dim": "#ffb2bd",
+        "outline-variant": "#bdc8ce",
+        "on-secondary-fixed": "#400014",
+        "tertiary-container": "#c7aa00",
+        "surface-container-lowest": "#ffffff",
+        "on-surface-variant": "#3e484e",
+        "primary-fixed-dim": "#6bd3fd",
+        "error-container": "#ffdad6",
+        "primary": "#006480",
+        "background": "#f7f9fe",
+        "outline": "#6e797e",
+        "on-secondary-fixed-variant": "#8f0638",
+        "surface-variant": "#e0e3e7",
+        "secondary-fixed": "#ffd9de",
+        "on-tertiary": "#ffffff",
+        "inverse-surface": "#2d3134",
+        "on-primary-fixed-variant": "#004d64",
+        "surface-tint": "#006684",
+        "surface-dim": "#d7dade",
+        "tertiary": "#6f5d00",
+        "on-tertiary-fixed-variant": "#534600",
+        "surface-container-low": "#f1f4f8",
+        "on-secondary-container": "#670025",
+        "inverse-on-surface": "#eef1f5",
+        "on-tertiary-fixed": "#221b00",
+        "tertiary-fixed-dim": "#e7c500",
+        "on-secondary": "#ffffff",
+        "on-primary-container": "#fbfdff",
+        "primary-container": "#007ea1",
+        "on-tertiary-container": "#4b3f00",
+        "on-primary": "#ffffff",
+        "primary-fixed": "#bde9ff",
+        "on-error": "#ffffff",
+        "surface-container-highest": "#e0e3e7",
+        "on-background": "#181c1f",
+        "surface-bright": "#f7f9fe"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "margin": "1rem",
+        "margin-lg": "2.5rem",
+        "space-md": "1rem",
+        "margin-md": "1.5rem",
+        "gutter": "1rem",
+        "space-lg": "1.5rem",
+        "space-xs": "0.25rem",
+        "gutter-lg": "1.5rem",
+        "space-sm": "0.5rem",
+        "space-xl": "2.25rem"
+      },
+      "fontFamily": {
+        "body-md": ["Times New Roman"],
+        "headline-lg": ["Times New Roman"],
+        "headline-xl": ["Times New Roman"],
+        "title-md": ["Times New Roman"],
+        "display-lg": ["Times New Roman"],
+        "label-lg": ["Times New Roman"],
+        "label-md": ["Times New Roman"],
+        "headline-sm": ["Times New Roman"],
+        "label-tech": ["Times New Roman"],
+        "body-sm": ["Times New Roman"],
+        "body-lg": ["Times New Roman"],
+        "headline-xl-mobile": ["Times New Roman"]
+      },
+      "fontSize": {
+        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+        "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+        "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+        "title-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+        "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "label-lg": ["13px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700"}],
+        "label-md": ["11px", {"lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700"}],
+        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+        "label-tech": ["10px", {"lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "400"}],
+        "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}],
+        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+        "headline-xl-mobile": ["26px", {"lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "700"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between border-r border-outline-variant/40"><div class="flex flex-col"><div class="p-gutter border-b border-outline-variant/30"><div class="flex items-center justify-between mb-space-sm"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[20px]">print</span><span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface font-bold">PrintFlow OS</span></div><span class="text-[10px] font-label-tech tracking-widest text-on-surface-variant/80 border border-outline-variant/60 px-space-xs py-0.5 rounded">v4.2.8</span></div><div class="flex items-center justify-between text-on-surface-variant font-label-tech text-label-tech"><span class="flex items-center gap-1">IMPOSITION ENG: ACTIVE</span><div class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-[#219BC3]"></span><span class="w-2 h-2 rounded-full bg-[#D9476B]"></span><span class="w-2 h-2 rounded-full bg-[#F5D21B]"></span><span class="w-2 h-2 rounded-full bg-[#1B2427]"></span></div></div></div><div class="px-gutter pt-space-md pb-space-xs"><span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Console Routes &amp; Imposition</span></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-bold border-l-2 border-primary"><a class="flex items-center gap-space-sm px-space-md py-space-sm font-title-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors rounded" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">space_dashboard</span><span>Dashboard</span></a><a class="flex items-center justify-between px-space-md py-space-sm font-title-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors rounded" data-path="orders" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">assignment</span><span>Orders</span></div><span class="font-label-tech text-label-tech bg-surface-container text-on-surface px-1.5 py-0.5 rounded border border-outline-variant/40">128 QUEUED</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm font-title-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors rounded" data-path="production" href="#"><span class="material-symbols-outlined text-[18px]">precision_manufacturing</span><span>Production</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm font-title-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors rounded" data-path="payments" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span>Payments</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm transition-colors rounded bg-primary-container text-on-primary-container font-bold border-l-2 border-primary" data-path="inventory" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span>Inventory</span></div><span class="font-label-tech text-label-tech bg-secondary/10 text-secondary border border-secondary/30 px-1 py-0.5 rounded">ACTIVE</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm font-title-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors rounded" data-path="reports" href="#"><span class="material-symbols-outlined text-[18px]">monitoring</span><span>Reports</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm font-title-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors rounded" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span>Settings</span></a></nav></div><div class="p-gutter border-t border-outline-variant/30 bg-surface-container"><div class="flex items-center justify-between mb-space-sm"><span class="font-label-tech text-label-tech uppercase text-on-surface-variant">Plate Lock Density</span><span class="font-label-tech text-label-tech font-bold text-primary">99.8% OK</span></div><div class="w-full h-1.5 bg-surface-container-high flex rounded overflow-hidden"><div class="h-full w-1/4 bg-[#219BC3]"></div><div class="h-full w-1/4 bg-[#D9476B]"></div><div class="h-full w-1/4 bg-[#F5D21B]"></div><div class="h-full w-1/4 bg-[#1B2427]"></div></div><div class="mt-space-sm flex items-center justify-between text-on-surface-variant font-label-tech text-label-tech"><span>300 LPI • 2400 DPI</span><span>BLEED: 3.0mm</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-md z-40 border-b border-outline-variant/40 shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-16 w-full px-gutter-lg flex items-center justify-between"><div class="flex items-center gap-gutter"><div class="flex items-center gap-space-sm bg-surface-container px-space-sm py-1 rounded border border-outline-variant/40"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-tech text-label-tech text-on-surface font-bold tracking-wider">PRESSLINE 04: ONLINE</span><span class="text-outline-variant">|</span><span class="font-label-tech text-label-tech text-on-surface-variant">CALIBRATION 99.4%</span></div><div class="hidden xl:flex items-center gap-space-xs font-label-tech text-label-tech text-on-surface-variant border border-outline-variant/30 px-space-sm py-1 rounded"><span class="material-symbols-outlined text-[14px] text-tertiary">verified</span><span>ISO 12647-2 / FOGRA 51 STANDARD</span></div></div><div class="flex items-center gap-space-md"><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors underline decoration-outline-variant underline-offset-4" data-path="portal" href="#">Customer Portal</a><div class="flex items-center gap-1 font-label-tech text-label-tech uppercase bg-secondary-fixed text-on-secondary-fixed font-bold px-2 py-0.5 rounded border border-secondary/20"><span>Admin Centre</span></div><button aria-label="Toggle color mode" class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">contrast</span></button><div class="h-6 w-px bg-outline-variant/40"></div><div class="flex items-center gap-space-sm text-right"><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Master Pressman Shift Lead #01</span><span class="font-label-tech text-label-tech text-on-surface-variant tracking-wider leading-tight">MP-044 • SHIFT A</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Precision Prepress Ruler Accent -->
+<div class="w-full bg-surface-container-high px-gutter-lg py-1 flex items-center justify-between text-on-surface-variant font-label-tech text-label-tech border-b border-outline-variant/40">
+<div class="flex items-center gap-space-md">
+<span class="tracking-widest uppercase font-bold text-primary">ERP-MODULE: MAT-LOGIX // SEC: WAREHOUSE-SUBSTRATES</span>
+<span class="text-outline-variant">|</span>
+<span>CALIBRATION: FOGRA51 / ISO 12647-2 CERTIFIED</span>
+<span class="text-outline-variant">|</span>
+<span class="flex items-center gap-1 font-bold"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>BAY TELEMETRY: 48% RH • 22.4°C</span>
+</div>
+<div class="flex items-center gap-space-sm font-label-tech text-label-tech">
+<span class="tracking-widest">IMPOSITION SHEET: 700 × 1000 mm</span>
+<div class="flex items-center gap-0.5 ml-2">
+<span class="w-2 h-2 bg-[#219BC3]" title="Cyan"></span>
+<span class="w-2 h-2 bg-[#D9476B]" title="Magenta"></span>
+<span class="w-2 h-2 bg-[#F5D21B]" title="Yellow"></span>
+<span class="w-2 h-2 bg-[#1B2427]" title="Key Black"></span>
+</div>
+<span class="ml-2 font-bold text-on-surface">⌖ REG: ±0.02mm</span>
+</div>
+</div>
+<div class="p-gutter-lg flex flex-col gap-space-lg">
+<!-- SUB-HEADER & CONTEXT BAR -->
+<section class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-md pb-space-sm border-b border-outline-variant/40">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 font-label-tech text-label-tech text-on-surface-variant uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">PREPRESS ERP</a>
+<span>/</span>
+<a class="hover:text-primary transition-colors" href="#">RAW MATERIALS &amp; CONSUMABLES</a>
+<span>/</span>
+<span class="text-primary font-bold">INVENTORY &amp; SUBSTRATE LEDGER</span>
+<span class="text-outline-variant font-normal">[ SPEC: INV-REG-402 ]</span>
+</div>
+<div class="flex items-baseline gap-space-md">
+<h1 class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">Warehouse Material Stock &amp; Substrate Register</h1>
+<span class="font-label-tech text-label-tech uppercase px-2 py-0.5 bg-surface-container text-on-surface-variant rounded border border-outline-variant/50">JIS P 0138 SPEC READY</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Real-time gravimetric ink tank levels, volumetric paper pallet tonnage, and consumable allocation logs synchronized with automated CTP imposition gang-runs and offset presslines.
+        </p>
+</div>
+<!-- Action Cluster -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="px-space-md py-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface font-title-md text-body-md rounded border border-outline-variant/80 transition-colors flex items-center gap-space-xs" id="open-adj-modal" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">tune</span>
+<span>Adjust Stock Level</span>
+</button>
+<button class="px-space-md py-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface font-title-md text-body-md rounded border border-outline-variant/80 transition-colors flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Export Valuation (CSV)</span>
+</button>
+<button class="px-space-md py-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface font-title-md text-body-md rounded border border-outline-variant/80 transition-colors flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">receipt_long</span>
+<span>Generate PO</span>
+</button>
+<button class="px-space-md py-space-sm bg-primary hover:bg-primary-container text-on-primary font-title-md text-body-md rounded transition-colors flex items-center gap-space-xs shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>+ Add New Item</span>
+</button>
+</div>
+</section>
+<!-- LOW-STOCK CRITICAL ALERT BANNER -->
+<div class="relative bg-surface-container-lowest border-l-4 border-[#D9476B] rounded p-space-md border border-outline-variant/60 shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- CMYK Top Micro Edge -->
+<div class="absolute top-0 right-4 flex items-center gap-1 -translate-y-1/2 bg-surface-container px-2 py-0.5 border border-outline-variant/50 rounded text-[9px] font-label-tech text-on-surface-variant">
+<span>SECURITY SEAL</span>
+<div class="flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-[#219BC3]"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#D9476B]"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#F5D21B]"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#1B2427]"></span>
+</div>
+</div>
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded bg-[#D9476B]/10 text-[#D9476B] flex items-center justify-center border border-[#D9476B]/30 flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">crisis_alert</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">CRITICAL REORDER ALERT: 3 CONSUMABLES BELOW MINIMUM SAFETY THRESHOLD</span>
+<span class="font-label-tech text-label-tech bg-[#D9476B]/10 text-[#D9476B] px-2 py-0.5 rounded border border-[#D9476B]/30 font-bold">URGENT MAKEREADY RISK</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2 py-1 rounded border border-outline-variant/30">
+<span class="w-2 h-2 rounded-full bg-[#219BC3]"></span>
+<span><strong>Cyan Process Ink (Line 04):</strong> 18% left (~4.2 hrs run-time remaining)</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2 py-1 rounded border border-outline-variant/30">
+<span class="w-2 h-2 rounded-full bg-[#D9476B]"></span>
+<span><strong>13 × 19" Digital Silk (300 GSM):</strong> 25 reams (Next job requires 18)</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2 py-1 rounded border border-outline-variant/30">
+<span class="w-2 h-2 rounded-full bg-[#F5D21B]"></span>
+<span><strong>Thermal CTP Plates (1030×790):</strong> 14 plates remaining (Safety: 30)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-shrink-0 self-end lg:self-center">
+<button class="px-3 py-1.5 bg-[#219BC3] hover:bg-primary-container text-white font-label-md text-label-md rounded transition-colors uppercase tracking-wider flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>Express Dispatch</span>
+</button>
+<button class="px-3 py-1.5 bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md rounded border border-outline-variant/60 transition-colors uppercase tracking-wider" type="button">
+<span>Expedite PO</span>
+</button>
+<button aria-label="Dismiss Alert" class="p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- TOP METRICS / VALUATION LEDGER (4 Cards with Prepress Framing) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded border border-outline-variant/60 flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between text-on-surface-variant pb-space-xs border-b border-outline-variant/30">
+<span class="font-label-md text-label-md uppercase tracking-wider">Total Raw Valuation</span>
+<span class="font-label-tech text-label-tech text-outline">[ 68 SKUs ]</span>
+</div>
+<div class="my-space-sm flex flex-col">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg font-bold text-on-surface tracking-tight">₹14,82,450</span>
+<span class="font-label-tech text-label-tech text-primary font-bold bg-primary/10 px-1.5 py-0.5 rounded border border-primary/20">+8.4% AUDIT</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Based on FIFO weighted inventory cost ledger</span>
+</div>
+<div class="pt-space-xs border-t border-outline-variant/30 flex items-center justify-between font-label-tech text-label-tech text-on-surface-variant">
+<span>SUBSTRATE: 74%</span>
+<span>INKS: 19%</span>
+<span>PLATES: 7%</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded border border-outline-variant/60 flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between text-on-surface-variant pb-space-xs border-b border-outline-variant/30">
+<span class="font-label-md text-label-md uppercase tracking-wider">Substrate Warehouse</span>
+<span class="font-label-tech text-label-tech text-outline">[ TONNAGE ]</span>
+</div>
+<div class="my-space-sm flex flex-col">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg font-bold text-on-surface tracking-tight">148.6 <span class="text-title-md font-normal text-on-surface-variant">MT</span></span>
+<span class="font-label-tech text-label-tech text-primary font-bold bg-surface-container px-1.5 py-0.5 rounded border border-outline-variant/50">84% CAPACITY</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Staged in Bays 01-A, 02-B, 03-A (De-palletized)</span>
+</div>
+<div class="pt-space-xs border-t border-outline-variant/30 flex items-center justify-between font-label-tech text-label-tech text-on-surface-variant">
+<span>HUMIDITY: 48% RH</span>
+<span class="text-primary font-bold">STABLE CONDITION</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded border border-outline-variant/60 flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between text-on-surface-variant pb-space-xs border-b border-outline-variant/30">
+<span class="font-label-md text-label-md uppercase tracking-wider">Ink Fountain Reserves</span>
+<span class="font-label-tech text-label-tech text-[#D9476B] font-bold">[ 1 ALERT ]</span>
+</div>
+<div class="my-space-sm flex flex-col">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg font-bold text-on-surface tracking-tight">182.4 <span class="text-title-md font-normal text-on-surface-variant">KG</span></span>
+<span class="font-label-tech text-label-tech bg-[#D9476B]/10 text-[#D9476B] px-1.5 py-0.5 rounded border border-[#D9476B]/30 font-bold">CYAN LOW</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Heidelberg XL 106 + Indigo ElectroInk Tanks</span>
+</div>
+<div class="pt-space-xs border-t border-outline-variant/30 flex items-center justify-between font-label-tech text-label-tech text-on-surface-variant">
+<span>4 ACTIVE PRESS LINES</span>
+<span class="font-bold text-on-surface">FLOW: NOMINAL</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded border border-outline-variant/60 flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between text-on-surface-variant pb-space-xs border-b border-outline-variant/30">
+<span class="font-label-md text-label-md uppercase tracking-wider">Pending Reorders</span>
+<span class="font-label-tech text-label-tech text-outline">[ IN-TRANSIT ]</span>
+</div>
+<div class="my-space-sm flex flex-col">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg font-bold text-on-surface tracking-tight">₹1,85,600</span>
+<span class="font-label-tech text-label-tech bg-tertiary-fixed text-on-tertiary-fixed font-bold px-1.5 py-0.5 rounded border border-tertiary/20">3 SHIPMENTS</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">JK Paper Mills (Coated Card) &amp; Toyo Ink India</span>
+</div>
+<div class="pt-space-xs border-t border-outline-variant/30 flex items-center justify-between font-label-tech text-label-tech text-on-surface-variant">
+<span>NEXT ETA: TOMORROW 11:30 IST</span>
+<span class="font-bold text-primary">PO-IND-9042</span>
+</div>
+</div>
+</section>
+<!-- INK FOUNTAIN RESERVES & PROCESS TANKS TELEMETRY -->
+<section class="bg-surface-container-lowest rounded border border-outline-variant/60 p-space-md shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-sm mb-space-md border-b border-outline-variant/30 gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">invert_colors</span>
+<div>
+<h2 class="font-title-md text-title-md font-bold text-on-surface tracking-tight">Press Ink Fountain Capacities &amp; Process Tanks</h2>
+<span class="font-label-tech text-label-tech text-on-surface-variant">ACTIVE CELL: HEIDELBERG SPEEDMASTER XL 106 &amp; HP INDIGO 12000 DIGITAL PRESS</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-2.5 py-1 text-on-surface font-label-md text-label-md border border-outline-variant/70 rounded hover:bg-surface-container transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">colorize</span>
+<span>Calibrate Densitometer</span>
+</button>
+<button class="px-2.5 py-1 bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md border border-outline-variant/80 rounded transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px] text-primary">add_circle</span>
+<span>Log Batch Refill</span>
+</button>
+</div>
+</div>
+<!-- 4 CMYK Tank Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Cyan -->
+<div class="p-space-md rounded bg-surface-container-low border-2 border-[#D9476B]/60 relative flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded-sm bg-[#219BC3] inline-block border border-outline-variant/50"></span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Cyan (C)</span>
+</div>
+<span class="font-label-tech text-label-tech bg-[#D9476B]/15 text-[#D9476B] px-1.5 py-0.5 rounded font-bold border border-[#D9476B]/30">LOW STOCK (18%)</span>
+</div>
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">3.6 <span class="text-body-sm font-normal text-on-surface-variant">/ 20.0 kg</span></span>
+<span class="font-label-tech text-label-tech text-[#D9476B] font-bold">THRESHOLD: 5.0 kg</span>
+</div>
+<!-- Bar Meter -->
+<div class="w-full h-3 bg-surface-container-high rounded overflow-hidden p-0.5 border border-outline-variant/40 mb-space-sm">
+<div class="h-full bg-[#219BC3] rounded-sm transition-all" style="width: 18%;"></div>
+</div>
+<div class="flex flex-col gap-0.5 text-on-surface-variant font-label-tech text-label-tech border-t border-outline-variant/30 pt-space-xs">
+<div class="flex justify-between"><span>Lot Number:</span><span class="font-bold text-on-surface">#TOYO-CY-9942</span></div>
+<div class="flex justify-between"><span>Consumption Flow:</span><span>42g / 1,000 shts</span></div>
+<div class="flex justify-between text-[#D9476B] font-bold"><span>Depletion In:</span><span>~4.2 Press Hours</span></div>
+</div>
+</div>
+<!-- Magenta -->
+<div class="p-space-md rounded bg-surface-container-low border border-outline-variant/60 relative flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded-sm bg-[#D9476B] inline-block border border-outline-variant/50"></span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Magenta (M)</span>
+</div>
+<span class="font-label-tech text-label-tech bg-primary/10 text-primary px-1.5 py-0.5 rounded font-bold border border-primary/20">OPTIMAL (52%)</span>
+</div>
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">10.4 <span class="text-body-sm font-normal text-on-surface-variant">/ 20.0 kg</span></span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">THRESHOLD: 5.0 kg</span>
+</div>
+<!-- Bar Meter -->
+<div class="w-full h-3 bg-surface-container-high rounded overflow-hidden p-0.5 border border-outline-variant/40 mb-space-sm">
+<div class="h-full bg-[#D9476B] rounded-sm transition-all" style="width: 52%;"></div>
+</div>
+<div class="flex flex-col gap-0.5 text-on-surface-variant font-label-tech text-label-tech border-t border-outline-variant/30 pt-space-xs">
+<div class="flex justify-between"><span>Lot Number:</span><span class="font-bold text-on-surface">#TOYO-MG-8812</span></div>
+<div class="flex justify-between"><span>Consumption Flow:</span><span>51g / 1,000 shts</span></div>
+<div class="flex justify-between text-primary"><span>Depletion In:</span><span>~18.5 Press Hours</span></div>
+</div>
+</div>
+<!-- Yellow -->
+<div class="p-space-md rounded bg-surface-container-low border border-outline-variant/60 relative flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded-sm bg-[#F5D21B] inline-block border border-outline-variant/50"></span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Yellow (Y)</span>
+</div>
+<span class="font-label-tech text-label-tech bg-primary/10 text-primary px-1.5 py-0.5 rounded font-bold border border-primary/20">OPTIMAL (60%)</span>
+</div>
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">12.0 <span class="text-body-sm font-normal text-on-surface-variant">/ 20.0 kg</span></span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">THRESHOLD: 5.0 kg</span>
+</div>
+<!-- Bar Meter -->
+<div class="w-full h-3 bg-surface-container-high rounded overflow-hidden p-0.5 border border-outline-variant/40 mb-space-sm">
+<div class="h-full bg-[#F5D21B] rounded-sm transition-all" style="width: 60%;"></div>
+</div>
+<div class="flex flex-col gap-0.5 text-on-surface-variant font-label-tech text-label-tech border-t border-outline-variant/30 pt-space-xs">
+<div class="flex justify-between"><span>Lot Number:</span><span class="font-bold text-on-surface">#TOYO-YL-4019</span></div>
+<div class="flex justify-between"><span>Consumption Flow:</span><span>34g / 1,000 shts</span></div>
+<div class="flex justify-between text-primary"><span>Depletion In:</span><span>~24.1 Press Hours</span></div>
+</div>
+</div>
+<!-- Key Black -->
+<div class="p-space-md rounded bg-surface-container-low border border-outline-variant/60 relative flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded-sm bg-[#1B2427] inline-block border border-outline-variant/50"></span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Key Black (K)</span>
+</div>
+<span class="font-label-tech text-label-tech bg-primary/10 text-primary px-1.5 py-0.5 rounded font-bold border border-primary/20">OPTIMAL (70%)</span>
+</div>
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">14.0 <span class="text-body-sm font-normal text-on-surface-variant">/ 20.0 kg</span></span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">THRESHOLD: 5.0 kg</span>
+</div>
+<!-- Bar Meter -->
+<div class="w-full h-3 bg-surface-container-high rounded overflow-hidden p-0.5 border border-outline-variant/40 mb-space-sm">
+<div class="h-full bg-[#1B2427] rounded-sm transition-all" style="width: 70%;"></div>
+</div>
+<div class="flex flex-col gap-0.5 text-on-surface-variant font-label-tech text-label-tech border-t border-outline-variant/30 pt-space-xs">
+<div class="flex justify-between"><span>Lot Number:</span><span class="font-bold text-on-surface">#TOYO-BK-7721</span></div>
+<div class="flex justify-between"><span>Consumption Flow:</span><span>68g / 1,000 shts</span></div>
+<div class="flex justify-between text-primary"><span>Depletion In:</span><span>~29.0 Press Hours</span></div>
+</div>
+</div>
+</div>
+</section>
+<!-- PRIMARY PAPER & SUBSTRATE REGISTER TABLE -->
+<section class="bg-surface-container-lowest rounded border border-outline-variant/60 p-space-md shadow-sm flex flex-col gap-space-md">
+<!-- Search, Filters and Density Header -->
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-sm">
+<div class="flex-1 flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm">
+<!-- Search Field -->
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full pl-9 pr-3 py-1.5 bg-surface-container-low text-on-surface font-body-md text-body-md border border-outline-variant/70 rounded focus:border-primary focus:outline-none placeholder:text-on-surface-variant/60" id="substrate-search" placeholder="Search substrate name, GSM, caliper, SKU, or mill..." type="text"/>
+</div>
+<!-- Category Filter -->
+<select class="px-3 py-1.5 bg-surface-container-low text-on-surface font-body-md text-body-md border border-outline-variant/70 rounded focus:border-primary focus:outline-none">
+<option>All Substrates (68)</option>
+<option>Coated Art Card / Paper</option>
+<option>Uncoated / Copier / Bond</option>
+<option>Specialty &amp; Archival Cotton</option>
+<option>Packaging Board / Kraft</option>
+<option>Synthetics &amp; Foils</option>
+</select>
+<!-- GSM Filter -->
+<select class="px-3 py-1.5 bg-surface-container-low text-on-surface font-body-md text-body-md border border-outline-variant/70 rounded focus:border-primary focus:outline-none">
+<option>All GSM Classes</option>
+<option>60 - 100 GSM (Lightweight)</option>
+<option>120 - 170 GSM (Text/Book)</option>
+<option>220 - 300 GSM (Cover/Card)</option>
+<option>350 - 450+ GSM (Heavy Rigid)</option>
+</select>
+<!-- Stock Status Filter -->
+<select class="px-3 py-1.5 bg-surface-container-low text-on-surface font-body-md text-body-md border border-outline-variant/70 rounded focus:border-primary focus:outline-none">
+<option>Status: All SKUs</option>
+<option>Status: Healthy / In Stock</option>
+<option>Status: Low Stock Flag</option>
+<option>Status: Critical Reorder</option>
+</select>
+</div>
+<div class="flex items-center gap-2 self-end lg:self-center font-label-tech text-label-tech text-on-surface-variant">
+<span class="px-2 py-1 bg-surface-container rounded border border-outline-variant/40">REGISTER: BAY 02-B &amp; 03-A</span>
+<span class="px-2 py-1 bg-surface-container rounded border border-outline-variant/40">CALIB: NOMINAL</span>
+</div>
+</div>
+<!-- High-Density Prepress Data Table -->
+<div class="overflow-x-auto border border-outline-variant/50 rounded">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container font-label-md text-label-md text-on-surface-variant uppercase tracking-wider border-b-2 border-outline-variant/70">
+<th class="py-2.5 px-3">Item &amp; Specification</th>
+<th class="py-2.5 px-3">Sheet Size</th>
+<th class="py-2.5 px-3">GSM / Caliper</th>
+<th class="py-2.5 px-3 text-right">On-Hand Qty</th>
+<th class="py-2.5 px-3">Unit</th>
+<th class="py-2.5 px-3 text-right">Min Threshold</th>
+<th class="py-2.5 px-3">Stock Status</th>
+<th class="py-2.5 px-3">Last Updated</th>
+<th class="py-2.5 px-3 text-center">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/30 font-body-md text-body-md text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-2.5 px-3">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">A4 Copier / Bond Pure White</span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">SKU: PAP-BND-080-A4 • Century Pulp &amp; Paper</span>
+</div>
+</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech">210 × 297 mm <span class="text-outline-variant">(A4)</span></td>
+<td class="py-2.5 px-3 font-bold">80 GSM</td>
+<td class="py-2.5 px-3 text-right font-headline-sm text-headline-sm font-bold text-on-surface">120</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech text-on-surface-variant">Reams (500 shts)</td>
+<td class="py-2.5 px-3 text-right font-label-tech text-label-tech text-on-surface-variant">50 reams</td>
+<td class="py-2.5 px-3">
+<span class="font-label-tech text-label-tech bg-[#219BC3]/10 text-[#219BC3] px-2 py-0.5 rounded border border-[#219BC3]/30 font-bold uppercase">In Stock / Healthy</span>
+</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech text-on-surface-variant">Today, 09:15 IST</td>
+<td class="py-2.5 px-3 text-center">
+<div class="inline-flex items-center gap-1 font-label-tech text-label-tech">
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-container-high rounded border border-outline-variant/60 text-primary font-bold" type="button">Adjust</button>
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-container-high rounded border border-outline-variant/60 text-on-surface-variant" type="button">Log</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 (Critical / Low) -->
+<tr class="bg-[#D9476B]/5 hover:bg-[#D9476B]/10 transition-colors">
+<td class="py-2.5 px-3">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface flex items-center gap-1.5">
+                    13 × 19" Digital Silk Art Card
+                    <span class="material-symbols-outlined text-[16px] text-[#D9476B]">warning</span>
+</span>
+<span class="font-label-tech text-label-tech text-[#D9476B] font-bold">SKU: PAP-300-1319 • JK Paper Mills [Active Run Required]</span>
+</div>
+</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech">330 × 483 mm <span class="text-outline-variant">(13×19")</span></td>
+<td class="py-2.5 px-3 font-bold">300 GSM</td>
+<td class="py-2.5 px-3 text-right font-headline-sm text-headline-sm font-bold text-[#D9476B]">25</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech text-on-surface-variant">Reams (250 shts)</td>
+<td class="py-2.5 px-3 text-right font-label-tech text-label-tech text-[#D9476B] font-bold">40 reams</td>
+<td class="py-2.5 px-3">
+<span class="font-label-tech text-label-tech bg-[#D9476B]/15 text-[#D9476B] px-2 py-0.5 rounded border border-[#D9476B]/40 font-bold uppercase animate-pulse">Low Stock / Reorder</span>
+</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech text-on-surface-variant">Today, 08:30 IST</td>
+<td class="py-2.5 px-3 text-center">
+<div class="inline-flex items-center gap-1 font-label-tech text-label-tech">
+<button class="quick-adjust-btn px-2 py-1 bg-surface-container hover:bg-surface-container-high rounded border border-outline-variant/60 text-primary font-bold" type="button">Adjust</button>
+<button class="px-2 py-1 bg-[#D9476B] text-white hover:bg-secondary rounded font-bold" type="button">Reorder</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-2.5 px-3">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">Art Card Gloss Premium</span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">SKU: PAP-GLS-350-B1 • ITC PSPD Bhadrachalam</span>
+</div>
+</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech">640 × 900 mm <span class="text-outline-variant">(B1)</span></td>
+<td class="py-2.5 px-3 font-bold">350 GSM</td>
+<td class="py-2.5 px-3 text-right font-headline-sm text-headline-sm font-bold text-on-surface">4,200</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech text-on-surface-variant">Sheets (Full Sheet)</td>
+<td class="py-2.5 px-3 text-right font-label-tech text-label-tech text-on-surface-variant">2,000 sheets</td>
+<td class="py-2.5 px-3">
+<span class="font-label-tech text-label-tech bg-[#219BC3]/10 text-[#219BC3] px-2 py-0.5 rounded border border-[#219BC3]/30 font-bold uppercase">In Stock / Healthy</span>
+</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech text-on-surface-variant">Yesterday, 17:45 IST</td>
+<td class="py-2.5 px-3 text-center">
+<div class="inline-flex items-center gap-1 font-label-tech text-label-tech">
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-container-high rounded border border-outline-variant/60 text-primary font-bold" type="button">Adjust</button>
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-container-high rounded border border-outline-variant/60 text-on-surface-variant" type="button">Log</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-2.5 px-3">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">Sappi Galerie Art Silk</span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">SKU: PAP-SAP-150-B1P • Sappi Europe Import</span>
+</div>
+</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech">700 × 1000 mm <span class="text-outline-variant">(B1+)</span></td>
+<td class="py-2.5 px-3 font-bold">150 GSM</td>
+<td class="py-2.5 px-3 text-right font-headline-sm text-headline-sm font-bold text-on-surface">8,500</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech text-on-surface-variant">Sheets (Pallet Staged)</td>
+<td class="py-2.5 px-3 text-right font-label-tech text-label-tech text-on-surface-variant">3,000 sheets</td>
+<td class="py-2.5 px-3">
+<span class="font-label-tech text-label-tech bg-[#219BC3]/10 text-[#219BC3] px-2 py-0.5 rounded border border-[#219BC3]/30 font-bold uppercase">In Stock / Healthy</span>
+</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech text-on-surface-variant">22 Oct 2025</td>
+<td class="py-2.5 px-3 text-center">
+<div class="inline-flex items-center gap-1 font-label-tech text-label-tech">
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-container-high rounded border border-outline-variant/60 text-primary font-bold" type="button">Adjust</button>
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-container-high rounded border border-outline-variant/60 text-on-surface-variant" type="button">Log</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 (Attention / Low) -->
+<tr class="bg-tertiary-fixed/10 hover:bg-tertiary-fixed/20 transition-colors">
+<td class="py-2.5 px-3">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">Natural Cotton Rag Archival</span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">SKU: PAP-COT-350-IMP • Hahnemühle FineArt</span>
+</div>
+</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech">560 × 760 mm <span class="text-outline-variant">(Imperial)</span></td>
+<td class="py-2.5 px-3 font-bold">350 GSM</td>
+<td class="py-2.5 px-3 text-right font-headline-sm text-headline-sm font-bold text-tertiary">450</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech text-on-surface-variant">Sheets</td>
+<td class="py-2.5 px-3 text-right font-label-tech text-label-tech text-tertiary font-bold">500 sheets</td>
+<td class="py-2.5 px-3">
+<span class="font-label-tech text-label-tech bg-[#F5D21B]/30 text-on-surface px-2 py-0.5 rounded border border-[#F5D21B] font-bold uppercase">Attention / Low</span>
+</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech text-on-surface-variant">21 Oct 2025</td>
+<td class="py-2.5 px-3 text-center">
+<div class="inline-flex items-center gap-1 font-label-tech text-label-tech">
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-container-high rounded border border-outline-variant/60 text-primary font-bold" type="button">Adjust</button>
+<button class="px-2 py-1 bg-tertiary-container text-on-tertiary-container hover:bg-tertiary-fixed font-bold rounded" type="button">Reorder</button>
+</div>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-2.5 px-3">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">Unbleached Kraft Board</span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">SKU: BRD-KRF-300-ROL • WestRock Packaging</span>
+</div>
+</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech">720 × 1020 mm <span class="text-outline-variant">(Roll Slit)</span></td>
+<td class="py-2.5 px-3 font-bold">300 GSM</td>
+<td class="py-2.5 px-3 text-right font-headline-sm text-headline-sm font-bold text-on-surface">18</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech text-on-surface-variant">Industrial Rolls (1,200m)</td>
+<td class="py-2.5 px-3 text-right font-label-tech text-label-tech text-on-surface-variant">10 rolls</td>
+<td class="py-2.5 px-3">
+<span class="font-label-tech text-label-tech bg-[#219BC3]/10 text-[#219BC3] px-2 py-0.5 rounded border border-[#219BC3]/30 font-bold uppercase">In Stock / Healthy</span>
+</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech text-on-surface-variant">20 Oct 2025</td>
+<td class="py-2.5 px-3 text-center">
+<div class="inline-flex items-center gap-1 font-label-tech text-label-tech">
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-container-high rounded border border-outline-variant/60 text-primary font-bold" type="button">Adjust</button>
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-container-high rounded border border-outline-variant/60 text-on-surface-variant" type="button">Log</button>
+</div>
+</td>
+</tr>
+<!-- Row 7 -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-2.5 px-3">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">Teslin Synthetic Waterproof</span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">SKU: SYN-TES-400-SRA3 • PPG Industries</span>
+</div>
+</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech">320 × 460 mm <span class="text-outline-variant">(SRA3)</span></td>
+<td class="py-2.5 px-3 font-bold">400 Micron</td>
+<td class="py-2.5 px-3 text-right font-headline-sm text-headline-sm font-bold text-on-surface">85</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech text-on-surface-variant">Reams (100 shts)</td>
+<td class="py-2.5 px-3 text-right font-label-tech text-label-tech text-on-surface-variant">30 reams</td>
+<td class="py-2.5 px-3">
+<span class="font-label-tech text-label-tech bg-[#219BC3]/10 text-[#219BC3] px-2 py-0.5 rounded border border-[#219BC3]/30 font-bold uppercase">In Stock / Healthy</span>
+</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech text-on-surface-variant">19 Oct 2025</td>
+<td class="py-2.5 px-3 text-center">
+<div class="inline-flex items-center gap-1 font-label-tech text-label-tech">
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-container-high rounded border border-outline-variant/60 text-primary font-bold" type="button">Adjust</button>
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-container-high rounded border border-outline-variant/60 text-on-surface-variant" type="button">Log</button>
+</div>
+</td>
+</tr>
+<!-- Row 8 (Low Stock) -->
+<tr class="bg-[#D9476B]/5 hover:bg-[#D9476B]/10 transition-colors">
+<td class="py-2.5 px-3">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">Metallic Silver Foil Board</span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">SKU: SPE-FLB-300-B1 • Kurz Transfer Products</span>
+</div>
+</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech">700 × 1000 mm <span class="text-outline-variant">(B1)</span></td>
+<td class="py-2.5 px-3 font-bold">300 GSM</td>
+<td class="py-2.5 px-3 text-right font-headline-sm text-headline-sm font-bold text-[#D9476B]">12</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech text-on-surface-variant">Reams (100 shts)</td>
+<td class="py-2.5 px-3 text-right font-label-tech text-label-tech text-[#D9476B] font-bold">15 reams</td>
+<td class="py-2.5 px-3">
+<span class="font-label-tech text-label-tech bg-[#D9476B]/15 text-[#D9476B] px-2 py-0.5 rounded border border-[#D9476B]/30 font-bold uppercase">Low Stock</span>
+</td>
+<td class="py-2.5 px-3 font-label-tech text-label-tech text-on-surface-variant">18 Oct 2025</td>
+<td class="py-2.5 px-3 text-center">
+<div class="inline-flex items-center gap-1 font-label-tech text-label-tech">
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-container-high rounded border border-outline-variant/60 text-primary font-bold" type="button">Adjust</button>
+<button class="px-2 py-1 bg-[#D9476B] text-white hover:bg-secondary rounded font-bold" type="button">Reorder</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Status Ledger Strip -->
+<div class="flex flex-col sm:flex-row items-center justify-between text-on-surface-variant font-label-tech text-label-tech pt-space-xs border-t border-outline-variant/40 gap-space-sm">
+<div class="flex items-center gap-space-md">
+<span>Showing 8 of 68 SKUs</span>
+<span class="text-outline-variant">|</span>
+<span>FIFO Inventory Valuation: ₹14,82,450 Nominal</span>
+<span class="text-outline-variant">|</span>
+<span class="text-primary font-bold">Warehouse Bay 02-B &amp; 03-A Synced</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-container-high rounded border border-outline-variant/40 text-on-surface" type="button">« Previous 20</button>
+<span class="px-2 py-1 bg-primary text-on-primary font-bold rounded">1</span>
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-container-high rounded border border-outline-variant/40 text-on-surface" type="button">2</button>
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-container-high rounded border border-outline-variant/40 text-on-surface" type="button">3</button>
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-container-high rounded border border-outline-variant/40 text-on-surface" type="button">4</button>
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-container-high rounded border border-outline-variant/40 text-on-surface" type="button">Next 20 »</button>
+</div>
+</div>
+</section>
+<!-- TWO-COLUMN WORKFLOW SECTION: QUICK ADJUSTMENT DIALOG & AUDIT LEDGER -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
+<!-- STOCK ADJUSTMENT PANEL (SPEC: ADJ-FORM-88) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded border-2 border-primary/50 p-space-md shadow-sm relative flex flex-col gap-space-sm">
+<div class="absolute -top-3 left-4 bg-primary text-on-primary px-2 py-0.5 rounded font-label-tech text-label-tech uppercase font-bold tracking-wider">
+          ADJUST STOCK LEVEL [ SPEC: ADJ-FORM-88 ]
+        </div>
+<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/30 mt-1">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Reconcile Material Count</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Direct bin card update &amp; pressroom issue validation</p>
+</div>
+<span class="font-label-tech text-label-tech text-primary font-bold bg-primary/10 px-2 py-1 rounded border border-primary/20">STATION: BAY-02</span>
+</div>
+<!-- Selected Item Details -->
+<div class="bg-surface-container-low p-space-sm rounded border border-outline-variant/50 flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<span class="font-bold text-on-surface">13 × 19" Digital Silk Art Card (300 GSM)</span>
+<span class="font-label-tech text-label-tech bg-[#D9476B]/15 text-[#D9476B] font-bold px-1.5 py-0.5 rounded">FLAGGED LOW</span>
+</div>
+<div class="flex justify-between text-on-surface-variant font-label-tech text-label-tech">
+<span>SKU: #SKU-PAP-300-1319</span>
+<span>MILL: JK PAPER MILLS</span>
+</div>
+<div class="flex justify-between text-on-surface font-body-sm text-body-sm pt-1 border-t border-outline-variant/30">
+<span>Current Verified Physical Count:</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">25 Reams</span>
+</div>
+</div>
+<!-- Adjustment Type Radio Grid -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md uppercase text-on-surface-variant tracking-wider">Adjustment Type •</label>
+<div class="grid grid-cols-2 gap-1.5 font-label-tech text-label-tech">
+<label class="flex items-center gap-1.5 p-2 bg-surface-container rounded border border-outline-variant/60 cursor-pointer hover:bg-surface-container-high transition-colors">
+<input checked="" class="text-primary focus:ring-0" name="adj-type" type="radio"/>
+<span class="font-bold text-on-surface">(+) Stock In / Delivery</span>
+</label>
+<label class="flex items-center gap-1.5 p-2 bg-surface-container rounded border border-outline-variant/60 cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="text-primary focus:ring-0" name="adj-type" type="radio"/>
+<span class="font-bold text-[#D9476B]">(-) Waste / Spoilage</span>
+</label>
+<label class="flex items-center gap-1.5 p-2 bg-surface-container rounded border border-outline-variant/60 cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="text-primary focus:ring-0" name="adj-type" type="radio"/>
+<span class="font-bold text-on-surface">(-) Press Run Issue</span>
+</label>
+<label class="flex items-center gap-1.5 p-2 bg-surface-container rounded border border-outline-variant/60 cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="text-primary focus:ring-0" name="adj-type" type="radio"/>
+<span class="font-bold text-on-surface">Cycle Count Discrepancy</span>
+</label>
+</div>
+</div>
+<!-- Quantity & Math -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md uppercase text-on-surface-variant tracking-wider">Adjustment Qty •</label>
+<div class="relative">
+<input class="w-full px-3 py-1.5 bg-surface-container-low text-on-surface font-headline-sm text-headline-sm font-bold border border-outline-variant/70 rounded focus:border-primary focus:outline-none" type="number" value="50"/>
+<span class="absolute right-2 top-2.5 font-label-tech text-label-tech text-on-surface-variant">REAMS</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md uppercase text-on-surface-variant tracking-wider">New Calculated On-Hand</label>
+<div class="px-3 py-1.5 bg-primary/10 border border-primary/30 rounded flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">75</span>
+<span class="font-label-tech text-label-tech text-primary font-bold uppercase">Healthy Level</span>
+</div>
+</div>
+</div>
+<!-- Mandatory Reason -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md uppercase text-on-surface-variant tracking-wider">Audit Justification &amp; GIN Reference •</label>
+<textarea class="w-full px-3 py-1.5 bg-surface-container-low text-on-surface font-body-sm text-body-sm border border-outline-variant/70 rounded focus:border-primary focus:outline-none" placeholder="Provide invoice/GIN number or describe makeready waste event..." rows="2">Emergency supplier replenishment from JK Paper local depot. GIN #GIN-8849 logged by Gate 02 receiving bay.</textarea>
+</div>
+<!-- Operator Stamp -->
+<div class="p-2 bg-surface-container rounded border border-outline-variant/40 flex items-center justify-between text-on-surface-variant font-label-tech text-label-tech">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">badge</span>
+<span>AUTH: Master Pressman Shift Lead #01 (MP-044)</span>
+</div>
+<span class="font-bold text-on-surface">PIN SIGNED</span>
+</div>
+<!-- Buttons -->
+<div class="flex items-center justify-end gap-space-sm pt-space-xs border-t border-outline-variant/30">
+<button class="px-3 py-1.5 bg-surface-container-low hover:bg-surface-container text-on-surface font-title-md text-body-md rounded border border-outline-variant/60 transition-colors" type="button">
+            Cancel
+          </button>
+<button class="px-4 py-1.5 bg-primary hover:bg-primary-container text-on-primary font-title-md text-body-md rounded transition-colors flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Confirm &amp; Issue Bin Card</span>
+</button>
+</div>
+</div>
+<!-- AUDIT TRAIL / CHRONOLOGICAL INVENTORY STREAM -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded border border-outline-variant/60 p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs mb-space-sm border-b border-outline-variant/30">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">history_edu</span>
+<h2 class="font-title-md text-title-md font-bold text-on-surface tracking-tight">Chronological Inventory Audit Stream &amp; Consumption Log</h2>
+</div>
+<span class="font-label-tech text-label-tech text-outline">[ AUTO-SYNC ACTIVE ]</span>
+</div>
+<!-- Ledger Stream Items -->
+<div class="flex flex-col divide-y divide-outline-variant/30">
+<!-- Event 1 -->
+<div class="py-2.5 flex items-start gap-space-sm">
+<div class="w-7 h-7 rounded bg-secondary-fixed/50 text-on-secondary-fixed flex items-center justify-center font-bold text-label-tech flex-shrink-0 mt-0.5">
+                OUT
+              </div>
+<div class="flex-1 flex flex-col">
+<div class="flex items-baseline justify-between">
+<span class="font-body-md text-body-md font-bold text-on-surface">
+                    -18 Reams deducted from 13×19" Digital Silk (300 GSM)
+                  </span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">10 MINS AGO</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Allocated to Gang Job Docket <strong class="text-on-surface">#SP-2026-4K7Q9</strong> (Visiting Cards 500 pcs gang-run). Staged at Indigo 12000 feed deck.
+                </p>
+<div class="flex items-center gap-space-md mt-1 font-label-tech text-label-tech text-on-surface-variant">
+<span>OPERATOR: R. Deshmukh (EMP-210)</span>
+<span>FEED SENSOR: VERIFIED</span>
+</div>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="py-2.5 flex items-start gap-space-sm">
+<div class="w-7 h-7 rounded bg-[#219BC3]/20 text-[#219BC3] flex items-center justify-center font-bold text-label-tech flex-shrink-0 mt-0.5">
+                INK
+              </div>
+<div class="flex-1 flex flex-col">
+<div class="flex items-baseline justify-between">
+<span class="font-body-md text-body-md font-bold text-on-surface">
+                    -2.4 kg Cyan Process Ink consumed across Offset Unit 04
+                  </span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">45 MINS AGO</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  High-coverage brochure print run <strong class="text-on-surface">#BK-2026-9M2T1</strong> (32,000 imp). Automatic ink pump telemetry synchronization.
+                </p>
+<div class="flex items-center gap-space-md mt-1 font-label-tech text-label-tech text-on-surface-variant">
+<span>TELEMETRY: AUTO-DENSITOMETER OK</span>
+<span>UNIT DELTA: ±0.03g</span>
+</div>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="py-2.5 flex items-start gap-space-sm">
+<div class="w-7 h-7 rounded bg-primary/20 text-primary flex items-center justify-center font-bold text-label-tech flex-shrink-0 mt-0.5">
+                IN
+              </div>
+<div class="flex-1 flex flex-col">
+<div class="flex items-baseline justify-between">
+<span class="font-body-md text-body-md font-bold text-on-surface">
+                    +100 Reams A4 Copier Bond (80 GSM) received
+                  </span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">3 HOURS AGO</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Received via PO <strong class="text-on-surface">#PO-IND-9041</strong> from Bilt Graphics. Goods Inward Note <strong class="text-on-surface">#GIN-8834</strong> verified at Unloading Bay 01.
+                </p>
+<div class="flex items-center gap-space-md mt-1 font-label-tech text-label-tech text-on-surface-variant">
+<span>PALLET COUNT: 2</span>
+<span>QC INSP: ACCEPTED (MOISTURE 4.6%)</span>
+</div>
+</div>
+</div>
+<!-- Event 4 -->
+<div class="py-2.5 flex items-start gap-space-sm">
+<div class="w-7 h-7 rounded bg-[#D9476B]/20 text-[#D9476B] flex items-center justify-center font-bold text-label-tech flex-shrink-0 mt-0.5">
+                SCRAP
+              </div>
+<div class="flex-1 flex flex-col">
+<div class="flex items-baseline justify-between">
+<span class="font-body-md text-body-md font-bold text-on-surface">
+                    -50 Sheets 350 GSM Cotton Rag written off
+                  </span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">YESTERDAY 16:30</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Marked as 'Makeready Spoilage / Color Calib Delta-E &gt; 1.2' during fine-art gallery print setup.
+                </p>
+<div class="flex items-center gap-space-md mt-1 font-label-tech text-label-tech text-on-surface-variant">
+<span>AUTHORIZED: Master Pressman</span>
+<span>SCRAP BIN: BAY-04</span>
+</div>
+</div>
+</div>
+<!-- Event 5 -->
+<div class="py-2.5 flex items-start gap-space-sm">
+<div class="w-7 h-7 rounded bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold text-label-tech flex-shrink-0 mt-0.5">
+                AUDIT
+              </div>
+<div class="flex-1 flex flex-col">
+<div class="flex items-baseline justify-between">
+<span class="font-body-md text-body-md font-bold text-on-surface">
+                    Cycle count reconciled for Bay 03 Chemical Cabinet
+                  </span>
+<span class="font-label-tech text-label-tech text-on-surface-variant">23 OCT 2025</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Fountain solution, plate developer, and UV blanket wash inventories aligned with physical drum dipstick measurements.
+                </p>
+<div class="flex items-center gap-space-md mt-1 font-label-tech text-label-tech text-on-surface-variant">
+<span>SUPERVISOR: Shift Supervisor #02</span>
+<span>VARIANCE: 0.00%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-sm mt-space-sm border-t border-outline-variant/30 flex items-center justify-between font-label-tech text-label-tech">
+<span class="text-on-surface-variant">HASH: 4F8A-9B21-E839-C012 • SHA-256 SIGNED</span>
+<a class="text-primary hover:underline flex items-center gap-1 font-bold" href="#">
+<span>View Cryptographic Pressnet Warehouse Ledger</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple interactive filter & table search demonstration
+  const searchInput = document.getElementById('substrate-search');
+  if (searchInput) {
+    searchInput.addEventListener('input', function(e) {
+      const term = e.target.value.toLowerCase();
+      const rows = document.querySelectorAll('tbody tr');
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        row.style.display = text.includes(term) ? '' : 'none';
+      });
+    });
+  }
+
+  // Quick adjust modal trigger focus effect
+  const quickAdjustBtns = document.querySelectorAll('.quick-adjust-btn, #open-adj-modal');
+  quickAdjustBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const adjustmentCard = document.querySelector('[class*="border-primary/50"]');
+      if (adjustmentCard) {
+        adjustmentCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        adjustmentCard.classList.add('ring-2', 'ring-primary');
+        setTimeout(() => {
+          adjustmentCard.classList.remove('ring-2', 'ring-primary');
+        }, 1200);
+      }
+    });
+  });
+</script></main></div></body></html>

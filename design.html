@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design Reference — Stitch Screens</title>
+  <style>
+    :root {
+      --cyan: #219bc3;
+      --magenta: #d9476b;
+      --yellow: #f5d21b;
+      --key-black: #1b2427;
+      --surface: #ffffff;
+      --canvas: #f5f5f2;
+      --text: #191d20;
+      --text-secondary: #686d70;
+      --border: #d5d7d6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--text);
+      font-family: "Times New Roman", Times, serif;
+    }
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 2.5rem;
+    }
+    h1 { margin: 0 0 0.25rem; font-size: 24px; line-height: 32px; }
+    .meta { color: var(--text-secondary); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .cmyk { display: flex; gap: 4px; margin-top: 0.75rem; }
+    .cmyk span { width: 8px; height: 8px; display: inline-block; }
+    main { max-width: 1600px; margin: 0 auto; padding: 2.5rem; }
+    h2 { font-size: 18px; font-weight: 600; margin: 2rem 0 1rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s ease;
+    }
+    .card:hover { border-color: var(--cyan); }
+    .card img { width: 100%; height: 220px; object-fit: cover; object-position: top; display: block; border-bottom: 1px solid var(--border); }
+    .card .body { padding: 1rem; }
+    .card .title { font-size: 16px; font-weight: 700; margin: 0 0 0.5rem; }
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2px 6px;
+      color: var(--text-secondary);
+      margin-right: 6px;
+    }
+    .badge.mobile { border-color: var(--magenta); color: var(--magenta); }
+    .badge.desktop { border-color: var(--cyan); color: var(--cyan); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="cmyk">
+      <span style="background:#219bc3"></span>
+      <span style="background:#d9476b"></span>
+      <span style="background:#f5d21b"></span>
+      <span style="background:#1b2427"></span>
+    </div>
+    <h1>Design reference — Stitch screens</h1>
+    <div class="meta">Imported from Google Stitch &nbsp;•&nbsp; Project 15747305669043123223 &nbsp;•&nbsp; 16 screens</div>
+  </header>
+  <main>
+    <p style="margin:0 0 1rem;color:var(--text-secondary)">Static Google Stitch screens kept as the visual reference. The working, responsive site is at <a href="/">/</a> and the admin console at <a href="/admin/">/admin/</a>.</p>
+    <h2>Desktop screens (8)</h2>
+    <div class="grid">
+      <a class="card" href="/screens/desktop/admin-dashboard-overview.html">
+        <img src="/screenshots/admin-dashboard-overview.png" alt="Admin Dashboard Overview" loading="lazy" />
+        <div class="body">
+          <p class="title">Admin Dashboard Overview</p>
+          <span class="badge desktop">Desktop · 1280</span>
+        </div>
+      </a>
+      <a class="card" href="/screens/desktop/print-specification-preflight-order-tracking.html">
+        <img src="/screenshots/print-specification-preflight-order-tracking.png" alt="Print Specification Preflight Order Tracking" loading="lazy" />
+        <div class="body">
+          <p class="title">Print Specification Preflight Order Tracking</p>
+          <span class="badge desktop">Desktop · 1280</span>
+        </div>
+      </a>
+      <a class="card" href="/screens/desktop/printflow-os-admin-login.html">
+        <img src="/screenshots/printflow-os-admin-login.png" alt="PrintFlow OS — Admin Login" loading="lazy" />
+        <div class="body">
+          <p class="title">PrintFlow OS — Admin Login</p>
+          <span class="badge desktop">Desktop · 1280</span>
+        </div>
+      </a>
+      <a class="card" href="/screens/desktop/printflow-os-inventory.html">
+        <img src="/screenshots/printflow-os-inventory.png" alt="PrintFlow OS — Inventory" loading="lazy" />
+        <div class="body">
+          <p class="title">PrintFlow OS — Inventory</p>
+          <span class="badge desktop">Desktop · 1280</span>
+        </div>
+      </a>
+      <a class="card" href="/screens/desktop/printflow-os-order-management.html">
+        <img src="/screenshots/printflow-os-order-management.png" alt="PrintFlow OS — Order Management" loading="lazy" />
+        <div class="body">
+          <p class="title">PrintFlow OS — Order Management</p>
+          <span class="badge desktop">Desktop · 1280</span>
+        </div>
+      </a>
+      <a class="card" href="/screens/desktop/printflow-os-payments.html">
+        <img src="/screenshots/printflow-os-payments.png" alt="PrintFlow OS — Payments" loading="lazy" />
+        <div class="body">
+          <p class="title">PrintFlow OS — Payments</p>
+          <span class="badge desktop">Desktop · 1280</span>
+        </div>
+      </a>
+      <a class="card" href="/screens/desktop/printflow-os-reports.html">
+        <img src="/screenshots/printflow-os-reports.png" alt="PrintFlow OS — Reports" loading="lazy" />
+        <div class="body">
+          <p class="title">PrintFlow OS — Reports</p>
+          <span class="badge desktop">Desktop · 1280</span>
+        </div>
+      </a>
+      <a class="card" href="/screens/desktop/production-workflow-digital-job-cards.html">
+        <img src="/screenshots/production-workflow-digital-job-cards.png" alt="Production Workflow Digital Job Cards" loading="lazy" />
+        <div class="body">
+          <p class="title">Production Workflow Digital Job Cards</p>
+          <span class="badge desktop">Desktop · 1280</span>
+        </div>
+      </a>
+    </div>
+
+    <h2>Mobile screens (8)</h2>
+    <div class="grid">
+      <a class="card" href="/screens/mobile/printflow-mobile-account-and-order-history.html">
+        <img src="/screenshots/printflow-mobile-account-and-order-history.png" alt="PrintFlow Mobile — Account And Order History" loading="lazy" />
+        <div class="body">
+          <p class="title">PrintFlow Mobile — Account And Order History</p>
+          <span class="badge mobile">Mobile · 390</span>
+        </div>
+      </a>
+      <a class="card" href="/screens/mobile/printflow-mobile-artwork-upload.html">
+        <img src="/screenshots/printflow-mobile-artwork-upload.png" alt="PrintFlow Mobile — Artwork Upload" loading="lazy" />
+        <div class="body">
+          <p class="title">PrintFlow Mobile — Artwork Upload</p>
+          <span class="badge mobile">Mobile · 390</span>
+        </div>
+      </a>
+      <a class="card" href="/screens/mobile/printflow-mobile-checkout.html">
+        <img src="/screenshots/printflow-mobile-checkout.png" alt="PrintFlow Mobile — Checkout" loading="lazy" />
+        <div class="body">
+          <p class="title">PrintFlow Mobile — Checkout</p>
+          <span class="badge mobile">Mobile · 390</span>
+        </div>
+      </a>
+      <a class="card" href="/screens/mobile/printflow-mobile-home.html">
+        <img src="/screenshots/printflow-mobile-home.png" alt="PrintFlow Mobile — Home" loading="lazy" />
+        <div class="body">
+          <p class="title">PrintFlow Mobile — Home</p>
+          <span class="badge mobile">Mobile · 390</span>
+        </div>
+      </a>
+      <a class="card" href="/screens/mobile/printflow-mobile-order-confirmation.html">
+        <img src="/screenshots/printflow-mobile-order-confirmation.png" alt="PrintFlow Mobile — Order Confirmation" loading="lazy" />
+        <div class="body">
+          <p class="title">PrintFlow Mobile — Order Confirmation</p>
+          <span class="badge mobile">Mobile · 390</span>
+        </div>
+      </a>
+      <a class="card" href="/screens/mobile/printflow-mobile-order-tracking.html">
+        <img src="/screenshots/printflow-mobile-order-tracking.png" alt="PrintFlow Mobile — Order Tracking" loading="lazy" />
+        <div class="body">
+          <p class="title">PrintFlow Mobile — Order Tracking</p>
+          <span class="badge mobile">Mobile · 390</span>
+        </div>
+      </a>
+      <a class="card" href="/screens/mobile/printflow-mobile-product-catalogue.html">
+        <img src="/screenshots/printflow-mobile-product-catalogue.png" alt="PrintFlow Mobile — Product Catalogue" loading="lazy" />
+        <div class="body">
+          <p class="title">PrintFlow Mobile — Product Catalogue</p>
+          <span class="badge mobile">Mobile · 390</span>
+        </div>
+      </a>
+      <a class="card" href="/screens/mobile/printflow-mobile-product-configurator.html">
+        <img src="/screenshots/printflow-mobile-product-configurator.png" alt="PrintFlow Mobile — Product Configurator" loading="lazy" />
+        <div class="body">
+          <p class="title">PrintFlow Mobile — Product Configurator</p>
+          <span class="badge mobile">Mobile · 390</span>
+        </div>
+      </a>
+    </div>
+  </main>
+</body>
+</html>

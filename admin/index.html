@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin sign in — PrintFlow OS</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="/images/printflow-logo.svg" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/js/tw-config.js"></script>
+  <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+  <div class="min-h-screen grid lg:grid-cols-2">
+    <section class="relative hidden lg:flex flex-col justify-between bg-[#1B2427] text-[#eef1f5] p-12 overflow-hidden">
+      <div class="cmyk-strip absolute top-0 inset-x-0"><span></span><span></span><span></span><span></span></div>
+      <div class="flex items-center gap-3"><span class="material-symbols-outlined text-[32px]">print</span><span class="font-headline-lg text-headline-lg">PrintFlow OS</span></div>
+      <div>
+        <p class="font-label-md text-label-md uppercase tracking-widest opacity-70">Press management console</p>
+        <h1 class="font-display-lg text-display-lg mt-3">From order to delivery.</h1>
+        <p class="text-body-lg opacity-80 mt-4 max-w-md">Review incoming orders and artwork, confirm quotes, run production stages and coordinate dispatch, all in one place.</p>
+      </div>
+      <div class="flex gap-10 opacity-60 font-label-tech text-label-tech uppercase tracking-widest"><span>Review</span><span>Produce</span><span>Track</span><span>Deliver</span></div>
+      <span class="reg-mark top-10 right-10 opacity-60"></span><span class="reg-mark bottom-10 right-10 opacity-60"></span>
+    </section>
+    <section class="flex flex-col">
+      <div class="flex justify-between items-center p-4 sm:p-6">
+        <a href="/" class="inline-flex items-center gap-1 text-body-md text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-[18px]">arrow_back</span>Customer site</a>
+        <button type="button" data-theme-toggle class="w-10 h-10 inline-flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container"><span class="material-symbols-outlined">dark_mode</span></button>
+      </div>
+      <div class="flex-1 flex items-center justify-center px-4 pb-16">
+        <form id="login" class="w-full max-w-sm space-y-5" novalidate>
+          <div>
+            <p class="font-label-md text-label-md uppercase tracking-widest text-primary">Staff &amp; admin</p>
+            <h2 class="font-headline-xl text-headline-xl mt-1">Sign in</h2>
+          </div>
+          <div><label class="field-label" for="email">Email</label><input id="email" type="email" class="field" autocomplete="username" required /></div>
+          <div>
+            <label class="field-label" for="password">Password</label>
+            <div class="relative"><input id="password" type="password" class="field pr-11" autocomplete="current-password" required />
+              <button type="button" id="show" class="absolute right-1 top-1/2 -translate-y-1/2 w-9 h-9 inline-flex items-center justify-center text-on-surface-variant" aria-label="Show password"><span class="material-symbols-outlined text-[20px]">visibility</span></button></div>
+            <p id="err" class="field-error hidden" role="alert"></p>
+          </div>
+          <button class="btn btn-primary w-full py-3 text-body-lg">Sign in<span class="material-symbols-outlined">login</span></button>
+          <div class="card p-4 text-body-sm text-on-surface-variant space-y-1">
+            <div class="flex items-center gap-2"><span class="demo-flag">Demo sign-in</span>No real authentication yet.</div>
+            <div>Email <code class="text-on-surface">admin@printflow.example</code> · Password <code class="text-on-surface">demo1234</code></div>
+            <button type="button" id="fill" class="text-primary underline">Fill demo credentials</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+  <script type="module" src="/src/js/admin/login.js"></script>
+</body>
+</html>

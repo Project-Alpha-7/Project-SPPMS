@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PrintFlow — Order printing online</title>
+  <meta name="description" content="Order visiting cards, flyers, brochures, banners and more online. Upload artwork, get an instant estimate and track production." />
+  <link rel="icon" href="/images/printflow-logo.svg" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/js/tw-config.js"></script>
+  <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body data-shell="customer" data-page="home" class="bg-surface text-on-surface min-h-screen flex flex-col">
+  <main class="flex-1">
+    <!-- Hero -->
+    <section class="relative overflow-hidden border-b border-outline-variant bg-surface-container-lowest">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div>
+          <p class="font-label-md text-label-md uppercase tracking-widest text-primary mb-4 flex items-center gap-2"><span class="w-6 h-px bg-primary"></span>Online print ordering</p>
+          <h1 class="font-headline-xl-mobile text-headline-xl-mobile md:font-display-lg md:text-display-lg text-on-surface">Your printing, made simple.</h1>
+          <p class="mt-5 text-body-lg text-on-surface-variant max-w-xl">Choose a product, set your specifications, upload your artwork and see an estimate instantly. Our press team reviews every job and keeps you updated at each production stage.</p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="/products.html" class="btn btn-primary text-body-lg px-6 py-3"><span class="material-symbols-outlined">print</span>Start your printing order</a>
+            <a href="/track.html" class="btn btn-outline text-body-lg px-6 py-3"><span class="material-symbols-outlined">search</span>Track an order</a>
+          </div>
+          <dl class="mt-10 grid grid-cols-3 gap-px bg-outline-variant border border-outline-variant rounded-lg overflow-hidden max-w-lg">
+            <div class="bg-surface-container-lowest p-4"><dt class="font-label-tech text-label-tech uppercase text-outline">Products</dt><dd class="font-title-md text-title-md sm:font-headline-sm sm:text-headline-sm mt-1">8 types</dd></div>
+            <div class="bg-surface-container-lowest p-4"><dt class="font-label-tech text-label-tech uppercase text-outline">Artwork files</dt><dd class="font-title-md text-title-md sm:font-headline-sm sm:text-headline-sm mt-1">PDF, JPG, PNG</dd></div>
+            <div class="bg-surface-container-lowest p-4"><dt class="font-label-tech text-label-tech uppercase text-outline">Tracking</dt><dd class="font-title-md text-title-md sm:font-headline-sm sm:text-headline-sm mt-1">8 stages</dd></div>
+          </dl>
+        </div>
+        <div class="relative">
+          <div class="card overflow-hidden">
+            <img src="/images/stitch-asset-03.jpg" alt="Offset printing press running in a print shop" class="w-full aspect-[4/3] object-cover" />
+            <div class="cmyk-strip"><span></span><span></span><span></span><span></span></div>
+          </div>
+          <span class="reg-mark -top-4 -left-4"></span><span class="reg-mark -top-4 -right-4"></span>
+          <span class="reg-mark -bottom-4 -left-4"></span><span class="reg-mark -bottom-4 -right-4"></span>
+          <!-- Quick track -->
+          <form id="quick-track" class="card p-4 sm:p-5 shadow-xl sm:absolute sm:-bottom-8 sm:-left-8 sm:w-80 mt-4 sm:mt-0">
+            <label for="qt-id" class="field-label">Track an existing order</label>
+            <div class="flex gap-2">
+              <input id="qt-id" class="field" placeholder="Order ID, e.g. SP-2026-7QK2M" autocomplete="off" required />
+              <button class="btn btn-primary px-3" aria-label="Track"><span class="material-symbols-outlined">arrow_forward</span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
+        <div>
+          <p class="font-label-md text-label-md uppercase tracking-widest text-primary">Catalogue</p>
+          <h2 class="font-headline-lg text-headline-lg md:font-headline-xl md:text-headline-xl mt-1">Browse printing products</h2>
+        </div>
+        <a href="/products.html" class="btn btn-outline">View all products<span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+      </div>
+      <div id="home-products" class="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"></div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how-it-works" class="bg-surface-container-low border-y border-outline-variant scroll-mt-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <p class="font-label-md text-label-md uppercase tracking-widest text-primary">Process</p>
+        <h2 class="font-headline-lg text-headline-lg md:font-headline-xl md:text-headline-xl mt-1 mb-10">How it works</h2>
+        <ol class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="card p-6 relative"><span class="font-display-lg text-display-lg text-primary/30">01</span><h3 class="font-title-md text-title-md mt-2">Configure</h3><p class="text-body-md text-on-surface-variant mt-2">Pick a product and choose size, quantity, paper, colour and finishing.</p></li>
+          <li class="card p-6 relative"><span class="font-display-lg text-display-lg text-secondary/30">02</span><h3 class="font-title-md text-title-md mt-2">Upload artwork</h3><p class="text-body-md text-on-surface-variant mt-2">Upload a PDF, JPG or PNG. Our pre-press team reviews every file by hand.</p></li>
+          <li class="card p-6 relative"><span class="font-display-lg text-display-lg text-tertiary/40">03</span><h3 class="font-title-md text-title-md mt-2">Get an estimate</h3><p class="text-body-md text-on-surface-variant mt-2">See a price breakdown instantly. The press confirms the final quote after review.</p></li>
+          <li class="card p-6 relative"><span class="font-display-lg text-display-lg text-on-surface/20">04</span><h3 class="font-title-md text-title-md mt-2">Track to delivery</h3><p class="text-body-md text-on-surface-variant mt-2">Follow pre-press, printing, finishing, packing and dispatch with your Order ID.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- File guidelines + contact -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid gap-8 lg:grid-cols-2">
+      <div id="file-guidelines" class="card p-6 md:p-8 scroll-mt-28">
+        <h2 class="font-headline-sm text-headline-sm flex items-center gap-2"><span class="material-symbols-outlined text-primary">upload_file</span>Supported files</h2>
+        <ul class="mt-5 space-y-3 text-body-md text-on-surface-variant">
+          <li class="flex gap-3"><span class="material-symbols-outlined text-success text-[20px]">check</span><span><strong class="text-on-surface">PDF, JPG or PNG</strong>, up to 25 MB per file.</span></li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-success text-[20px]">check</span><span>Add <strong class="text-on-surface">3 mm bleed</strong> on each side for edge-to-edge designs.</span></li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-success text-[20px]">check</span><span>Use 300 DPI images and outline or embed your fonts.</span></li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary text-[20px]">info</span><span>Every file is checked manually by our pre-press team. If something needs fixing we'll ask you before printing.</span></li>
+        </ul>
+      </div>
+      <div id="contact" class="card p-6 md:p-8 scroll-mt-28">
+        <h2 class="font-headline-sm text-headline-sm flex items-center gap-2"><span class="material-symbols-outlined text-primary">support_agent</span>Contact the press</h2>
+        <dl class="mt-5 grid sm:grid-cols-2 gap-5 text-body-md" id="contact-list"></dl>
+        <a href="/products.html" class="btn btn-primary mt-6">Start an order</a>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="/src/js/pages/home.js"></script>
+</body>
+</html>

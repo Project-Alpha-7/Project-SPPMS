@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-on-surface": "#eef1f5", "surface-container-highest": "#e0e3e7", "surface-variant": "#e0e3e7", "surface-container-low": "#f1f4f8", "tertiary": "#6f5d00", "outline-variant": "#bdc8ce", "secondary-fixed-dim": "#ffb2bd", "background": "#f7f9fe", "error": "#ba1a1a", "error-container": "#ffdad6", "on-tertiary-container": "#4b3f00", "primary-fixed": "#bde9ff", "surface-dim": "#d7dade", "on-primary-fixed-variant": "#004d64", "on-surface": "#181c1f", "on-primary-fixed": "#001f2a", "inverse-primary": "#6bd3fd", "on-error": "#ffffff", "surface-tint": "#006684", "surface-container": "#ebeef2", "on-secondary-fixed-variant": "#8f0638", "on-primary": "#ffffff", "secondary-fixed": "#ffd9de", "on-tertiary-fixed-variant": "#534600", "primary": "#006480", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#ffe262", "on-tertiary": "#ffffff", "secondary": "#b0274e", "primary-container": "#007ea1", "primary-fixed-dim": "#6bd3fd", "secondary-container": "#fe6386", "on-secondary-fixed": "#400014", "on-primary-container": "#fbfdff", "outline": "#6e797e", "surface-bright": "#f7f9fe", "on-error-container": "#93000a", "tertiary-container": "#c7aa00", "surface-container-high": "#e5e8ec", "surface": "#f7f9fe", "on-surface-variant": "#3e484e", "on-background": "#181c1f", "on-tertiary-fixed": "#221b00", "inverse-surface": "#2d3134", "tertiary-fixed-dim": "#e7c500", "on-secondary": "#ffffff", "on-secondary-container": "#670025" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "gutter-lg": "1.5rem", "space-md": "1rem", "margin": "1rem", "margin-md": "1.5rem", "margin-lg": "2.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-xl": "2.25rem", "gutter": "1rem" }, fontFamily: { "title-md": ["Times New Roman"], "headline-xl": ["Times New Roman"], "label-lg": ["Times New Roman"], "body-md": ["Times New Roman"], "headline-lg": ["Times New Roman"], "body-lg": ["Times New Roman"], "display-lg": ["Times New Roman"], "label-md": ["Times New Roman"], "body-sm": ["Times New Roman"], "label-tech": ["Times New Roman"], "headline-sm": ["Times New Roman"], "headline-xl-mobile": ["Times New Roman"] }, fontSize: { "title-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-lg": ["13px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "label-tech": ["10px", { "lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "700" }], "headline-xl-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "700" }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[20px]">print</span><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">PrintFlow<span class="font-label-tech text-label-tech uppercase tracking-widest text-primary ml-1">OS</span></span></div><div class="flex items-center gap-[3px] mt-0.5"><span class="w-2 h-2 rounded-[0.5px] bg-[#219BC3] inline-block" title="Cyan"></span><span class="w-2 h-2 rounded-[0.5px] bg-[#D9476B] inline-block" title="Magenta"></span><span class="w-2 h-2 rounded-[0.5px] bg-[#F5D21B] inline-block" title="Yellow"></span><span class="w-2 h-2 rounded-[0.5px] bg-[#181C1F] inline-block" title="Key Black"></span><span class="font-label-tech text-label-tech text-outline ml-1">CAL•300DPI</span></div></div></div><div class="flex items-center gap-space-xs"><button aria-label="Toggle Light/Dark Theme" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface" onclick="document.documentElement.classList.toggle('dark')" type="button"><span class="material-symbols-outlined text-[20px]">light_mode</span></button><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full pb-6 px-margin space-y-space-md">
+<!-- STEP PROGRESS TRACKER -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-tech text-label-tech uppercase text-primary tracking-widest flex items-center gap-1">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+        Step 3 of 5 • Pre-Flight Calibration
+      </span>
+<span class="font-label-tech text-label-tech text-outline">REF: #PF-IND-8842</span>
+</div>
+<div class="flex items-center justify-between gap-1 mt-space-xs">
+<!-- Step 1 -->
+<div class="flex-1 flex flex-col items-center">
+<div class="w-full h-1 bg-primary rounded-full"></div>
+<span class="font-label-tech text-label-tech text-primary mt-1">1. Format</span>
+</div>
+<!-- Step 2 -->
+<div class="flex-1 flex flex-col items-center">
+<div class="w-full h-1 bg-primary rounded-full"></div>
+<span class="font-label-tech text-label-tech text-primary mt-1">2. Specs</span>
+</div>
+<!-- Step 3 Active -->
+<div class="flex-1 flex flex-col items-center">
+<div class="w-full h-1.5 bg-primary rounded-full shadow-[0_0_8px_rgba(0,100,128,0.4)]"></div>
+<span class="font-label-md text-label-md text-primary font-bold mt-1">3. Artwork</span>
+</div>
+<!-- Step 4 -->
+<div class="flex-1 flex flex-col items-center opacity-40">
+<div class="w-full h-1 bg-outline-variant rounded-full"></div>
+<span class="font-label-tech text-label-tech text-on-surface-variant mt-1">4. Delivery</span>
+</div>
+<!-- Step 5 -->
+<div class="flex-1 flex flex-col items-center opacity-40">
+<div class="w-full h-1 bg-outline-variant rounded-full"></div>
+<span class="font-label-tech text-label-tech text-on-surface-variant mt-1">5. Review</span>
+</div>
+</div>
+</div>
+<!-- ORDER CONTEXT & SPEC SHEET -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<!-- Top Micro Strip -->
+<div class="flex items-center justify-between pb-space-xs mb-space-xs border-b border-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface">500 Visiting Cards</span>
+<span class="bg-surface-container-high text-on-surface font-label-tech text-label-tech px-1.5 py-0.5 rounded">4/4 CMYK</span>
+</div>
+<span class="font-label-tech text-label-tech text-outline">SKU: VC-9054-MATTE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm leading-relaxed">
+      90 × 54 mm • 300 GSM Premium Art Card • Double-Sided Offset • Velvety Matte Lamination
+    </p>
+<!-- Calibration Target Annotations -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1 text-on-surface-variant">
+<div class="flex items-center justify-between font-label-tech text-label-tech">
+<span class="text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">crop</span>
+          BLEED: 94 × 58 MM (+2.0 MM CUT MARGIN)
+        </span>
+<span class="text-secondary font-semibold">SAFE ZONE: 86 × 50 MM</span>
+</div>
+<div class="flex items-center justify-between font-label-tech text-label-tech text-outline pt-0.5">
+<span>COLOR PROFILE: FOGRA39 / ISO COATED</span>
+<span>RESOLUTION: ≥ 300 DPI</span>
+</div>
+</div>
+</div>
+<!-- INTERACTIVE UPLOAD DROPZONE -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col items-center justify-center text-center relative group cursor-pointer transition-all active:scale-[0.99]" id="dropzone">
+<!-- Cut Mark Corners -->
+<div class="absolute top-2 left-2 text-outline-variant font-label-tech text-label-tech select-none">┌ ⌖</div>
+<div class="absolute top-2 right-2 text-outline-variant font-label-tech text-label-tech select-none">⌖ ┐</div>
+<div class="absolute bottom-2 left-2 text-outline-variant font-label-tech text-label-tech select-none">└ ⌖</div>
+<div class="absolute bottom-2 right-2 text-outline-variant font-label-tech text-label-tech select-none">⌖ ┘</div>
+<!-- Central Micro-Graphic -->
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed mb-space-sm shadow-sm">
+<span class="material-symbols-outlined text-[32px]">cloud_upload</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface mb-1">
+      Tap to Select or Drop Imposition Files
+    </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-[280px] mb-space-sm">
+      Standard high-res PDF (PDF/X-1a preferred), TIF, high-resolution JPG or PNG.
+    </p>
+<!-- Prepress Badges -->
+<div class="flex flex-wrap items-center justify-center gap-space-xs mt-1">
+<span class="bg-surface-container text-on-surface-variant font-label-tech text-label-tech px-2 py-1 rounded">
+        MAX 25 MB / FILE
+      </span>
+<span class="bg-surface-container text-on-surface-variant font-label-tech text-label-tech px-2 py-1 rounded">
+        AUTO 2MM BLEED CHECK
+      </span>
+<span class="bg-surface-container text-on-surface-variant font-label-tech text-label-tech px-2 py-1 rounded">
+        OUTLINED FONTS
+      </span>
+</div>
+<!-- Hidden Input for Micro-Interaction -->
+<input accept=".pdf,.png,.jpg,.jpeg" class="hidden" id="file-input" type="file"/>
+</div>
+<!-- UPLOADED ARTWORK LEDGER -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between px-1">
+<h3 class="font-title-md text-title-md text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">layers</span>
+        Artwork Queue
+      </h3>
+<span class="font-label-tech text-label-tech px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">
+        1 READY • 1 REJECTED
+      </span>
+</div>
+<!-- Card 1: Successful Pre-press Validated File -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col gap-space-sm">
+<!-- Cyan Prepress Status Indicator -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<!-- Proof Thumbnail Image -->
+<div class="w-14 h-14 rounded-lg overflow-hidden bg-surface-container flex-shrink-0 relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Editorial design visiting card front and back mockups placed on a neutral prepress evaluation light table with visible CMYK registration target marks and crop lines in sharp focus" src="/images/stitch-asset-10.jpg"/>
+<div class="absolute bottom-0 right-0 bg-primary text-on-primary text-[9px] px-1 font-label-tech">PDF</div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-[15px] font-bold text-on-surface truncate">visiting-card-front-back.pdf</span>
+</div>
+<span class="font-label-tech text-label-tech text-on-surface-variant mt-0.5">
+              2.4 MB • 2 PAGES • 300 DPI • FOGRA39
+            </span>
+<div class="flex items-center gap-1 mt-1">
+<span class="inline-flex items-center gap-0.5 bg-primary/10 text-primary px-1.5 py-0.5 rounded font-label-tech text-label-tech">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+                PRE-PRESS READY (100%)
+              </span>
+<span class="font-label-tech text-label-tech text-outline">• BLEED OK</span>
+</div>
+</div>
+</div>
+<!-- Action Controls -->
+<div class="flex items-center gap-1 flex-shrink-0">
+<button aria-label="Inspect Proof" class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant" title="Inspect Proof">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+<button aria-label="Remove Artwork" class="w-8 h-8 rounded-full bg-surface-container hover:bg-error-container hover:text-on-error-container flex items-center justify-center text-on-surface-variant transition-colors" title="Delete Artwork">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Pre-flight Validation Checklist Bar -->
+<div class="bg-surface-container-low rounded-lg p-space-xs flex items-center justify-between font-label-tech text-label-tech text-on-surface-variant">
+<span class="flex items-center gap-1 text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          Raster Integrity: Passed
+        </span>
+<span class="flex items-center gap-1 text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          Ink Coverage: 284% (Max 320%)
+        </span>
+</div>
+</div>
+<!-- Card 2: Error State (Rejected File) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-14 h-14 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">cancel</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[15px] font-bold text-on-surface truncate">brand_master_logo.ai</span>
+<span class="font-label-tech text-label-tech text-on-surface-variant mt-0.5">
+              14.8 MB • UPLOADED TODAY, 10:14 AM
+            </span>
+<div class="flex items-center gap-1 mt-1">
+<span class="inline-flex items-center gap-0.5 bg-secondary text-on-secondary px-1.5 py-0.5 rounded font-label-tech text-label-tech font-bold">
+                REJECTED (INVALID MIME)
+              </span>
+</div>
+</div>
+</div>
+<button aria-label="Dismiss Error" class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant" title="Dismiss">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Magenta Error Callout -->
+<div class="bg-secondary/5 rounded-lg p-space-sm mt-1">
+<p class="font-body-sm text-body-sm text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">error</span>
+          Unsupported native vector format (.ai).
+        </p>
+<p class="font-label-tech text-label-tech text-on-surface-variant mt-0.5 pl-5">
+          Please export artwork as a press-ready PDF with fonts converted to outlines, or flatten to CMYK TIFF.
+        </p>
+</div>
+</div>
+</div>
+<!-- VISUAL PREPRESS PREVIEW BANNER -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm relative">
+<div class="relative w-full h-36">
+<img class="w-full h-full object-cover" data-alt="Macro close-up shot of offset press CMYK ink roller station running cyan and yellow inks on high-speed industrial printing press, sharp editorial industrial documentary photography" src="/images/stitch-asset-11.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/40 to-transparent flex flex-col justify-end p-space-md text-surface-bright">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#219BC3]"></span>
+<span class="font-label-tech text-label-tech uppercase tracking-widest text-primary-fixed">Industrial Assurance</span>
+</div>
+<p class="font-headline-sm text-[16px] leading-tight text-white mt-1">
+          Laser plate imaging at 2,400 DPI with Heidelberg Suprasetter CTP.
+        </p>
+</div>
+</div>
+</div>
+<!-- YELLOW ACCENT PREPRESS MANUAL REVIEW GUARANTEE -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-tertiary-container/30 flex items-center justify-center text-tertiary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<h4 class="font-headline-sm text-[15px] font-bold text-on-surface">
+            Automated &amp; Human Preflight Guarantee
+          </h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+          Before your plates touch the press, our pre-press team performs a rigid multi-point assessment:
+        </p>
+</div>
+</div>
+<ul class="mt-space-sm space-y-1.5 pl-11 text-on-surface font-body-sm text-body-sm">
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[15px]">check</span>
+<span>Automatic 28-point preflight check (bleed, overprint, TAC ink limits).</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[15px]">check</span>
+<span>Instant WhatsApp PDF soft-proof dispatched for final authorization.</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[15px]">check</span>
+<span>Full misprint indemnity: zero plate misregistration or color casts.</span>
+</li>
+</ul>
+</div>
+<!-- STICKY COMMERCE & NAVIGATION FOOTER -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-tech text-label-tech text-outline uppercase tracking-wider">Estimated Total (500 Units)</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">₹1,450</span>
+<span class="font-label-tech text-label-tech text-outline">INCL. 18% GST</span>
+</div>
+<span class="font-label-tech text-label-tech text-on-surface-variant">₹2.90 per card • Double Sided Matte</span>
+</div>
+<div class="text-right">
+<span class="inline-flex items-center gap-1 bg-surface-container text-primary px-2 py-1 rounded font-label-tech text-label-tech font-bold">
+<span class="material-symbols-outlined text-[12px]">schedule</span>
+          SHIPS IN 48 HOURS
+        </span>
+</div>
+</div>
+<!-- PRIMARY ACTION BUTTON -->
+<button class="w-full h-12 bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-[16px] tracking-wide rounded-lg flex items-center justify-center gap-2 shadow-sm active:scale-[0.98] transition-all" id="btn-continue" type="button">
+<span>Continue to Delivery</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<div class="flex items-center justify-center gap-space-md pt-1">
+<button class="font-label-tech text-label-tech text-on-surface-variant hover:text-primary flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">arrow_back</span>
+        Back to Specifications
+      </button>
+<span class="text-outline-variant">•</span>
+<button class="font-label-tech text-label-tech text-primary hover:underline flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">download</span>
+        Download A4 Template (PDF)
+      </button>
+</div>
+</div>
+</div>
+<!-- INLINE CLIENT SCRIPT FOR SEAMLESS TOUCH INTERACTION -->
+<script>
+  (function() {
+    const dropzone = document.getElementById('dropzone');
+    const fileInput = document.getElementById('file-input');
+    const continueBtn = document.getElementById('btn-continue');
+
+    if (dropzone && fileInput) {
+      dropzone.addEventListener('click', () => {
+        fileInput.click();
+      });
+
+      fileInput.addEventListener('change', (e) => {
+        if (e.target.files && e.target.files.length > 0) {
+          const fileName = e.target.files[0].name;
+          alert('Pre-flight queue updated: File received for raster calibration: ' + fileName);
+        }
+      });
+    }
+
+    if (continueBtn) {
+      continueBtn.addEventListener('click', () => {
+        const toast = document.createElement('div');
+        toast.className = 'fixed bottom-20 left-1/2 -translate-x-1/2 bg-on-surface text-surface px-4 py-2 rounded-lg font-label-md shadow-lg z-50 text-center flex items-center gap-2 animate-bounce';
+        toast.innerHTML = '<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> Preflight Passed • Transitioning to Delivery Phase...';
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 2400);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-md text-label-md uppercase tracking-wider mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="products" href="#"><span class="material-symbols-outlined text-[22px]">format_paint</span><span class="font-label-md text-label-md uppercase tracking-wider mt-0.5">Products</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-orders" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-md text-label-md uppercase tracking-wider mt-0.5">Orders</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="track" href="#"><span class="material-symbols-outlined text-[22px]">qr_code_scanner</span><span class="font-label-md text-label-md uppercase tracking-wider mt-0.5">Track</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="account" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-md text-label-md uppercase tracking-wider mt-0.5">Account</span></a></div></nav></body></html>

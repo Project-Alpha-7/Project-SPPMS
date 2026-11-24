@@ -1,0 +1,156 @@
+{
+    "bodyFontFamily":  "Times New Roman",
+    "colorMode":  "LIGHT",
+    "colorVariant":  "FIDELITY",
+    "customColor":  "#219bc3",
+    "designMd":  "---\nname: Industrial Editorial Prepress\ncolors:\n  surface: \u0027#f7f9fe\u0027\n  surface-dim: \u0027#d7dade\u0027\n  surface-bright: \u0027#f7f9fe\u0027\n  surface-container-lowest: \u0027#ffffff\u0027\n  surface-container-low: \u0027#f1f4f8\u0027\n  surface-container: \u0027#ebeef2\u0027\n  surface-container-high: \u0027#e5e8ec\u0027\n  surface-container-highest: \u0027#e0e3e7\u0027\n  on-surface: \u0027#181c1f\u0027\n  on-surface-variant: \u0027#3e484e\u0027\n  inverse-surface: \u0027#2d3134\u0027\n  inverse-on-surface: \u0027#eef1f5\u0027\n  outline: \u0027#6e797e\u0027\n  outline-variant: \u0027#bdc8ce\u0027\n  surface-tint: \u0027#006684\u0027\n  primary: \u0027#006480\u0027\n  on-primary: \u0027#ffffff\u0027\n  primary-container: \u0027#007ea1\u0027\n  on-primary-container: \u0027#fbfdff\u0027\n  inverse-primary: \u0027#6bd3fd\u0027\n  secondary: \u0027#b0274e\u0027\n  on-secondary: \u0027#ffffff\u0027\n  secondary-container: \u0027#fe6386\u0027\n  on-secondary-container: \u0027#670025\u0027\n  tertiary: \u0027#6f5d00\u0027\n  on-tertiary: \u0027#ffffff\u0027\n  tertiary-container: \u0027#c7aa00\u0027\n  on-tertiary-container: \u0027#4b3f00\u0027\n  error: \u0027#ba1a1a\u0027\n  on-error: \u0027#ffffff\u0027\n  error-container: \u0027#ffdad6\u0027\n  on-error-container: \u0027#93000a\u0027\n  primary-fixed: \u0027#bde9ff\u0027\n  primary-fixed-dim: \u0027#6bd3fd\u0027\n  on-primary-fixed: \u0027#001f2a\u0027\n  on-primary-fixed-variant: \u0027#004d64\u0027\n  secondary-fixed: \u0027#ffd9de\u0027\n  secondary-fixed-dim: \u0027#ffb2bd\u0027\n  on-secondary-fixed: \u0027#400014\u0027\n  on-secondary-fixed-variant: \u0027#8f0638\u0027\n  tertiary-fixed: \u0027#ffe262\u0027\n  tertiary-fixed-dim: \u0027#e7c500\u0027\n  on-tertiary-fixed: \u0027#221b00\u0027\n  on-tertiary-fixed-variant: \u0027#534600\u0027\n  background: \u0027#f7f9fe\u0027\n  on-background: \u0027#181c1f\u0027\n  surface-variant: \u0027#e0e3e7\u0027\ntypography:\n  display-lg:\n    fontFamily: Times New Roman\n    fontSize: 40px\n    fontWeight: \u0027700\u0027\n    lineHeight: 48px\n    letterSpacing: -0.02em\n  headline-xl:\n    fontFamily: Times New Roman\n    fontSize: 32px\n    fontWeight: \u0027700\u0027\n    lineHeight: 40px\n    letterSpacing: -0.01em\n  headline-xl-mobile:\n    fontFamily: Times New Roman\n    fontSize: 26px\n    fontWeight: \u0027700\u0027\n    lineHeight: 32px\n    letterSpacing: 0em\n  headline-lg:\n    fontFamily: Times New Roman\n    fontSize: 24px\n    fontWeight: \u0027700\u0027\n    lineHeight: 32px\n  headline-sm:\n    fontFamily: Times New Roman\n    fontSize: 20px\n    fontWeight: \u0027700\u0027\n    lineHeight: 28px\n  title-md:\n    fontFamily: Times New Roman\n    fontSize: 18px\n    fontWeight: \u0027600\u0027\n    lineHeight: 24px\n  body-lg:\n    fontFamily: Times New Roman\n    fontSize: 16px\n    fontWeight: \u0027400\u0027\n    lineHeight: 24px\n  body-md:\n    fontFamily: Times New Roman\n    fontSize: 14px\n    fontWeight: \u0027400\u0027\n    lineHeight: 20px\n  body-sm:\n    fontFamily: Times New Roman\n    fontSize: 12px\n    fontWeight: \u0027400\u0027\n    lineHeight: 18px\n  label-lg:\n    fontFamily: Times New Roman\n    fontSize: 13px\n    fontWeight: \u0027700\u0027\n    lineHeight: 16px\n    letterSpacing: 0.04em\n  label-md:\n    fontFamily: Times New Roman\n    fontSize: 11px\n    fontWeight: \u0027700\u0027\n    lineHeight: 14px\n    letterSpacing: 0.06em\n  label-tech:\n    fontFamily: Times New Roman\n    fontSize: 10px\n    fontWeight: \u0027400\u0027\n    lineHeight: 12px\n    letterSpacing: 0.08em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  gutter: 1rem\n  gutter-lg: 1.5rem\n  margin: 1rem\n  margin-md: 1.5rem\n  margin-lg: 2.5rem\n  space-xs: 0.25rem\n  space-sm: 0.5rem\n  space-md: 1rem\n  space-lg: 1.5rem\n  space-xl: 2.25rem\n---\n\n## Brand \u0026 Style\n\nThis design system blends heavy industrial printing machinery with authoritative editorial dignity. It is tailored for high-volume enterprise print brokerages, industrial press houses, and automated fulfillment networks. The atmosphere is that of an exacting, high-throughput operating system: clean, structured, calibrated, and rigorously functional.\n\nThe aesthetic fuses classic typography with technical prepress documentation. It treats every digital interface like an ultra-dense, precisely bounded imposition sheet ready for plate generation. Key motifs include:\n- **Registration Crosshairs \u0026 Micro Marks:** Scaled 4-color CMYK registration strips, optical corner tick marks, and density targets integrated into panels, headers, and modals.\n- **Dimensional Metric Annotations:** Explicit real-world units (`mm`, `GSM`, `dpi`, `pt`, `bleed: 3mm`) alongside standard UI metadata.\n- **Double-Stroke Framing:** Fine engineering-grade double outlines evoking physical drafting tables and precision paper cutters.\n- **Quiet Authority:** Times New Roman applied comprehensively across all typographic roles, transforming standard enterprise UI into a bespoke, literary-grade technical ledger.\n\n## Colors\n\nThe palette is rooted in industrial prepress reality: a true subtractive print model (Cyan, Magenta, Yellow, Key/Black) mapped purposefully into an interactive digital workflow.\n\n### Light Mode (Default Canvas)\n- **Primary Canvas (`#FFFFFF` \u0026 `#F5F5F2`):** Base workspace and neutral background reminiscent of uncoated, high-brightness stock paper.\n- **Card / Surface (`#FFFFFF`):** Crisp pure white containers bounded by mechanical borders.\n- **Primary Text (`#191D20`):** Carbon black ink tone with extreme contrast and legibility.\n- **Secondary / Supporting Text (`#686D70`):** Balanced graphite gray for metadata, unit tags, and field labels.\n- **Structural Borders (`#D5D7D6`):** Machine-drawn hairline strokes for compartmentalization without visual clutter.\n\n### Dark Mode (Pressroom Console)\n- **Primary Canvas (`#111719`):** Deep charcoal slate engineered for low-light pressrooms and multi-screen control booths.\n- **Card / Surface Tier 1 (`#191F22`) \u0026 Tier 2 (`#20272A`):** Layered sheet containers providing elevation without shadow bloat.\n- **Primary Text (`#F5F5F2`):** Bleached ivory paper white.\n- **Secondary Text (`#A7AFB1`):** Calibrated muted aluminum gray.\n- **Structural Borders (`#3A4448`):** Restrained, low-contrast structural rules.\n\n### CMYK Functional Anchors\n- **Cyan (`#219BC3`):** Primary action state, active selection ribbons, verified proof markers, focused input outlines, and interactive links.\n- **Magenta (`#D9476B`):** Secondary accents, production alerts, batch cut-offs, system notifications, and dynamic tag callouts.\n- **Yellow (`#F5D21B`):** Warning indicators, queue pauses, drying/pending cycles, and inspection holds. Must always use dark carbon text (`#191D20`) for contrast.\n- **Key Black (`#1B2427`):** Solid structural ground, dark badges, high-contrast print commands, and active tabs.\n\n## Typography\n\nThe design system enforces `Times New Roman` systematically across every interface tier. Rather than relying on modern monospaced or sans-serif standards, it uses the precision of classical serif proportions to evoke the heritage of mechanical publishing, broadsides, and legal imprint registries.\n\n### Typographic Implementation Rules\n- **Tabular Data \u0026 Numbers:** Use `font-variant-numeric: tabular-nums lining-nums` for all financial metrics, batch counters, and run sizes to maintain strict vertical alignment across tables.\n- **Labels \u0026 Micro-Annotations:** The `label-md` and `label-tech` levels should be rendered in uppercase with positive letter spacing (`0.06em` to `0.08em`) to mimic printed press sheet margins and technical documentation.\n- **Text Density:** Never allow loose, floaty line heights. Keep leading tight (`1.2` to `1.4`) to sustain high visual density without sacrificing legibility.\n\n## Layout \u0026 Spacing\n\nThe layout philosophy mirrors physical paper sheets, imposition layouts, and plate locks. Interfaces are anchored to a 12-column responsive fluid grid with precise, consistent gutters and margins.\n\n### Breakpoint Adaptation\n- **Mobile (\u003c 768px):** 4-column structure, `margin: 1rem`, `gutter: 1rem`. Overflows collapse vertically; technical registration bars scale to horizontal 2-bar or 4-dot formats.\n- **Tablet (768px - 1199px):** 8-column layout, `margin-md: 1.5rem`, `gutter: 1rem`. Sidebars collapse to icon/dock status.\n- **Desktop (ΓëÑ 1200px):** 12-column layout, `margin-lg: 2.5rem`, `gutter-lg: 1.5rem`. Max-width content boundaries pinned to 1600px with symmetric outer gutter framing.\n\n### Structural Rhythms \u0026 Boundaries\n- Avoid floating elements with ambiguous boundaries. Every content group must reside within explicit mechanical borders.\n- Technical measurement lines and bleed lines are indicated by `1px` dashed borders, framing the active content area like a print artboard.\n\n## Elevation \u0026 Depth\n\nThis system avoids soft, blurred, or diffuse drop shadows. Depth is communicated strictly through surface layering, crisp mechanical borders, and hairline offsets reminiscent of physical paper stocks stacked on a cutting table.\n\n### Depth Mechanics\n- **Level 0 (Artboard / Sheet Base):** Flat background surface (`#F5F5F2` light / `#111719` dark).\n- **Level 1 (Panels \u0026 Cards):** Flat container (`#FFFFFF` light / `#191F22` dark) enclosed by a `1px` border (`#D5D7D6` light / `#3A4448` dark).\n- **Level 2 (Active Sheets \u0026 Focus Containers):** Dual-stroke visual border. Constructed using a `1.5px` outer border in Cyan (`#219BC3`) accompanied by an inner `1px` offset ring (`box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 2.5px #219BC3` in light mode).\n- **Level 3 (Modals, Overlays, Floating Proofs):** Hard-edged 2px offset physical drop shadow (`box-shadow: 3px 3px 0px rgba(25, 29, 32, 0.15)` in light mode; `box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5)` in dark mode) paired with an opaque hairline outline.\n\n## Shapes\n\nThe shape vocabulary emphasizes the machined accuracy of hydraulic guillotines and die-cutters. Elements are distinctly architectural and rectangular.\n\n- **Standard Elements (Buttons, Inputs, Badges):** 6px corner radius (`roundedness: 1`, with custom boundary clamp at 6px).\n- **Major Containers (Cards, Modals, Canvas Drawers):** Strict 8px to 10px corner radius.\n- **Micro Chips \u0026 Registration Ticks:** Crisp 2px to 4px radius. \n- Circular forms are reserved exclusively for:\n  - CMYK registration targets and crosshairs (`Γèò`).\n  - Radio button centers.\n  - Optical color calibration dots.\n\n## Components\n\n### 1. The CMYK Micro Calibration Strip\nEvery primary container, modal, and system header includes an integrated 4-color prepress calibration strip at its top or bottom edge:\n- A horizontal sequence of four adjacent squares or pill-dots (each 8px ├ù 8px, 4px margin):\n  - `Cyan (#219BC3)`\n  - `Magenta (#D9476B)`\n  - `Yellow (#F5D21B)`\n  - `Key Black (#1B2427)`\n- In modals, the calibration strip sits adjacent to an engineering registration mark: a 12px circular crosshair icon (`Γîû`).\n\n### 2. Buttons\n- **Primary Action (Cyan Direct):** Outlined or solid fill with high typographic punch. Solid style uses `#219BC3` background with pure white `#FFFFFF` Times New Roman bold text. Outlined variant uses a `1.5px` solid border (`#219BC3`), transparent background, `#219BC3` text, and a double-stroke focus ring on hover.\n- **Secondary (Magenta Accent / Proof Approval):** Hairline outline `1.5px` `#D9476B`, text `#D9476B`. Hover state fills with 8% opacity tint.\n- **Tertiary / Neutral (Structural Outlined):** Hairline border `1px` (`#D5D7D6` light / `#3A4448` dark), background transparent, text `#191D20` (light) / `#F5F5F2` (dark).\n- **Physical Padding:** `0.5rem 1rem` for standard; `0.25rem 0.625rem` for compact data-grid buttons.\n\n### 3. Cards \u0026 Paper Containers\n- Constructed with `#FFFFFF` (light) or `#20272A` (dark) canvas.\n- Framed with `1px` solid `#D5D7D6` (light) or `#3A4448` (dark).\n- Cards include a technical header containing:\n  - Serif section title (`title-md`).\n  - Right-aligned dimensional tag (e.g., `[ 210 ├ù 297 mm ΓÇö 300 GSM ]`) set in `label-tech` tracking.\n  - A subtle `1px` divider line separating card header from content body.\n\n### 4. Input Fields \u0026 Select Pickers\n- **Resting:** `1px` border `#D5D7D6` (light) / `#3A4448` (dark), background `#FFFFFF` (light) / `#191F22` (dark), text in Times New Roman `14px`.\n- **Focus:** `1.5px` border `#219BC3` with a zero-blur crisp outline offset of `2px`.\n- **Labels:** Positioned outside/above the field in `label-md` uppercase with a trailing dot or registration mark (e.g., `PAPER FINISH ΓÇó`).\n- **Units Append:** Fixed right-side micro-tags (e.g., `GSM`, `mm`, `LPI`, `copies`) styled in `label-tech` using `#686D70`.\n\n### 5. Chips, Status Badges \u0026 Print Runs\n- Rectangular with 4px corner radius and `1px` crisp bounding stroke.\n- **Proof Approved:** Border `#219BC3`, subtle cyan background (5% opacity), Cyan text.\n- **Press Hold / Drying:** Border `#F5D21B`, background `#F5D21B` (10% opacity), text `#191D20` (light) / `#F5D21B` (dark).\n- **Plate Error / Bleed Warning:** Border `#D9476B`, background `#D9476B` (8% opacity), text `#D9476B`.\n\n### 6. QR Code Tracking Cards\nSpecialized component for online print ordering:\n- Central QR graphic framed with four corner crop marks (L-shaped bracket marks at each corner denoting physical cut lines).\n- Metadata block directly underneath specifying: UUID, Batch Sequence, Order Timestamp, and Target Press Line.\n- All numbers rendered in tabular lining Times New Roman.\n\n### 7. Data Tables \u0026 Imposition Sheets\n- Compact vertical padding (`space-sm` / `8px`).\n- Column headers styled with `label-md` uppercase, bordered by a double-rule at the bottom (`border-bottom: 3px double #D5D7D6`).\n- Alternating rows employ subtle zebra striping (`#F5F5F2` at 40% opacity in light mode) with high-contrast text.",
+    "headlineFontFamily":  "Times New Roman",
+    "labelFontFamily":  "Times New Roman",
+    "namedColors":  {
+                        "background":  "#f7f9fe",
+                        "error":  "#ba1a1a",
+                        "error_container":  "#ffdad6",
+                        "inverse_on_surface":  "#eef1f5",
+                        "inverse_primary":  "#6bd3fd",
+                        "inverse_surface":  "#2d3134",
+                        "on_background":  "#181c1f",
+                        "on_error":  "#ffffff",
+                        "on_error_container":  "#93000a",
+                        "on_primary":  "#ffffff",
+                        "on_primary_container":  "#fbfdff",
+                        "on_primary_fixed":  "#001f2a",
+                        "on_primary_fixed_variant":  "#004d64",
+                        "on_secondary":  "#ffffff",
+                        "on_secondary_container":  "#670025",
+                        "on_secondary_fixed":  "#400014",
+                        "on_secondary_fixed_variant":  "#8f0638",
+                        "on_surface":  "#181c1f",
+                        "on_surface_variant":  "#3e484e",
+                        "on_tertiary":  "#ffffff",
+                        "on_tertiary_container":  "#4b3f00",
+                        "on_tertiary_fixed":  "#221b00",
+                        "on_tertiary_fixed_variant":  "#534600",
+                        "outline":  "#6e797e",
+                        "outline_variant":  "#bdc8ce",
+                        "primary":  "#006480",
+                        "primary_container":  "#007ea1",
+                        "primary_fixed":  "#bde9ff",
+                        "primary_fixed_dim":  "#6bd3fd",
+                        "secondary":  "#b0274e",
+                        "secondary_container":  "#fe6386",
+                        "secondary_fixed":  "#ffd9de",
+                        "secondary_fixed_dim":  "#ffb2bd",
+                        "surface":  "#f7f9fe",
+                        "surface_bright":  "#f7f9fe",
+                        "surface_container":  "#ebeef2",
+                        "surface_container_high":  "#e5e8ec",
+                        "surface_container_highest":  "#e0e3e7",
+                        "surface_container_low":  "#f1f4f8",
+                        "surface_container_lowest":  "#ffffff",
+                        "surface_dim":  "#d7dade",
+                        "surface_tint":  "#006684",
+                        "surface_variant":  "#e0e3e7",
+                        "tertiary":  "#6f5d00",
+                        "tertiary_container":  "#c7aa00",
+                        "tertiary_fixed":  "#ffe262",
+                        "tertiary_fixed_dim":  "#e7c500"
+                    },
+    "overrideNeutralColor":  "#191d20",
+    "overridePrimaryColor":  "#219bc3",
+    "overrideSecondaryColor":  "#d9476b",
+    "overrideTertiaryColor":  "#f5d21b",
+    "roundness":  "ROUND_FOUR",
+    "spacing":  {
+                    "gutter":  "1rem",
+                    "gutter-lg":  "1.5rem",
+                    "margin":  "1rem",
+                    "margin-lg":  "2.5rem",
+                    "margin-md":  "1.5rem",
+                    "space-lg":  "1.5rem",
+                    "space-md":  "1rem",
+                    "space-sm":  "0.5rem",
+                    "space-xl":  "2.25rem",
+                    "space-xs":  "0.25rem"
+                },
+    "spacingScale":  2,
+    "typography":  {
+                       "body-lg":  {
+                                       "fontFamily":  "Times New Roman",
+                                       "fontSize":  "16px",
+                                       "fontWeight":  "400",
+                                       "lineHeight":  "24px"
+                                   },
+                       "body-md":  {
+                                       "fontFamily":  "Times New Roman",
+                                       "fontSize":  "14px",
+                                       "fontWeight":  "400",
+                                       "lineHeight":  "20px"
+                                   },
+                       "body-sm":  {
+                                       "fontFamily":  "Times New Roman",
+                                       "fontSize":  "12px",
+                                       "fontWeight":  "400",
+                                       "lineHeight":  "18px"
+                                   },
+                       "display-lg":  {
+                                          "fontFamily":  "Times New Roman",
+                                          "fontSize":  "40px",
+                                          "fontWeight":  "700",
+                                          "letterSpacing":  "-0.02em",
+                                          "lineHeight":  "48px"
+                                      },
+                       "headline-lg":  {
+                                           "fontFamily":  "Times New Roman",
+                                           "fontSize":  "24px",
+                                           "fontWeight":  "700",
+                                           "lineHeight":  "32px"
+                                       },
+                       "headline-sm":  {
+                                           "fontFamily":  "Times New Roman",
+                                           "fontSize":  "20px",
+                                           "fontWeight":  "700",
+                                           "lineHeight":  "28px"
+                                       },
+                       "headline-xl":  {
+                                           "fontFamily":  "Times New Roman",
+                                           "fontSize":  "32px",
+                                           "fontWeight":  "700",
+                                           "letterSpacing":  "-0.01em",
+                                           "lineHeight":  "40px"
+                                       },
+                       "headline-xl-mobile":  {
+                                                  "fontFamily":  "Times New Roman",
+                                                  "fontSize":  "26px",
+                                                  "fontWeight":  "700",
+                                                  "letterSpacing":  "0em",
+                                                  "lineHeight":  "32px"
+                                              },
+                       "label-lg":  {
+                                        "fontFamily":  "Times New Roman",
+                                        "fontSize":  "13px",
+                                        "fontWeight":  "700",
+                                        "letterSpacing":  "0.04em",
+                                        "lineHeight":  "16px"
+                                    },
+                       "label-md":  {
+                                        "fontFamily":  "Times New Roman",
+                                        "fontSize":  "11px",
+                                        "fontWeight":  "700",
+                                        "letterSpacing":  "0.06em",
+                                        "lineHeight":  "14px"
+                                    },
+                       "label-tech":  {
+                                          "fontFamily":  "Times New Roman",
+                                          "fontSize":  "10px",
+                                          "fontWeight":  "400",
+                                          "letterSpacing":  "0.08em",
+                                          "lineHeight":  "12px"
+                                      },
+                       "title-md":  {
+                                        "fontFamily":  "Times New Roman",
+                                        "fontSize":  "18px",
+                                        "fontWeight":  "600",
+                                        "lineHeight":  "24px"
+                                    }
+                   }
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My orders — PrintFlow</title>
+  <link rel="icon" href="/images/printflow-logo.svg" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/js/tw-config.js"></script>
+  <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body data-shell="customer" data-page="account" class="bg-surface text-on-surface min-h-screen flex flex-col">
+  <main class="flex-1">
+    <div id="page-header"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+      <div class="card p-4 flex gap-3 text-body-md text-on-surface-variant"><span class="material-symbols-outlined text-primary">info</span>Customer accounts are not built yet. This page lists orders placed from this browser.</div>
+      <div class="flex gap-2" role="tablist" id="tabs"></div>
+      <div id="list" class="grid gap-4 md:grid-cols-2 xl:grid-cols-3"></div>
+    </div>
+  </main>
+  <script type="module" src="/src/js/pages/account.js"></script>
+</body>
+</html>

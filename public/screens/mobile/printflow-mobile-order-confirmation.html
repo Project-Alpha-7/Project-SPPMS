@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>PrintFlow OS</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#007ea1", "inverse-primary": "#6bd3fd", "primary": "#006480", "on-primary": "#ffffff", "primary-fixed": "#bde9ff", "outline-variant": "#bdc8ce", "error-container": "#ffdad6", "error": "#ba1a1a", "secondary": "#b0274e", "surface-container": "#ebeef2", "on-tertiary": "#ffffff", "on-tertiary-fixed-variant": "#534600", "surface-container-high": "#e5e8ec", "surface": "#f7f9fe", "on-secondary-fixed-variant": "#8f0638", "tertiary-container": "#c7aa00", "on-tertiary-container": "#4b3f00", "tertiary-fixed": "#ffe262", "secondary-fixed": "#ffd9de", "surface-container-low": "#f1f4f8", "on-secondary-container": "#670025", "on-tertiary-fixed": "#221b00", "on-primary-fixed-variant": "#004d64", "surface-container-highest": "#e0e3e7", "on-surface": "#181c1f", "on-error-container": "#93000a", "on-secondary": "#ffffff", "outline": "#6e797e", "tertiary-fixed-dim": "#e7c500", "inverse-on-surface": "#eef1f5", "surface-variant": "#e0e3e7", "secondary-container": "#fe6386", "inverse-surface": "#2d3134", "surface-tint": "#006684", "primary-fixed-dim": "#6bd3fd", "on-primary-container": "#fbfdff", "surface-container-lowest": "#ffffff", "on-surface-variant": "#3e484e", "on-background": "#181c1f", "on-primary-fixed": "#001f2a", "on-error": "#ffffff", "tertiary": "#6f5d00", "secondary-fixed-dim": "#ffb2bd", "surface-bright": "#f7f9fe", "on-secondary-fixed": "#400014", "surface-dim": "#d7dade", "background": "#f7f9fe" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xl": "2.25rem", "space-lg": "1.5rem", "margin": "1rem", "space-md": "1rem", "margin-md": "1.5rem", "margin-lg": "2.5rem", "space-sm": "0.5rem", "gutter-lg": "1.5rem", "space-xs": "0.25rem", "gutter": "1rem" }, "fontFamily": { "body-md": ["Times New Roman"], "label-lg": ["Times New Roman"], "headline-sm": ["Times New Roman"], "headline-lg": ["Times New Roman"], "label-md": ["Times New Roman"], "headline-xl-mobile": ["Times New Roman"], "title-md": ["Times New Roman"], "label-tech": ["Times New Roman"], "display-lg": ["Times New Roman"], "body-lg": ["Times New Roman"], "body-sm": ["Times New Roman"], "headline-xl": ["Times New Roman"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-lg": ["13px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "700" }], "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "headline-xl-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "700" }], "title-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "label-tech": ["10px", { "lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "400" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="flex flex-col justify-center gap-0.5"><div class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-[20px]">print</span><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">PrintFlow OS</span></div><div class="flex items-center gap-1 pl-6"><span class="font-label-tech text-label-tech text-outline tracking-wider uppercase">CALIB</span><div class="flex items-center gap-1"><span class="w-2 h-2 rounded-[1px] bg-[#219BC3] block"></span><span class="w-2 h-2 rounded-[1px] bg-[#D9476B] block"></span><span class="w-2 h-2 rounded-[1px] bg-[#F5D21B] block"></span><span class="w-2 h-2 rounded-[1px] bg-[#1B2427] block"></span></div><span class="font-label-tech text-label-tech text-outline-variant font-mono ml-0.5">⌖</span></div></div></div><div class="flex items-center gap-1"><button aria-label="Toggle Theme" class="w-11 h-11 flex items-center justify-center rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" onclick="document.documentElement.classList.toggle('dark')" type="button"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container relative transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin py-space-sm space-y-space-md text-on-surface">
+<!-- TOP CONFIRMATION SUCCESS HERO HEADER -->
+<div class="bg-surface-container-lowest dark:bg-[#191F22] p-space-md rounded-lg shadow-sm relative overflow-hidden">
+<!-- Calibration crosshair & CMYK Micro strip -->
+<div class="flex items-center justify-between pb-space-xs mb-space-sm bg-surface-container-low/50 dark:bg-black/20 -mx-space-md -mt-space-md px-space-md py-1.5">
+<div class="flex items-center gap-1.5">
+<span class="font-label-tech text-label-tech text-outline tracking-wider font-mono">⌖ REG: TICKET_ACK</span>
+<span class="font-label-tech text-label-tech text-outline-variant font-mono">• DOCKET #942</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-[#219BC3] inline-block rounded-[0.5px]"></span>
+<span class="w-1.5 h-1.5 bg-[#D9476B] inline-block rounded-[0.5px]"></span>
+<span class="w-1.5 h-1.5 bg-[#F5D21B] inline-block rounded-[0.5px]"></span>
+<span class="w-1.5 h-1.5 bg-[#1B2427] dark:bg-white inline-block rounded-[0.5px]"></span>
+</div>
+</div>
+<div class="flex flex-col items-center text-center pt-space-xs">
+<!-- Double-ring registration checkmark badge -->
+<div class="w-12 h-12 rounded-full flex items-center justify-center relative mb-space-sm bg-surface-container-low dark:bg-surface-container">
+<div class="w-10 h-10 rounded-full flex items-center justify-center bg-primary-container text-on-primary">
+<span class="material-symbols-outlined text-[24px]">done_all</span>
+</div>
+<span class="absolute -top-1 -right-1 font-label-tech text-[9px] text-primary font-bold">OK</span>
+</div>
+<h1 class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">
+        Order Successfully Submitted
+      </h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-[280px] mt-1">
+        Pre-press ticket logged into production dispatch queue.
+      </p>
+<!-- Prominent Order ID Box -->
+<div class="w-full mt-space-md p-space-sm bg-surface-container-low dark:bg-[#111719] rounded flex flex-col items-center justify-center relative">
+<div class="flex items-center justify-between w-full px-space-xs mb-1">
+<span class="font-label-tech text-label-tech text-outline uppercase tracking-wider">JOB IDENTIFIER</span>
+<span class="font-label-tech text-label-tech text-[#219BC3] font-mono">PLATE_BATCH #B4</span>
+</div>
+<div class="flex items-center justify-center gap-space-sm py-1 w-full">
+<span class="font-headline-lg text-headline-lg tracking-wider font-bold text-on-surface font-mono select-all">
+            SP-2026-4K7Q9
+          </span>
+<button aria-label="Copy Order Identifier" class="h-9 px-space-sm bg-surface-container-highest hover:bg-outline-variant/30 text-primary active:scale-95 transition-all flex items-center gap-1 rounded text-body-sm" id="copy-id-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+<span class="font-label-md text-label-md uppercase">Copy</span>
+</button>
+</div>
+<div class="opacity-0 transition-opacity duration-200 text-label-tech text-primary font-bold tracking-wide mt-0.5" id="copy-toast">
+          ✓ DOCKET NUMBER COPIED TO CLIPBOARD
+        </div>
+</div>
+<!-- Yellow Amber Pending Status Badge -->
+<div class="mt-space-sm inline-flex items-center gap-2 px-space-sm py-1 bg-tertiary-fixed/40 dark:bg-tertiary-container/30 text-on-tertiary-container dark:text-tertiary-fixed rounded">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed-dim opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+<span class="font-label-md text-label-md tracking-wider uppercase font-bold">
+          [ STATUS: SUBMITTED – AWAITING REVIEW ]
+        </span>
+</div>
+<!-- Prepress Timestamp & Node Meta -->
+<div class="mt-space-sm flex items-center gap-1.5 text-center">
+<span class="material-symbols-outlined text-outline text-[14px]">schedule</span>
+<span class="font-label-tech text-label-tech text-on-surface-variant font-mono">
+          Submitted: Today, 24 Oct 2025 • 14:32 IST • Prepress Node #04
+        </span>
+</div>
+</div>
+</div>
+<!-- ORDER SPECIFICATION CARD -->
+<div class="bg-surface-container-lowest dark:bg-[#191F22] rounded-lg p-space-md shadow-sm space-y-space-sm">
+<!-- Prepress strip header -->
+<div class="flex items-center justify-between pb-space-xs bg-surface-container-low/40 dark:bg-black/20 -mx-space-md -mt-space-md px-space-md py-1.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">receipt_long</span>
+<span class="font-title-md text-title-md font-bold tracking-tight text-on-surface">JOB SPECIFICATION SUMMARY</span>
+</div>
+<span class="font-label-tech text-label-tech text-outline font-mono">[ 1 ITEM ]</span>
+</div>
+<!-- Product headline -->
+<div class="flex items-start justify-between pt-1">
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Visiting Cards × 500 pcs</h2>
+<p class="font-label-tech text-label-tech text-[#219BC3] font-bold tracking-wider uppercase mt-0.5">HEIDELBERG SPEEDMASTER XL 75</p>
+</div>
+<span class="px-2 py-0.5 bg-surface-container-high rounded font-label-tech text-label-tech font-mono text-on-surface-variant">RUN: 500 SHT</span>
+</div>
+<!-- Technical Specs Matrix -->
+<div class="space-y-space-xs pt-space-xs font-body-sm">
+<div class="p-space-xs bg-surface-container-low dark:bg-surface-container rounded flex items-center justify-between">
+<span class="font-label-tech text-label-tech text-outline tracking-wider uppercase">DIMENSIONS •</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface font-mono">90 × 54 mm (Standard +3mm Bleed)</span>
+</div>
+<div class="p-space-xs bg-surface-container-low dark:bg-surface-container rounded flex items-center justify-between">
+<span class="font-label-tech text-label-tech text-outline tracking-wider uppercase">SUBSTRATE •</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">300 GSM Premium Art Card</span>
+</div>
+<div class="p-space-xs bg-surface-container-low dark:bg-surface-container rounded flex items-center justify-between">
+<span class="font-label-tech text-label-tech text-outline tracking-wider uppercase">INKING / PASS •</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface font-mono">Double-Sided Full Color (4/4 CMYK)</span>
+</div>
+<div class="p-space-xs bg-surface-container-low dark:bg-surface-container rounded flex items-center justify-between">
+<span class="font-label-tech text-label-tech text-outline tracking-wider uppercase">FINISHING •</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Velvety Matte Lamination (Both Sides)</span>
+</div>
+<!-- Preflight Checked Artwork Block -->
+<div class="p-space-xs bg-surface-container-low dark:bg-surface-container rounded flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-tech text-label-tech text-outline tracking-wider uppercase">ARTWORK FILE •</span>
+<span class="font-label-tech text-label-tech text-on-surface font-mono">2.4 MB • 300 DPI</span>
+</div>
+<div class="flex items-center justify-between mt-1">
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.5 bg-secondary-container text-on-secondary-container font-label-tech text-[10px] font-bold rounded">PDF/X-4</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate max-w-[190px]">visiting-card-front-back.pdf</span>
+</div>
+<span class="font-label-tech text-label-tech text-primary font-bold">FOGRA39</span>
+</div>
+<div class="flex items-center gap-1 text-[#219BC3] pt-0.5">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span class="font-label-tech text-label-tech font-bold uppercase">Passed automated preflight check</span>
+</div>
+</div>
+<div class="p-space-xs bg-surface-container-low dark:bg-surface-container rounded flex items-center justify-between">
+<span class="font-label-tech text-label-tech text-outline tracking-wider uppercase">DELIVERY PIN •</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">PIN 560001 (Bengaluru, KA)</span>
+</div>
+<div class="p-space-xs bg-surface-container-low dark:bg-surface-container rounded flex items-center justify-between">
+<span class="font-label-tech text-label-tech text-outline tracking-wider uppercase">SETTLEMENT •</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Pay at pickup (Counter cash/UPI)</span>
+</div>
+</div>
+<!-- Estimated Cost Calculation Box -->
+<div class="mt-space-sm pt-space-sm bg-surface-container-high dark:bg-surface-container-highest p-space-sm rounded">
+<div class="flex items-baseline justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md font-bold text-on-surface">ESTIMATED TOTAL:</span>
+<span class="px-1.5 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed font-label-tech text-label-tech font-bold uppercase rounded">[ ESTIMATE ]</span>
+</div>
+<span class="font-headline-lg text-headline-lg font-bold text-primary font-mono">₹1,530</span>
+</div>
+<p class="font-label-tech text-label-tech text-on-surface-variant mt-1.5 leading-tight">
+        * ESTIMATE – Final quotation and billing will be confirmed by the press after pre-flight inspection and imposition verification.
+      </p>
+</div>
+</div>
+<!-- QR CODE & DIRECT ACCESS SECTION -->
+<div class="bg-surface-container-lowest dark:bg-[#191F22] rounded-lg p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-xs mb-space-sm bg-surface-container-low/40 dark:bg-black/20 -mx-space-md -mt-space-md px-space-md py-1.5">
+<span class="font-title-md text-title-md font-bold tracking-tight text-on-surface">QUICK PRESS ACCESS &amp; QR</span>
+<span class="font-label-tech text-label-tech text-[#219BC3] font-mono">UUID: SP-4K7Q9</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<!-- QR Frame with simulated cut/crop corner tick marks -->
+<div class="relative p-space-sm my-space-xs bg-surface-container-lowest rounded-sm shadow-inner flex flex-col items-center">
+<!-- SVG Corner Crop Marks -->
+<span class="absolute -top-1 -left-1 font-label-tech text-outline text-[12px] leading-none select-none">┌</span>
+<span class="absolute -top-1 -right-1 font-label-tech text-outline text-[12px] leading-none select-none">┐</span>
+<span class="absolute -bottom-1 -left-1 font-label-tech text-outline text-[12px] leading-none select-none">└</span>
+<span class="absolute -bottom-1 -right-1 font-label-tech text-outline text-[12px] leading-none select-none">┘</span>
+<!-- Precision Vector QR Code Representation -->
+<svg aria-label="Order Tracking QR Code" class="w-36 h-36" fill="none" viewbox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#FFFFFF" height="140" width="140"></rect>
+<!-- Position Marks: Top-Left -->
+<rect fill="#1B2427" height="35" width="35" x="14" y="14"></rect>
+<rect fill="#FFFFFF" height="25" width="25" x="19" y="19"></rect>
+<rect fill="#219BC3" height="15" width="15" x="24" y="24"></rect>
+<!-- Position Marks: Top-Right -->
+<rect fill="#1B2427" height="35" width="35" x="91" y="14"></rect>
+<rect fill="#FFFFFF" height="25" width="25" x="96" y="19"></rect>
+<rect fill="#219BC3" height="15" width="15" x="101" y="24"></rect>
+<!-- Position Marks: Bottom-Left -->
+<rect fill="#1B2427" height="35" width="35" x="14" y="91"></rect>
+<rect fill="#FFFFFF" height="25" width="25" x="19" y="96"></rect>
+<rect fill="#219BC3" height="15" width="15" x="24" y="101"></rect>
+<!-- Data blocks -->
+<rect fill="#1B2427" height="6" width="6" x="56" y="18"></rect>
+<rect fill="#D9476B" height="6" width="6" x="68" y="18"></rect>
+<rect fill="#1B2427" height="6" width="6" x="76" y="18"></rect>
+<rect fill="#1B2427" height="6" width="12" x="56" y="28"></rect>
+<rect fill="#1B2427" height="6" width="8" x="74" y="28"></rect>
+<rect fill="#1B2427" height="14" width="6" x="56" y="38"></rect>
+<rect fill="#1B2427" height="6" width="14" x="68" y="38"></rect>
+<!-- Alignment and timing patterns -->
+<rect fill="#1B2427" height="4" width="100" x="20" y="56"></rect>
+<rect fill="#1B2427" height="100" width="4" x="56" y="20"></rect>
+<!-- Central and bottom data pixels -->
+<rect fill="#219BC3" height="14" width="14" x="66" y="66"></rect>
+<rect fill="#1B2427" height="14" width="8" x="88" y="66"></rect>
+<rect fill="#1B2427" height="6" width="16" x="102" y="66"></rect>
+<rect fill="#1B2427" height="18" width="6" x="102" y="78"></rect>
+<rect fill="#D9476B" height="10" width="12" x="114" y="78"></rect>
+<rect fill="#1B2427" height="6" width="14" x="66" y="86"></rect>
+<rect fill="#1B2427" height="24" width="8" x="86" y="86"></rect>
+<rect fill="#1B2427" height="6" width="22" x="98" y="104"></rect>
+<rect fill="#219BC3" height="10" width="16" x="104" y="116"></rect>
+<rect fill="#1B2427" height="18" width="12" x="66" y="104"></rect>
+<rect fill="#1B2427" height="14" width="8" x="20" y="70"></rect>
+<rect fill="#1B2427" height="8" width="14" x="34" y="70"></rect>
+<rect fill="#1B2427" height="4" width="10" x="38" y="82"></rect>
+</svg>
+<div class="mt-2 text-center">
+<span class="font-label-tech text-label-tech text-outline uppercase tracking-wider block">FAST PASS VERIFICATION</span>
+<span class="font-label-tech text-[10px] font-mono text-on-surface">URL: printflow.internal/track/SP-2026-4K7Q9</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-[300px] mt-space-xs">
+        Scan at pressroom counter or save link to inspect live CTP plate status and delivery updates without logging in.
+      </p>
+<!-- Action Button Group -->
+<div class="w-full mt-space-md space-y-space-xs">
+<!-- Primary Action Button: Filled Cyan -->
+<a class="w-full h-12 bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg uppercase tracking-wider rounded flex items-center justify-center gap-2 active:scale-[0.99] transition-all shadow-sm" href="#">
+<span>Track this order</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+<!-- Secondary Outlined Button -->
+<button class="w-full h-11 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md uppercase tracking-wider rounded flex items-center justify-center gap-2 transition-all" id="copy-link-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">share</span>
+<span id="link-btn-label">Save / Copy tracking link</span>
+</button>
+<!-- Tertiary Link Button -->
+<a class="w-full h-10 text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-1.5 transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px]">west</span>
+<span>Back to catalog home</span>
+</a>
+</div>
+</div>
+</div>
+<!-- WHAT HAPPENS NEXT [ PREPRESS PROTOCOL ] -->
+<div class="bg-surface-container-lowest dark:bg-[#191F22] rounded-lg p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-xs mb-space-sm bg-surface-container-low/40 dark:bg-black/20 -mx-space-md -mt-space-md px-space-md py-1.5">
+<span class="font-title-md text-title-md font-bold tracking-tight text-on-surface">WHAT HAPPENS NEXT</span>
+<span class="font-label-tech text-label-tech text-outline font-mono">[ PREPRESS PROTOCOL ]</span>
+</div>
+<!-- Milestone Vertical Connector List -->
+<div class="relative pl-6 space-y-space-md my-space-xs">
+<!-- Hairline vertical connector bar -->
+<div class="absolute left-2.5 top-3 bottom-3 w-0.5 bg-outline-variant/50"></div>
+<!-- Step 1 -->
+<div class="relative">
+<span class="absolute -left-6 top-0.5 w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-tech text-label-tech font-bold font-mono">
+          1
+        </span>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface uppercase">Press Reviews Order &amp; Artwork</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
+          Our prepress technicians inspect PDF bleed, crop bounds, minimum resolution (≥300 DPI), and maximum ink density (TAC ≤ 320%).
+        </p>
+</div>
+<!-- Step 2 -->
+<div class="relative">
+<span class="absolute -left-6 top-0.5 w-5 h-5 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-label-tech text-label-tech font-bold font-mono">
+          2
+        </span>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface uppercase">Soft-Proof or Change Request</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
+          If imposition, trim, or bleed needs adjustment, you will receive an instant approval notice via SMS, WhatsApp, or registered Email.
+        </p>
+</div>
+<!-- Step 3 -->
+<div class="relative">
+<span class="absolute -left-6 top-0.5 w-5 h-5 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-label-tech text-label-tech font-bold font-mono">
+          3
+        </span>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface uppercase">Production Starts After Confirmation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
+          CTP thermal plates are laser engraved at 2,400 DPI and loaded onto the Heidelberg press line for high-density offset inking.
+        </p>
+</div>
+<!-- Step 4 -->
+<div class="relative">
+<span class="absolute -left-6 top-0.5 w-5 h-5 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-label-tech text-label-tech font-bold font-mono">
+          4
+        </span>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface uppercase">Track Progress Anytime</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
+          Monitor plate exposure, inking run, post-press matte lamination, and courier dispatch in real time from your mobile device.
+        </p>
+</div>
+</div>
+</div>
+<!-- PRESS SUPPORT & FOOTER CERTIFICATION -->
+<div class="p-space-sm bg-surface-container-low dark:bg-[#191F22] rounded-lg text-center space-y-space-xs">
+<div class="flex items-center justify-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+<span class="font-label-lg text-label-lg font-bold uppercase tracking-wider">Direct Prepress Support</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+      Need immediate assistance with this docket? Call Prepress Desk: <strong class="text-on-surface font-mono">+91 80 4129 8800</strong> or message WhatsApp pressroom.
+    </p>
+<div class="pt-space-xs flex items-center justify-center gap-space-sm text-outline font-label-tech text-label-tech font-mono">
+<span>ISO 12647-2 OFFSET CERTIFIED</span>
+<span>•</span>
+<span>FSC® CERTIFIED SUBSTRATES</span>
+</div>
+<!-- Prepress end mark -->
+<div class="flex items-center justify-center gap-2 pt-1">
+<span class="w-1.5 h-1.5 bg-[#219BC3] rounded-[0.5px]"></span>
+<span class="w-1.5 h-1.5 bg-[#D9476B] rounded-[0.5px]"></span>
+<span class="w-1.5 h-1.5 bg-[#F5D21B] rounded-[0.5px]"></span>
+<span class="w-1.5 h-1.5 bg-[#1B2427] dark:bg-white rounded-[0.5px]"></span>
+<span class="font-mono text-outline-variant text-[10px]">⌖ END_OF_DOCKET</span>
+</div>
+</div>
+</div>
+<!-- Client-side interaction script for copy feedback and clipboard -->
+<script>
+  (function() {
+    const copyIdBtn = document.getElementById('copy-id-btn');
+    const toast = document.getElementById('copy-toast');
+    const copyLinkBtn = document.getElementById('copy-link-btn');
+    const linkLabel = document.getElementById('link-btn-label');
+
+    if (copyIdBtn && toast) {
+      copyIdBtn.addEventListener('click', () => {
+        navigator.clipboard?.writeText('SP-2026-4K7Q9').catch(() => {});
+        toast.classList.remove('opacity-0');
+        toast.classList.add('opacity-100');
+        setTimeout(() => {
+          toast.classList.remove('opacity-100');
+          toast.classList.add('opacity-0');
+        }, 2200);
+      });
+    }
+
+    if (copyLinkBtn && linkLabel) {
+      copyLinkBtn.addEventListener('click', () => {
+        const trackingUrl = window.location.origin + '/track/SP-2026-4K7Q9';
+        navigator.clipboard?.writeText(trackingUrl).catch(() => {});
+        const originalText = linkLabel.innerText;
+        linkLabel.innerText = '✓ Direct Tracking Link Copied';
+        setTimeout(() => {
+          linkLabel.innerText = originalText;
+        }, 2200);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-20 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] h-14 text-on-surface-variant hover:text-on-surface transition-colors gap-1" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-md text-label-md tracking-wider uppercase">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-14 text-on-surface-variant hover:text-on-surface transition-colors gap-1" data-path="catalogue-products" href="#"><span class="material-symbols-outlined text-[22px]">category</span><span class="font-label-md text-label-md tracking-wider uppercase">Catalog</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-14 transition-colors gap-1 text-primary font-bold" data-path="orders" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-md text-label-md tracking-wider uppercase">Orders</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-14 text-on-surface-variant hover:text-on-surface transition-colors gap-1" data-path="track" href="#"><span class="material-symbols-outlined text-[22px]">local_shipping</span><span class="font-label-md text-label-md tracking-wider uppercase">Track</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-14 text-on-surface-variant hover:text-on-surface transition-colors gap-1" data-path="account" href="#"><span class="material-symbols-outlined text-[22px]">manage_accounts</span><span class="font-label-md text-label-md tracking-wider uppercase">Account</span></a></div></nav></body></html>

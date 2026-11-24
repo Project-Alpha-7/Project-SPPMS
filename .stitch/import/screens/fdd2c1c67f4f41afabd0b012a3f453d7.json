@@ -1,0 +1,22 @@
+{
+  "success": true,
+  "data": {
+    "deviceType": "MOBILE",
+    "height": "3040",
+    "htmlCode": {
+      "downloadUrl": "https://stitch.googleapis.com/v1/projects/15747305669043123223/files/5f5fee60c2a848c2a2a988040cc82ce8:download",
+      "mimeType": "text/html",
+      "name": "projects/15747305669043123223/files/5f5fee60c2a848c2a2a988040cc82ce8"
+    },
+    "name": "projects/15747305669043123223/screens/fdd2c1c67f4f41afabd0b012a3f453d7",
+    "screenType": "DESIGN",
+    "screenshot": {
+      "downloadUrl": "https://stitch.googleapis.com/v1/projects/15747305669043123223/files/c77378d434704a2a8acf4534868a9cba:download",
+      "mimeType": "png",
+      "name": "projects/15747305669043123223/files/c77378d434704a2a8acf4534868a9cba"
+    },
+    "title": "PrintFlow Mobile - Checkout",
+    "width": "780",
+    "id": "fdd2c1c67f4f41afabd0b012a3f453d7"
+  }
+}

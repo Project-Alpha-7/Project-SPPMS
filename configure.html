@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Configure your order — PrintFlow</title>
+  <link rel="icon" href="/images/printflow-logo.svg" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/js/tw-config.js"></script>
+  <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body data-shell="customer" data-page="products" class="bg-surface text-on-surface min-h-screen flex flex-col">
+  <main class="flex-1">
+    <div class="border-b border-outline-variant bg-surface-container-lowest">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4" id="steps"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr),380px] items-start">
+      <form id="cfg" class="space-y-6" novalidate>
+        <section class="card p-5 md:p-6 flex flex-col sm:flex-row gap-5" id="product-head"></section>
+        <section class="card p-5 md:p-6 space-y-6" id="options"></section>
+        <section class="card p-5 md:p-6">
+          <label class="field-label" for="notes">Special instructions (optional)</label>
+          <textarea id="notes" class="field" rows="3" maxlength="500" placeholder="E.g. match the colours to our previous order"></textarea>
+        </section>
+      </form>
+      <aside class="lg:sticky lg:top-32 space-y-4">
+        <div class="card overflow-hidden">
+          <div class="cmyk-strip"><span></span><span></span><span></span><span></span></div>
+          <div class="p-5">
+            <div class="flex items-center justify-between gap-2">
+              <h2 class="font-title-md text-title-md">Price estimate</h2>
+              <span class="chip chip-warn">Estimate</span>
+            </div>
+            <div id="breakdown" class="mt-4"></div>
+            <p class="text-body-sm text-on-surface-variant mt-4">Demo rates. The press reviews your order and confirms the final quote before production.</p>
+            <button type="submit" form="cfg" class="btn btn-primary w-full mt-5 py-3 text-body-lg">Continue to artwork<span class="material-symbols-outlined">arrow_forward</span></button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <script type="module" src="/src/js/pages/configure.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "success": true,
+  "data": {
+    "deviceType": "DESKTOP",
+    "height": "4148",
+    "htmlCode": {
+      "downloadUrl": "https://stitch.googleapis.com/v1/projects/15747305669043123223/files/3ede905bea8e490b928ca5c5aa7162a6:download",
+      "mimeType": "text/html",
+      "name": "projects/15747305669043123223/screens/3ede905bea8e490b928ca5c5aa7162a6/fileEntries/html"
+    },
+    "name": "projects/15747305669043123223/screens/3ede905bea8e490b928ca5c5aa7162a6",
+    "screenType": "DESIGN",
+    "screenshot": {
+      "downloadUrl": "https://stitch.googleapis.com/v1/projects/15747305669043123223/files/screenshot_000660eaf467193203386b921917cdd0:download",
+      "mimeType": "image/png",
+      "name": "projects/15747305669043123223/screens/3ede905bea8e490b928ca5c5aa7162a6/fileEntries/screenshot"
+    },
+    "title": "Admin Dashboard Overview",
+    "width": "2560",
+    "id": "3ede905bea8e490b928ca5c5aa7162a6"
+  }
+}
