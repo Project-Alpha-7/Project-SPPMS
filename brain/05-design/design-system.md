@@ -1,7 +1,9 @@
 # Design System (Google Stitch) and How the Site Uses It
 
 Source: Google Stitch project `15747305669043123223` ("PressOS Print Management System").
-Raw design notes: `.stitch/import/design-system.md` and `.stitch/import/theme.json`.
+Raw design notes (`design-system.md`, `theme.json`) were kept in `.stitch/import/`; that folder was
+removed from the repo and working tree on 2026-11-24 — recover from git history (commit `4570964`)
+if needed. The essentials are summarised below.
 
 ## Identity
 - Brand in use: **PrintFlow** (customer site) / **PrintFlow OS** (admin console). Final naming is an open question.

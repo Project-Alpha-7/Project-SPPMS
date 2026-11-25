@@ -70,7 +70,6 @@ Seven seeded orders are marked **demo**, and admin has a **Reset demo data** but
 │   ├── screens/ screenshots/    # 16 Stitch reference screens (8 desktop, 8 mobile), unmodified
 │   └── images/                  # Stitch images (manifest.json maps their original URLs)
 ├── scripts/validate.mjs, scripts/import-stitch-screens.mjs
-├── .stitch/import/              # raw Stitch metadata + design system
 └── vite.config.js               # multi-page build (all root and admin/ pages)
 ```
 
