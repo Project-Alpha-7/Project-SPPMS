@@ -36,7 +36,8 @@ Build in controlled stages. Each stage has a deliverable.
 - **Safer:** 15–20 days if pricing, payment or customer requirements are unclear.
 - **Commercial grade:** needs hardening, security review, backups, monitoring and real press testing on top.
 
-Don't promise a fixed date until product options, pricing rules, payment mode and hosting are confirmed.
+Don't promise a fixed date until product options, pricing rules and payment mode are confirmed
+(hosting is settled: Vercel, see [deployment.md](deployment.md)).
 
 ## Progress
 - [ ] Stage 1: requirements sign-off (see [../decisions/open-questions.md](../decisions/open-questions.md))
@@ -48,7 +49,11 @@ Don't promise a fixed date until product options, pricing rules, payment mode an
   - Checkout, Order ID, tracking QR and live tracking
   - Admin confirm / modify / reject / cancel, quote changes, manual payments, production stages, job card, inventory and reports
   - Platform QR generator on the dashboard
-- [ ] Stage 3: project foundation for the backend (Supabase project, env vars, dev/prod)
+- [x] **Repo + hosting foundation (2026-11-24)**: code pushed to
+  `github.com/Project-Alpha-7/Project-SPPMS` (`main`, 195 files, blueprint + PDF preserved);
+  `vercel.json` + `.nvmrc` added, `npm run build` and `npm run validate` green.
+  Still pending: import the repo at vercel.com/new and complete the first deploy (unblocks Stage 10's QR step).
+- [ ] Stage 3: project foundation for the backend (Supabase project, env vars in Vercel, dev/prod)
 - [ ] Stage 4: real auth and roles (replaces the demo admin sign-in) and RLS policies
 - [ ] Stages 5–9, 11–12 backend wiring: swap `store.js` functions for database/storage/realtime calls (the UI stays)
 - [ ] Stage 6: private artwork storage with signed links (the prototype keeps only file metadata)

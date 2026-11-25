@@ -43,6 +43,8 @@
 - [ ] Machine values and maintenance rules display correctly and are labelled demo data
 
 ## Deployment
+- [ ] First Vercel deploy from GitHub succeeds (repo `Project-Alpha-7/Project-SPPMS`, preset from `vercel.json`)
+- [ ] A push to `main` triggers an auto-deploy
 - [ ] Production env vars are configured securely
 - [ ] Database access policies are enabled
 - [ ] Artwork storage is protected

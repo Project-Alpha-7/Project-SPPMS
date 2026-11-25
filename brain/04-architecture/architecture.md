@@ -38,6 +38,11 @@ policies, Edge Functions for privileged logic such as payment verification) stil
 properly. The repo already uses **Vite**, which fits Option A. Stack choice is recorded in
 [../decisions/decision-log.md](../decisions/decision-log.md).
 
+**Hosting (settled 2026-11-24): Vercel** for the frontend — GitHub repo
+`Project-Alpha-7/Project-SPPMS`, `vercel.json` Vite preset, push to `main` auto-deploys.
+See [../06-delivery/deployment.md](../06-delivery/deployment.md). The backend (Supabase) is
+separate; its env vars go into Vercel when Stage 3 starts.
+
 ## Real-time behaviour
 Real-time means that a meaningful update by one authorised user shows up on another connected screen
 without a manual refresh.
